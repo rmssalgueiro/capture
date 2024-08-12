@@ -34,7 +34,7 @@ target_include_directories(${PROJECT_NAME} PUBLIC
   ${CASADI_INCLUDE_DIR}
 )
 
-target_link_libraries(${PROJECT_NAME} ${CASADI_LIBRARY})
+target_link_libraries(${PROJECT_NAME} casadi)
 
 add_definitions(${EIGEN3_DEFINITIONS})
 
@@ -45,6 +45,7 @@ set(dependencies
   nav_msgs
   casadi_vendor
   ament_index_cpp
+  casadi
 )
 
 ament_target_dependencies(${PROJECT_NAME} ${dependencies})

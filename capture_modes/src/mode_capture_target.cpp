@@ -10,11 +10,12 @@ void CaptureTargetMode::initialize() {
 
     // Initialize the target state subscribers
     node_->declare_parameter<std::string>("autopilot.CaptureTargetMode.target_state_topic", "target_state"); 
-    // target_sub_ = node_->create_subscription<nav_msgs::msg::Odometry>(
-    //     node_->get_parameter("target_filter.CaptureTargetMode.target_state_topic").as_string(), 
-    //     rclcpp::SensorDataQoS(), 
-    //     std::bind(&CaptureTargetMode::target_state_callback, this, std::placeholders::_1)
-    // );
+    
+    target_sub_ = node_->create_subscription<nav_msgs::msg::Odometry>(
+        node_->get_parameter("autopilot.CaptureTargetMode.target_state_topic").as_string(), 
+        rclcpp::SensorDataQoS(), 
+        std::bind(&CaptureTargetMode::target_state_callback, this, std::placeholders::_1)
+    );
 
     // Load the gains of the controller
     node_->declare_parameter<double>("autopilot.CaptureTargetMode.gains.Kp", 1.0);
@@ -26,18 +27,41 @@ void CaptureTargetMode::initialize() {
     Kpz = node_->get_parameter("autopilot.CaptureTargetMode.gains.Kpz").as_double();
     Kvz = node_->get_parameter("autopilot.CaptureTargetMode.gains.Kvz").as_double();
 
+    RCLCPP_INFO(this->node_->get_logger(), "CaptureTargetMode Kp: %f", Kp);
+    RCLCPP_INFO(this->node_->get_logger(), "CaptureTargetMode Kv: %f", Kv);
+    RCLCPP_INFO(this->node_->get_logger(), "CaptureTargetMode Kpz: %f", Kpz);
+    RCLCPP_INFO(this->node_->get_logger(), "CaptureTargetMode Kvz: %f", Kvz);
+
     // Initialize the MPC library
-    std::string file_name = "gen";
-    std::string package_name = "capture_modes";
-    std::string prefix_lib = ament_index_cpp::get_package_share_directory(package_name) + "/include/";
-
-    // Create a new NLP solver instance from the compiled code
-    std::string lib_name = prefix_lib + file_name + ".so";
-
-    // Use CasADi's "external" to load the compiled function
-    mpc_controller_ = casadi::external("F",lib_name);
+    compile_mpc_controller();
 
     RCLCPP_INFO(this->node_->get_logger(), "CaptureTargetMode initialized");
+}
+
+
+void CaptureTargetMode::compile_mpc_controller() {
+
+    std::string file_name = "gen";
+    std::string prefix_code = ament_index_cpp::get_package_share_directory("capture_modes") + "/include/";
+
+    // Check if the .so file already exists
+    std::ifstream file(prefix_code + file_name + ".so");
+    if (file.good()) {
+        RCLCPP_INFO(this->node_->get_logger(), "MPC controller already compiled");
+        return;
+    } else {
+        RCLCPP_INFO(this->node_->get_logger(), "Compiling MPC controller");
+        // compile C++ code to a shared library
+        std::string compile_command = "gcc -fPIC -shared -O3 " +  prefix_code + file_name + ".cpp -o " + prefix_code + file_name + ".so";
+        int compile_flag = std::system(compile_command.c_str());
+        
+        if (compile_flag != 0) {
+            RCLCPP_ERROR(this->node_->get_logger(), "Compilation failed");
+        }
+    }
+
+    // Use CasADi's "external" to load the compiled function
+    mpc_controller_ = casadi::external("F", prefix_code);
 }
 
 bool CaptureTargetMode::enter() {
@@ -111,8 +135,7 @@ bool CaptureTargetMode::exit() {
     return true;
 }
 
-
-void CaptureTargetMode::target_state_callback(const nav_msgs::msg::Odometry::SharedPtr msg) {
+void CaptureTargetMode::target_state_callback(const nav_msgs::msg::Odometry::ConstSharedPtr msg) {
 
     // Update the position and velocity of the target
     Pd = Eigen::Vector3d(msg->pose.pose.position.x, msg->pose.pose.position.y, msg->pose.pose.position.z);

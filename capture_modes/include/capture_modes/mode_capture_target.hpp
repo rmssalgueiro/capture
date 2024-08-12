@@ -1,5 +1,6 @@
 #pragma once
 
+#include "gen.h"
 #include <casadi/casadi.hpp>
 #include <autopilot/mode.hpp>
 #include <nav_msgs/msg/odometry.hpp>
@@ -23,7 +24,9 @@ public:
     void mode_mpc_on();
 
     void update_vehicle_state();
-    void target_state_callback(const nav_msgs::msg::Odometry::SharedPtr msg);
+    void target_state_callback(const nav_msgs::msg::Odometry::ConstSharedPtr msg);
+
+    void compile_mpc_controller();
 
 protected:
 
