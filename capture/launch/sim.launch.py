@@ -64,12 +64,37 @@ def generate_launch_description():
         }.items(),
     )
 
+    # Call MAVLINK interface package launch file 
+    mavlink2_interface_launch_file = IncludeLaunchDescription(
+        # Grab the launch file for the mavlink interface
+        PythonLaunchDescriptionSource(os.path.join(get_package_share_directory('mavlink_interface'), 'launch/mavlink_interface.launch.py')),
+        # Define costume launch arguments/parameters used for the mavlink interface
+        launch_arguments={
+            'vehicle_id': '2', 
+            'namespace': 'drone',
+            'drone_params': LaunchConfiguration('drone_params'),
+            'connection': 'udp://:14541',
+            'mavlink_forward': "['']"
+        }.items(),
+    )
+
     # Call autopilot package launch file
     autopilot_launch_file = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(os.path.join(get_package_share_directory('autopilot'), 'launch/autopilot.launch.py')),
         # Define costume launch arguments/parameters used 
         launch_arguments={
-            'id': '1',
+            'vehicle_id': '1',
+            'namespace': 'drone',
+            'autopilot_yaml': LaunchConfiguration('drone_params'),
+        }.items(),
+    )
+
+    # Call autopilot package launch file
+    autopilot2_launch_file = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(os.path.join(get_package_share_directory('autopilot'), 'launch/autopilot.launch.py')),
+        # Define costume launch arguments/parameters used 
+        launch_arguments={
+            'vehicle_id': '2',
             'namespace': 'drone',
             'autopilot_yaml': LaunchConfiguration('drone_params'),
         }.items(),
@@ -82,8 +107,11 @@ def generate_launch_description():
         # Launch files for simulation
         gazebo_launch_file,
         iris_launch_file,
+        target_launch_file,
         # Launch files for the control system
         drone_params_file_arg,
         mavlink_interface_launch_file,
+        mavlink2_interface_launch_file,
         autopilot_launch_file,
+        autopilot2_launch_file
     ])
