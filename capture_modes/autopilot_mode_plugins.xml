@@ -1,0 +1,8 @@
+<library path="capture_modes">
+
+  <!-- Capture Target -->
+  <class type="autopilot::CaptureTargetMode" base_class_type="autopilot::Mode">
+      <description>Mode of operation to capture a target.</description>
+  </class>
+
+</library>
