@@ -17,6 +17,11 @@ find_package(pluginlib REQUIRED)
 find_package(Eigen3 REQUIRED)
 find_package(pegasus_utils REQUIRED)
 find_package(nav_msgs REQUIRED)
+find_package(ament_index_cpp REQUIRED)
+
+# Import the casadi dependency in the pegasus_external
+find_package(casadi_vendor REQUIRED)
+find_package(casadi REQUIRED)
 
 add_library(${PROJECT_NAME} 
   src/mode_capture_target.cpp
@@ -26,7 +31,10 @@ target_include_directories(${PROJECT_NAME} PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include>
   ${EIGEN3_INCLUDE_DIRS}
+  ${CASADI_INCLUDE_DIR}
 )
+
+target_link_libraries(${PROJECT_NAME} ${CASADI_LIBRARY})
 
 add_definitions(${EIGEN3_DEFINITIONS})
 
@@ -35,6 +43,8 @@ set(dependencies
   pluginlib
   pegasus_utils
   nav_msgs
+  casadi_vendor
+  ament_index_cpp
 )
 
 ament_target_dependencies(${PROJECT_NAME} ${dependencies})

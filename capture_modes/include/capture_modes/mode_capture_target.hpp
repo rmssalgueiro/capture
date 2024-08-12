@@ -1,8 +1,8 @@
 #pragma once
 
+#include <casadi/casadi.hpp>
 #include <autopilot/mode.hpp>
 #include <nav_msgs/msg/odometry.hpp>
-#include <capture_modes/mpc_controller.hpp>
 
 namespace autopilot {
 
@@ -49,8 +49,8 @@ protected:
 
     // Casadi variables for the MPC controller
     casadi::DM x0;
-    casadi::DM xx = DM::zeros(14,26);
-    casadi::DM uu = DM::zeros(4,25);
+    casadi::DM xx = casadi::DM::zeros(14,26);
+    casadi::DM uu = casadi::DM::zeros(4,25);
 
     // Control inputs to apply to the vehicle
     Eigen::Vector3d velocity_;

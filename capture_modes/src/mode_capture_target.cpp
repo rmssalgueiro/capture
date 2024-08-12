@@ -10,21 +10,21 @@ void CaptureTargetMode::initialize() {
 
     // Initialize the target state subscribers
     node_->declare_parameter<std::string>("autopilot.CaptureTargetMode.target_state_topic", "target_state"); 
-    target_sub_ = node_->create_subscription<nav_msgs::msg::Odometry>(
-        this->get_parameter("target_filter.CaptureTargetMode.target_state_topic").as_string(), 
-        rclcpp::SensorDataQoS(), 
-        std::bind(&TargetFilter::state_callback, this, std::placeholders::_1)
-    );
+    // target_sub_ = node_->create_subscription<nav_msgs::msg::Odometry>(
+    //     node_->get_parameter("target_filter.CaptureTargetMode.target_state_topic").as_string(), 
+    //     rclcpp::SensorDataQoS(), 
+    //     std::bind(&CaptureTargetMode::target_state_callback, this, std::placeholders::_1)
+    // );
 
     // Load the gains of the controller
     node_->declare_parameter<double>("autopilot.CaptureTargetMode.gains.Kp", 1.0);
     node_->declare_parameter<double>("autopilot.CaptureTargetMode.gains.Kv", 1.0);
     node_->declare_parameter<double>("autopilot.CaptureTargetMode.gains.Kpz", 1.0);
     node_->declare_parameter<double>("autopilot.CaptureTargetMode.gains.Kvz", .0);
-    Kp = this->get_parameter("autopilot.CaptureTargetMode.gains.Kp").as_double();
-    Kv = this->get_parameter("autopilot.CaptureTargetMode.gains.Kv").as_double();
-    Kpz = this->get_parameter("autopilot.CaptureTargetMode.gains.Kpz").as_double();
-    Kvz = this->get_parameter("autopilot.CaptureTargetMode.gains.Kvz").as_double();
+    Kp = node_->get_parameter("autopilot.CaptureTargetMode.gains.Kp").as_double();
+    Kv = node_->get_parameter("autopilot.CaptureTargetMode.gains.Kv").as_double();
+    Kpz = node_->get_parameter("autopilot.CaptureTargetMode.gains.Kpz").as_double();
+    Kvz = node_->get_parameter("autopilot.CaptureTargetMode.gains.Kvz").as_double();
 
     // Initialize the MPC library
     std::string file_name = "gen";
@@ -71,20 +71,20 @@ void CaptureTargetMode::mode_mpc_on() {
     x0 = casadi::DM::vertcat({P(0), P(1), P(2), V(0), V(1), V(2), yaw, Pd(0), Pd(1), Pd(2), Vd(0), Vd(1), Vd(2), yawd});
     
     // Create the input vector for the MPC
-    arg1 = {x0, uu, xx};
+    std::vector<casadi::DM> arg1 = {x0, uu, xx};
 
     // Call the MPC controller
-    res = mpc_controller_(arg1);
+    std::vector<casadi::DM> res = mpc_controller_(arg1);
 
     // Get the first input of the MPC
-    result_xx = res.at(1);
-    result_uu = res.at(0);
+    casadi::Matrix<double> result_xx = res.at(1);
+    casadi::Matrix<double> result_uu = res.at(0);
 
     // Update the state and input vectors
     xx = result_xx;
     uu = result_uu;
 
-    result_matrix = res.at(1);
+    casadi::Matrix<double> result_matrix = res.at(1);
 
     // Set the velocity input to apply to the vehicle
     velocity_[0] = static_cast<double>(result_matrix(3,1));
@@ -135,7 +135,7 @@ void CaptureTargetMode::update_vehicle_state() {
     // Update the MPC state
     P = state.position;
     V = state.velocity;
-    yaw = Pegasus::Rotations::yaw_from_quaternion(state.attitude) 
+    yaw = Pegasus::Rotations::yaw_from_quaternion(state.attitude);
 }
 
 } // namespace autopilot
