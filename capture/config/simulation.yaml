@@ -16,7 +16,7 @@
     # ----------------------------------------------------------------------------------------------------------
     autopilot:
       # Update rate
-      rate: 33.0 # Hz
+      rate: 10.0 # Hz
       # ----------------------------------------------------------------------------------------------------------
       # Definition of the controller that will perform the tracking of references of the different operation modes
       # ----------------------------------------------------------------------------------------------------------
@@ -72,6 +72,11 @@
         fallback: "HoldMode"
         on_finish: "HoldMode"
         target_state_topic: "target"
+        gains:
+          Kp: 1.0
+          Kv: 2.0
+          Kpz: 1.0
+          Kvz: 3.0
       DisarmMode: 
         valid_transitions: ["ArmMode"]
         fallback: "DisarmMode"
