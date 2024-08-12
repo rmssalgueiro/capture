@@ -18,7 +18,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdarg.h>
-#include "px4_ros_com/gen.h"
+#include "capture_modes/gen.h"
 
 #ifndef casadi_real
 #define casadi_real double

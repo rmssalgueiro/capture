@@ -42,26 +42,28 @@ void CaptureTargetMode::initialize() {
 void CaptureTargetMode::compile_mpc_controller() {
 
     std::string file_name = "gen";
-    std::string prefix_code = ament_index_cpp::get_package_share_directory("capture_modes") + "/include/";
+    std::string lib_path = ament_index_cpp::get_package_share_directory("capture_modes");
 
-    // Check if the .so file already exists
-    std::ifstream file(prefix_code + file_name + ".so");
+    // Remove the unnecessary part of the path
+    std::string toErase = "/share/capture_modes";
+    size_t pos = lib_path.find(toErase);
+    lib_path.erase(pos, toErase.length());
+
+    // Add the path to the .so file
+    lib_path = lib_path + "/lib/libgen.so";
+
+    // Check if the .so file exists
+    std::ifstream file(lib_path);
     if (file.good()) {
-        RCLCPP_INFO(this->node_->get_logger(), "MPC controller already compiled");
-        return;
-    } else {
-        RCLCPP_INFO(this->node_->get_logger(), "Compiling MPC controller");
-        // compile C++ code to a shared library
-        std::string compile_command = "gcc -fPIC -shared -O3 " +  prefix_code + file_name + ".cpp -o " + prefix_code + file_name + ".so";
-        int compile_flag = std::system(compile_command.c_str());
-        
-        if (compile_flag != 0) {
-            RCLCPP_ERROR(this->node_->get_logger(), "Compilation failed");
-        }
-    }
 
-    // Use CasADi's "external" to load the compiled function
-    mpc_controller_ = casadi::external("F", prefix_code);
+        // Use CasADi's "external" to load the compiled function
+        mpc_controller_ = casadi::external("F", lib_path);
+        RCLCPP_INFO(this->node_->get_logger(), "MPC controller already compiled");
+
+    } else {
+        throw std::runtime_error("MPC controller not compiled - libgen.so not found");
+    } 
+
 }
 
 bool CaptureTargetMode::enter() {

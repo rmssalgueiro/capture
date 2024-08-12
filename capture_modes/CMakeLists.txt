@@ -61,6 +61,25 @@ install(
   RUNTIME DESTINATION bin
 )
 
+# Library for the pre-generated Casadi optimization code
+add_library(gen src/gen.cpp)
+set_target_properties(gen PROPERTIES COMPILE_FLAGS "-fPIC -shared -O3")
+
+target_include_directories(gen PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+  $<INSTALL_INTERFACE:include>
+)
+
+target_link_libraries(gen casadi)
+
+install(
+  TARGETS gen
+  EXPORT export_gen
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib
+  RUNTIME DESTINATION bin
+)
+
 # Causes the visibility macros to use dllexport rather than dllimport,
 # which is appropriate when building the dll but not consuming it.
 target_compile_definitions(${PROJECT_NAME} PRIVATE "AUTOPILOT_MODES_BUILDING_LIBRARY")
