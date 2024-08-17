@@ -1,0 +1,1 @@
+/home/ricardo22/capture/src/build/box_geofencing/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake

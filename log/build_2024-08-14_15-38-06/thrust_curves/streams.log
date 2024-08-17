@@ -1,0 +1,30 @@
+[0.056s] Invoking command in '/home/ricardo22/capture/src/build/thrust_curves': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ricardo22/capture/install/pegasus_demos:/home/ricardo22/capture/install/capture_missions:/opt/ros/humble /usr/bin/cmake --build /home/ricardo22/capture/src/build/thrust_curves -- -j8 -l8
+[0.197s] [100%] Built target thrust_curves
+[0.229s] Invoked command in '/home/ricardo22/capture/src/build/thrust_curves' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ricardo22/capture/install/pegasus_demos:/home/ricardo22/capture/install/capture_missions:/opt/ros/humble /usr/bin/cmake --build /home/ricardo22/capture/src/build/thrust_curves -- -j8 -l8
+[0.380s] Invoking command in '/home/ricardo22/capture/src/build/thrust_curves': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ricardo22/capture/install/pegasus_demos:/home/ricardo22/capture/install/capture_missions:/opt/ros/humble /usr/bin/cmake --install /home/ricardo22/capture/src/build/thrust_curves
+[0.408s] -- Install configuration: ""
+[0.411s] -- Execute custom install script
+[0.413s] -- Up-to-date symlink: /home/ricardo22/capture/src/install/thrust_curves/include/thrust_curves/thrust_curves.hpp
+[0.416s] -- Up-to-date symlink: /home/ricardo22/capture/src/install/thrust_curves/share/thrust_curves/environment/library_path.sh
+[0.417s] -- Up-to-date symlink: /home/ricardo22/capture/src/install/thrust_curves/share/thrust_curves/environment/library_path.dsv
+[0.417s] -- Up-to-date symlink: /home/ricardo22/capture/src/install/thrust_curves/share/ament_index/resource_index/package_run_dependencies/thrust_curves
+[0.417s] -- Up-to-date symlink: /home/ricardo22/capture/src/install/thrust_curves/share/ament_index/resource_index/parent_prefix_path/thrust_curves
+[0.418s] -- Up-to-date symlink: /home/ricardo22/capture/src/install/thrust_curves/share/thrust_curves/environment/ament_prefix_path.sh
+[0.418s] -- Up-to-date symlink: /home/ricardo22/capture/src/install/thrust_curves/share/thrust_curves/environment/ament_prefix_path.dsv
+[0.419s] -- Up-to-date symlink: /home/ricardo22/capture/src/install/thrust_curves/share/thrust_curves/environment/path.sh
+[0.419s] -- Up-to-date symlink: /home/ricardo22/capture/src/install/thrust_curves/share/thrust_curves/environment/path.dsv
+[0.419s] -- Up-to-date symlink: /home/ricardo22/capture/src/install/thrust_curves/share/thrust_curves/local_setup.bash
+[0.419s] -- Up-to-date symlink: /home/ricardo22/capture/src/install/thrust_curves/share/thrust_curves/local_setup.sh
+[0.419s] -- Up-to-date symlink: /home/ricardo22/capture/src/install/thrust_curves/share/thrust_curves/local_setup.zsh
+[0.419s] -- Up-to-date symlink: /home/ricardo22/capture/src/install/thrust_curves/share/thrust_curves/local_setup.dsv
+[0.420s] -- Symlinking: /home/ricardo22/capture/src/install/thrust_curves/share/thrust_curves/package.dsv
+[0.444s] -- Up-to-date symlink: /home/ricardo22/capture/src/install/thrust_curves/share/ament_index/resource_index/packages/thrust_curves
+[0.445s] -- Up-to-date symlink: /home/ricardo22/capture/src/install/thrust_curves/share/thrust_curves/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.445s] -- Up-to-date symlink: /home/ricardo22/capture/src/install/thrust_curves/share/thrust_curves/cmake/ament_cmake_export_targets-extras.cmake
+[0.445s] -- Up-to-date symlink: /home/ricardo22/capture/src/install/thrust_curves/share/thrust_curves/cmake/thrust_curvesConfig.cmake
+[0.445s] -- Up-to-date symlink: /home/ricardo22/capture/src/install/thrust_curves/share/thrust_curves/cmake/thrust_curvesConfig-version.cmake
+[0.445s] -- Up-to-date symlink: /home/ricardo22/capture/src/install/thrust_curves/share/thrust_curves/package.xml
+[0.447s] -- Up-to-date: /home/ricardo22/capture/src/install/thrust_curves/lib/libthrust_curves.a
+[0.447s] -- Up-to-date: /home/ricardo22/capture/src/install/thrust_curves/share/thrust_curves/cmake/thrust_curvesTargetsExport.cmake
+[0.447s] -- Up-to-date: /home/ricardo22/capture/src/install/thrust_curves/share/thrust_curves/cmake/thrust_curvesTargetsExport-noconfig.cmake
+[0.479s] Invoked command in '/home/ricardo22/capture/src/build/thrust_curves' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ricardo22/capture/install/pegasus_demos:/home/ricardo22/capture/install/capture_missions:/opt/ros/humble /usr/bin/cmake --install /home/ricardo22/capture/src/build/thrust_curves

@@ -1,0 +1,21 @@
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture/share/capture/config/mb690b.yaml
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture/share/capture/config/simulation.yaml
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture/share/capture/launch/mb690b.launch.py
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture/share/capture/launch/sim.launch.py
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture/share/ament_index/resource_index/package_run_dependencies/capture
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture/share/ament_index/resource_index/parent_prefix_path/capture
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture/share/capture/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture/share/capture/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture/share/capture/environment/path.sh
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture/share/capture/environment/path.dsv
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture/share/capture/local_setup.bash
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture/share/capture/local_setup.sh
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture/share/capture/local_setup.zsh
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture/share/capture/local_setup.dsv
+-- Symlinking: /home/ricardo22/capture/src/install/capture/share/capture/package.dsv
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture/share/ament_index/resource_index/packages/capture
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture/share/capture/cmake/captureConfig.cmake
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture/share/capture/cmake/captureConfig-version.cmake
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture/share/capture/package.xml

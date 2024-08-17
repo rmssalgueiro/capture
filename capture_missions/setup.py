@@ -20,7 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'capture_mission=capture_missions.mission:main'
+            'mission=capture_missions.mission:main'
         ],
     },
 )

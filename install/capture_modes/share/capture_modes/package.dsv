@@ -1,0 +1,11 @@
+source;share/capture_modes/hook/cmake_prefix_path.ps1
+source;share/capture_modes/hook/cmake_prefix_path.dsv
+source;share/capture_modes/hook/cmake_prefix_path.sh
+source;share/capture_modes/hook/ld_library_path_lib.ps1
+source;share/capture_modes/hook/ld_library_path_lib.dsv
+source;share/capture_modes/hook/ld_library_path_lib.sh
+source;share/capture_modes/local_setup.bash
+source;share/capture_modes/local_setup.dsv
+source;share/capture_modes/local_setup.ps1
+source;share/capture_modes/local_setup.sh
+source;share/capture_modes/local_setup.zsh

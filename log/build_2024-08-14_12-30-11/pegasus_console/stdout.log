@@ -1,0 +1,133 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rclcpp: 16.0.9 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+-- Found FastRTPS: /opt/ros/humble/include  
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)
+-- Found pegasus_msgs: 1.0.0 (/home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/cmake)
+-- Found pegasus_utils: 1.0.0 (/home/ricardo22/capture/src/install/pegasus_utils/share/pegasus_utils/cmake)
+-- clang-tidy not found.
+-- ftxui_set_options screen
+-- ftxui_set_options dom
+-- ftxui_set_options component
+-- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
+-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: /home/ricardo22/capture/src/pegasus/pegasus_console/include/pegasus_console
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/ricardo22/capture/src/build/pegasus_console
+[  0%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/screen.dir/src/ftxui/screen/color.cpp.o[0m
+[  3%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/screen.dir/src/ftxui/screen/box.cpp.o[0m
+[  3%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/screen.dir/src/ftxui/screen/screen.cpp.o[0m
+[  9%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/screen.dir/src/ftxui/screen/color_info.cpp.o[0m
+[  9%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/screen.dir/src/ftxui/screen/string.cpp.o[0m
+[  9%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/screen.dir/src/ftxui/screen/terminal.cpp.o[0m
+[ 12%] [32m[1mLinking CXX static library libftxui-screen.a[0m
+[ 12%] Built target screen
+[ 12%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/bold.cpp.o[0m
+[ 15%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/blink.cpp.o[0m
+[ 15%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/box_helper.cpp.o[0m
+[ 18%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/border.cpp.o[0m
+[ 21%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/canvas.cpp.o[0m
+[ 21%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/automerge.cpp.o[0m
+[ 25%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/color.cpp.o[0m
+[ 25%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/clear_under.cpp.o[0m
+[ 25%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/composite_decorator.cpp.o[0m
+[ 25%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/dbox.cpp.o[0m
+[ 28%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/dim.cpp.o[0m
+[ 28%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/flex.cpp.o[0m
+[ 31%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/flexbox.cpp.o[0m
+[ 31%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/flexbox_config.cpp.o[0m
+[ 34%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/flexbox_helper.cpp.o[0m
+[ 34%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/focus.cpp.o[0m
+[ 34%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/frame.cpp.o[0m
+[ 37%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/gauge.cpp.o[0m
+[ 37%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/graph.cpp.o[0m
+[ 40%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/gridbox.cpp.o[0m
+[ 40%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/hbox.cpp.o[0m
+[ 43%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/inverted.cpp.o[0m
+[ 43%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/linear_gradient.cpp.o[0m
+[ 46%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/node.cpp.o[0m
+[ 46%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/node_decorator.cpp.o[0m
+[ 46%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/paragraph.cpp.o[0m
+[ 50%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/reflect.cpp.o[0m
+[ 50%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/scroll_indicator.cpp.o[0m
+[ 53%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/separator.cpp.o[0m
+[ 53%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/size.cpp.o[0m
+[ 53%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/strikethrough.cpp.o[0m
+[ 56%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/spinner.cpp.o[0m
+[ 59%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/table.cpp.o[0m
+[ 59%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/text.cpp.o[0m
+[ 59%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/underlined.cpp.o[0m
+[ 62%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/underlined_double.cpp.o[0m
+[ 62%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/util.cpp.o[0m
+[ 65%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/dom.dir/src/ftxui/dom/vbox.cpp.o[0m
+[ 65%] [32m[1mLinking CXX static library libftxui-dom.a[0m
+[ 65%] Built target dom
+[ 65%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/component.dir/src/ftxui/component/button.cpp.o[0m
+[ 71%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/component.dir/src/ftxui/component/catch_event.cpp.o[0m
+[ 71%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/component.dir/src/ftxui/component/collapsible.cpp.o[0m
+[ 71%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/component.dir/src/ftxui/component/checkbox.cpp.o[0m
+[ 71%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/component.dir/src/ftxui/component/animation.cpp.o[0m
+[ 71%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/component.dir/src/ftxui/component/component.cpp.o[0m
+[ 75%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/component.dir/src/ftxui/component/component_options.cpp.o[0m
+[ 75%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/component.dir/src/ftxui/component/container.cpp.o[0m
+[ 75%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/component.dir/src/ftxui/component/dropdown.cpp.o[0m
+[ 78%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/component.dir/src/ftxui/component/event.cpp.o[0m
+[ 78%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/component.dir/src/ftxui/component/hoverable.cpp.o[0m
+[ 81%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/component.dir/src/ftxui/component/input.cpp.o[0m
+[ 81%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/component.dir/src/ftxui/component/loop.cpp.o[0m
+[ 84%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/component.dir/src/ftxui/component/maybe.cpp.o[0m
+[ 84%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/component.dir/src/ftxui/component/menu.cpp.o[0m
+[ 87%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/component.dir/src/ftxui/component/modal.cpp.o[0m
+[ 87%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/component.dir/src/ftxui/component/radiobox.cpp.o[0m
+[ 87%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/component.dir/src/ftxui/component/renderer.cpp.o[0m
+[ 90%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/component.dir/src/ftxui/component/resizable_split.cpp.o[0m
+[ 90%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/component.dir/src/ftxui/component/screen_interactive.cpp.o[0m
+[ 93%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/component.dir/src/ftxui/component/slider.cpp.o[0m
+[ 93%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/component.dir/src/ftxui/component/terminal_input_parser.cpp.o[0m
+[ 96%] [32mBuilding CXX object _deps/ftxui-build/CMakeFiles/component.dir/src/ftxui/component/util.cpp.o[0m
+[ 96%] [32m[1mLinking CXX static library libftxui-component.a[0m
+[ 96%] Built target component
+[100%] [32mBuilding CXX object CMakeFiles/pegasus_console.dir/src/console_node.cpp.o[0m
+[100%] [32mBuilding CXX object CMakeFiles/pegasus_console.dir/src/console_ui.cpp.o[0m
+[100%] [32mBuilding CXX object CMakeFiles/pegasus_console.dir/src/main.cpp.o[0m
+[100%] [32m[1mLinking CXX executable pegasus_console[0m
+[100%] Built target pegasus_console

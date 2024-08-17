@@ -1,0 +1,1 @@
+/home/ricardo22/capture/src/build/pegasus_msgs/rosidl_cmake/srv/AddLemniscate_Request.msg

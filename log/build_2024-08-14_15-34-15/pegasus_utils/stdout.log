@@ -1,0 +1,22 @@
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/pegasus_utils/include/pegasus_utils/frames.hpp
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/pegasus_utils/include/pegasus_utils/rotations.hpp
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/pegasus_utils/share/ament_index/resource_index/package_run_dependencies/pegasus_utils
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/pegasus_utils/share/ament_index/resource_index/parent_prefix_path/pegasus_utils
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/pegasus_utils/share/pegasus_utils/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/pegasus_utils/share/pegasus_utils/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/pegasus_utils/share/pegasus_utils/environment/path.sh
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/pegasus_utils/share/pegasus_utils/environment/path.dsv
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/pegasus_utils/share/pegasus_utils/local_setup.bash
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/pegasus_utils/share/pegasus_utils/local_setup.sh
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/pegasus_utils/share/pegasus_utils/local_setup.zsh
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/pegasus_utils/share/pegasus_utils/local_setup.dsv
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_utils/share/pegasus_utils/package.dsv
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/pegasus_utils/share/ament_index/resource_index/packages/pegasus_utils
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/pegasus_utils/share/pegasus_utils/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/pegasus_utils/share/pegasus_utils/cmake/ament_cmake_export_targets-extras.cmake
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/pegasus_utils/share/pegasus_utils/cmake/pegasus_utilsConfig.cmake
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/pegasus_utils/share/pegasus_utils/cmake/pegasus_utilsConfig-version.cmake
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/pegasus_utils/share/pegasus_utils/package.xml
+-- Up-to-date: /home/ricardo22/capture/src/install/pegasus_utils/share/pegasus_utils/cmake/export_pegasus_utilsExport.cmake

@@ -1,0 +1,41 @@
+[ 11%] [32mBuilding CXX object CMakeFiles/autopilot_modes.dir/src/mode_waypoint.cpp.o[0m
+[ 22%] [32m[1mLinking CXX shared library libautopilot_modes.so[0m
+[100%] Built target autopilot_modes
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/autopilot_modes/share/autopilot_modes//autopilot_mode_plugins.xml
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/autopilot_modes/include/autopilot_modes/mode_arm.hpp
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/autopilot_modes/include/autopilot_modes/mode_disarm.hpp
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/autopilot_modes/include/autopilot_modes/mode_follow_trajectory.hpp
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/autopilot_modes/include/autopilot_modes/mode_hold.hpp
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/autopilot_modes/include/autopilot_modes/mode_land.hpp
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/autopilot_modes/include/autopilot_modes/mode_pass_through.hpp
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/autopilot_modes/include/autopilot_modes/mode_takeoff.hpp
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/autopilot_modes/include/autopilot_modes/mode_waypoint.hpp
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/autopilot_modes/include/autopilot_modes/visibility_control.h
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/autopilot_modes/share/autopilot_modes/environment/library_path.sh
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/autopilot_modes/share/autopilot_modes/environment/library_path.dsv
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/autopilot_modes/share/ament_index/resource_index/package_run_dependencies/autopilot_modes
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/autopilot_modes/share/ament_index/resource_index/parent_prefix_path/autopilot_modes
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/autopilot_modes/share/autopilot_modes/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/autopilot_modes/share/autopilot_modes/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/autopilot_modes/share/autopilot_modes/environment/path.sh
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/autopilot_modes/share/autopilot_modes/environment/path.dsv
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/autopilot_modes/share/autopilot_modes/local_setup.bash
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/autopilot_modes/share/autopilot_modes/local_setup.sh
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/autopilot_modes/share/autopilot_modes/local_setup.zsh
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/autopilot_modes/share/autopilot_modes/local_setup.dsv
+-- Symlinking: /home/ricardo22/capture/src/install/autopilot_modes/share/autopilot_modes/package.dsv
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/autopilot_modes/share/ament_index/resource_index/packages/autopilot_modes
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/autopilot_modes/share/ament_index/resource_index/autopilot__pluginlib__plugin/autopilot_modes
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/autopilot_modes/share/autopilot_modes/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/autopilot_modes/share/autopilot_modes/cmake/ament_cmake_export_libraries-extras.cmake
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/autopilot_modes/share/autopilot_modes/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/autopilot_modes/share/autopilot_modes/cmake/ament_cmake_export_targets-extras.cmake
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/autopilot_modes/share/autopilot_modes/cmake/autopilot_modesConfig.cmake
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/autopilot_modes/share/autopilot_modes/cmake/autopilot_modesConfig-version.cmake
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/autopilot_modes/share/autopilot_modes/package.xml
+-- Installing: /home/ricardo22/capture/src/install/autopilot_modes/lib/libautopilot_modes.so
+-- Set runtime path of "/home/ricardo22/capture/src/install/autopilot_modes/lib/libautopilot_modes.so" to ""
+-- Up-to-date: /home/ricardo22/capture/src/install/autopilot_modes/share/autopilot_modes/cmake/export_autopilot_modesExport.cmake
+-- Up-to-date: /home/ricardo22/capture/src/install/autopilot_modes/share/autopilot_modes/cmake/export_autopilot_modesExport-noconfig.cmake

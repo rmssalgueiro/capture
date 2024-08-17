@@ -1,0 +1,54 @@
+[0.061s] Invoking command in '/home/ricardo22/capture/src/build/autopilot_controllers': AMENT_PREFIX_PATH=/home/ricardo22/capture/src/install/autopilot:/home/ricardo22/capture/src/install/thrust_curves:/home/ricardo22/capture/src/install/pegasus_utils:/home/ricardo22/capture/src/install/pegasus_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ricardo22/capture/src/install/autopilot:/home/ricardo22/capture/src/install/thrust_curves:/home/ricardo22/capture/src/install/pegasus_utils:/home/ricardo22/capture/src/install/pegasus_msgs:/home/ricardo22/capture/install/capture:/home/ricardo22/capture/install/pegasus:/home/ricardo22/capture/install/mavlink_interface:/home/ricardo22/capture/install/autopilot_controllers:/home/ricardo22/capture/install/thrust_curves:/home/ricardo22/capture/install/static_trajectories:/home/ricardo22/capture/install/static_trajectory_manager:/home/ricardo22/capture/install/pid:/home/ricardo22/capture/install/pegasus_console:/home/ricardo22/capture/install/capture_modes:/home/ricardo22/capture/install/autopilot_modes:/home/ricardo22/capture/install/pegasus_utils:/home/ricardo22/capture/install/box_geofencing:/home/ricardo22/capture/install/autopilot:/home/ricardo22/capture/install/pegasus_msgs:/home/ricardo22/capture/install/pegasus_gazebo:/home/ricardo22/capture/install/mocap_interface:/home/ricardo22/pegasus_external/install/vrpn_vendor:/home/ricardo22/pegasus_external/install/micro_xrce_vendor:/home/ricardo22/pegasus_external/install/mavsdk_vendor:/home/ricardo22/pegasus_external/install/casadi_vendor:/home/ricardo22/capture/install/pegasus_demos:/home/ricardo22/capture/install/capture_missions:/opt/ros/humble LD_LIBRARY_PATH=/home/ricardo22/capture/src/install/thrust_curves/lib:/home/ricardo22/capture/src/install/pegasus_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/ricardo22/capture/src/pegasus/pegasus_autopilot/autopilot_controllers -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ricardo22/capture/src/install/autopilot_controllers
+[0.183s] -- The C compiler identification is GNU 11.4.0
+[0.307s] -- The CXX compiler identification is GNU 11.4.0
+[0.325s] -- Detecting C compiler ABI info
+[0.486s] -- Detecting C compiler ABI info - done
+[0.501s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.503s] -- Detecting C compile features
+[0.503s] -- Detecting C compile features - done
+[0.511s] -- Detecting CXX compiler ABI info
+[0.684s] -- Detecting CXX compiler ABI info - done
+[0.716s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.716s] -- Detecting CXX compile features
+[0.717s] -- Detecting CXX compile features - done
+[0.730s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.051s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.193s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.320s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.346s] -- Found pegasus_utils: 1.0.0 (/home/ricardo22/capture/src/install/pegasus_utils/share/pegasus_utils/cmake)
+[1.365s] -- Found thrust_curves: 1.0.0 (/home/ricardo22/capture/src/install/thrust_curves/share/thrust_curves/cmake)
+[1.368s] -- Found autopilot: 1.0.0 (/home/ricardo22/capture/src/install/autopilot/share/autopilot/cmake)
+[1.509s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.530s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.558s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.601s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.657s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.858s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.870s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[2.146s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[2.212s] -- Found FastRTPS: /opt/ros/humble/include  
+[2.319s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.353s] -- Looking for pthread.h
+[2.526s] -- Looking for pthread.h - found
+[2.526s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.695s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[2.697s] -- Found Threads: TRUE  
+[3.634s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[3.939s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[3.940s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/ricardo22/capture/src/pegasus/pegasus_autopilot/autopilot_controllers/include>
+[3.941s] -- Configured cppcheck exclude dirs and/or files: 
+[3.944s] -- Added test 'lint_cmake' to check CMake code style
+[3.948s] -- Added test 'uncrustify' to check C / C++ code style
+[3.948s] -- Configured uncrustify additional arguments: 
+[3.951s] -- Added test 'xmllint' to check XML markup files
+[3.967s] -- Configuring done
+[4.087s] -- Generating done
+[4.090s] -- Build files have been written to: /home/ricardo22/capture/src/build/autopilot_controllers
+[4.172s] Invoked command in '/home/ricardo22/capture/src/build/autopilot_controllers' returned '0': AMENT_PREFIX_PATH=/home/ricardo22/capture/src/install/autopilot:/home/ricardo22/capture/src/install/thrust_curves:/home/ricardo22/capture/src/install/pegasus_utils:/home/ricardo22/capture/src/install/pegasus_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ricardo22/capture/src/install/autopilot:/home/ricardo22/capture/src/install/thrust_curves:/home/ricardo22/capture/src/install/pegasus_utils:/home/ricardo22/capture/src/install/pegasus_msgs:/home/ricardo22/capture/install/capture:/home/ricardo22/capture/install/pegasus:/home/ricardo22/capture/install/mavlink_interface:/home/ricardo22/capture/install/autopilot_controllers:/home/ricardo22/capture/install/thrust_curves:/home/ricardo22/capture/install/static_trajectories:/home/ricardo22/capture/install/static_trajectory_manager:/home/ricardo22/capture/install/pid:/home/ricardo22/capture/install/pegasus_console:/home/ricardo22/capture/install/capture_modes:/home/ricardo22/capture/install/autopilot_modes:/home/ricardo22/capture/install/pegasus_utils:/home/ricardo22/capture/install/box_geofencing:/home/ricardo22/capture/install/autopilot:/home/ricardo22/capture/install/pegasus_msgs:/home/ricardo22/capture/install/pegasus_gazebo:/home/ricardo22/capture/install/mocap_interface:/home/ricardo22/pegasus_external/install/vrpn_vendor:/home/ricardo22/pegasus_external/install/micro_xrce_vendor:/home/ricardo22/pegasus_external/install/mavsdk_vendor:/home/ricardo22/pegasus_external/install/casadi_vendor:/home/ricardo22/capture/install/pegasus_demos:/home/ricardo22/capture/install/capture_missions:/opt/ros/humble LD_LIBRARY_PATH=/home/ricardo22/capture/src/install/thrust_curves/lib:/home/ricardo22/capture/src/install/pegasus_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/ricardo22/capture/src/pegasus/pegasus_autopilot/autopilot_controllers -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ricardo22/capture/src/install/autopilot_controllers
+[4.173s] Invoking command in '/home/ricardo22/capture/src/build/autopilot_controllers': AMENT_PREFIX_PATH=/home/ricardo22/capture/src/install/autopilot:/home/ricardo22/capture/src/install/thrust_curves:/home/ricardo22/capture/src/install/pegasus_utils:/home/ricardo22/capture/src/install/pegasus_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ricardo22/capture/src/install/autopilot:/home/ricardo22/capture/src/install/thrust_curves:/home/ricardo22/capture/src/install/pegasus_utils:/home/ricardo22/capture/src/install/pegasus_msgs:/home/ricardo22/capture/install/capture:/home/ricardo22/capture/install/pegasus:/home/ricardo22/capture/install/mavlink_interface:/home/ricardo22/capture/install/autopilot_controllers:/home/ricardo22/capture/install/thrust_curves:/home/ricardo22/capture/install/static_trajectories:/home/ricardo22/capture/install/static_trajectory_manager:/home/ricardo22/capture/install/pid:/home/ricardo22/capture/install/pegasus_console:/home/ricardo22/capture/install/capture_modes:/home/ricardo22/capture/install/autopilot_modes:/home/ricardo22/capture/install/pegasus_utils:/home/ricardo22/capture/install/box_geofencing:/home/ricardo22/capture/install/autopilot:/home/ricardo22/capture/install/pegasus_msgs:/home/ricardo22/capture/install/pegasus_gazebo:/home/ricardo22/capture/install/mocap_interface:/home/ricardo22/pegasus_external/install/vrpn_vendor:/home/ricardo22/pegasus_external/install/micro_xrce_vendor:/home/ricardo22/pegasus_external/install/mavsdk_vendor:/home/ricardo22/pegasus_external/install/casadi_vendor:/home/ricardo22/capture/install/pegasus_demos:/home/ricardo22/capture/install/capture_missions:/opt/ros/humble LD_LIBRARY_PATH=/home/ricardo22/capture/src/install/thrust_curves/lib:/home/ricardo22/capture/src/install/pegasus_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ricardo22/capture/src/build/autopilot_controllers -- -j8 -l8
+[4.508s] [ 20%] [32mBuilding CXX object CMakeFiles/autopilot_controllers.dir/src/pid.cpp.o[0m
+[4.524s] [ 40%] [32mBuilding CXX object CMakeFiles/autopilot_controllers.dir/src/pid_controller.cpp.o[0m
+[4.537s] [ 60%] [32mBuilding CXX object CMakeFiles/autopilot_controllers.dir/src/onboard_controller.cpp.o[0m
+[4.542s] [ 80%] [32mBuilding CXX object CMakeFiles/autopilot_controllers.dir/src/mellinger_controller.cpp.o[0m
+[35.137s] [100%] [32m[1mLinking CXX shared library libautopilot_controllers.so[0m
+[35.569s] [100%] Built target autopilot_controllers

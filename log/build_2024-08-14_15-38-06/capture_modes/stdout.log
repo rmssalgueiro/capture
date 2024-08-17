@@ -1,0 +1,33 @@
+[ 50%] Built target capture_modes
+[100%] Built target gen
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture_modes/share/capture_modes//autopilot_mode_plugins.xml
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture_modes/include/capture_modes/gen.h
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture_modes/include/capture_modes/mode_capture_target.hpp
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture_modes/share/capture_modes/environment/library_path.sh
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture_modes/share/capture_modes/environment/library_path.dsv
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture_modes/share/ament_index/resource_index/package_run_dependencies/capture_modes
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture_modes/share/ament_index/resource_index/parent_prefix_path/capture_modes
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture_modes/share/capture_modes/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture_modes/share/capture_modes/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture_modes/share/capture_modes/environment/path.sh
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture_modes/share/capture_modes/environment/path.dsv
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture_modes/share/capture_modes/local_setup.bash
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture_modes/share/capture_modes/local_setup.sh
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture_modes/share/capture_modes/local_setup.zsh
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture_modes/share/capture_modes/local_setup.dsv
+-- Symlinking: /home/ricardo22/capture/src/install/capture_modes/share/capture_modes/package.dsv
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture_modes/share/ament_index/resource_index/packages/capture_modes
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture_modes/share/ament_index/resource_index/autopilot__pluginlib__plugin/capture_modes
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture_modes/share/capture_modes/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture_modes/share/capture_modes/cmake/ament_cmake_export_libraries-extras.cmake
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture_modes/share/capture_modes/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture_modes/share/capture_modes/cmake/ament_cmake_export_targets-extras.cmake
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture_modes/share/capture_modes/cmake/capture_modesConfig.cmake
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture_modes/share/capture_modes/cmake/capture_modesConfig-version.cmake
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/capture_modes/share/capture_modes/package.xml
+-- Up-to-date: /home/ricardo22/capture/src/install/capture_modes/lib/libcapture_modes.so
+-- Up-to-date: /home/ricardo22/capture/src/install/capture_modes/lib/libgen.so
+-- Up-to-date: /home/ricardo22/capture/src/install/capture_modes/share/capture_modes/cmake/export_capture_modesExport.cmake
+-- Up-to-date: /home/ricardo22/capture/src/install/capture_modes/share/capture_modes/cmake/export_capture_modesExport-noconfig.cmake

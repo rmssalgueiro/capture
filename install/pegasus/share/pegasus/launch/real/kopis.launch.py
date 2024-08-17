@@ -1,0 +1,1 @@
+/home/ricardo22/capture/src/pegasus/pegasus/launch/real/kopis.launch.py

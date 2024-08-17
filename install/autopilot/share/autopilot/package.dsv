@@ -1,0 +1,8 @@
+source;share/autopilot/hook/cmake_prefix_path.ps1
+source;share/autopilot/hook/cmake_prefix_path.dsv
+source;share/autopilot/hook/cmake_prefix_path.sh
+source;share/autopilot/local_setup.bash
+source;share/autopilot/local_setup.dsv
+source;share/autopilot/local_setup.ps1
+source;share/autopilot/local_setup.sh
+source;share/autopilot/local_setup.zsh

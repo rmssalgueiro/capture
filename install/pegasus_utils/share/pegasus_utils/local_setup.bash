@@ -1,0 +1,1 @@
+/home/ricardo22/capture/src/build/pegasus_utils/ament_cmake_environment_hooks/local_setup.bash

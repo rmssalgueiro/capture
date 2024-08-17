@@ -107,6 +107,7 @@
       WaypointMode: 
         valid_transitions: ["LandMode", "HoldMode", "FollowTrajectoryMode", "PassThroughMode", "CaptureTargetMode"]
         fallback: "HoldMode"
+        on_finish: "HoldMode"
         geofencing_violation_fallback: "HoldMode"
         set_waypoint_service: "autopilot/set_waypoint"
       FollowTrajectoryMode: 

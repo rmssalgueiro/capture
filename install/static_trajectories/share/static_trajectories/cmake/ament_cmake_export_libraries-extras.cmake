@@ -1,0 +1,1 @@
+/home/ricardo22/capture/src/build/static_trajectories/ament_cmake_export_libraries/ament_cmake_export_libraries-extras.cmake

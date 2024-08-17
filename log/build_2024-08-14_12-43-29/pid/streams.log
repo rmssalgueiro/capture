@@ -1,0 +1,30 @@
+[0.042s] Invoking command in '/home/ricardo22/capture/src/build/pid': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ricardo22/capture/install/pegasus_demos:/home/ricardo22/capture/install/capture_missions:/opt/ros/humble /usr/bin/cmake --build /home/ricardo22/capture/src/build/pid -- -j8 -l8
+[0.125s] [35m[1mConsolidate compiler generated dependencies of target pid[0m
+[0.164s] [100%] Built target pid
+[0.234s] Invoked command in '/home/ricardo22/capture/src/build/pid' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ricardo22/capture/install/pegasus_demos:/home/ricardo22/capture/install/capture_missions:/opt/ros/humble /usr/bin/cmake --build /home/ricardo22/capture/src/build/pid -- -j8 -l8
+[0.410s] Invoking command in '/home/ricardo22/capture/src/build/pid': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ricardo22/capture/install/pegasus_demos:/home/ricardo22/capture/install/capture_missions:/opt/ros/humble /usr/bin/cmake --install /home/ricardo22/capture/src/build/pid
+[0.433s] -- Install configuration: ""
+[0.433s] -- Execute custom install script
+[0.433s] -- Up-to-date symlink: /home/ricardo22/capture/src/install/pid/include/pid/pid.hpp
+[0.433s] -- Up-to-date symlink: /home/ricardo22/capture/src/install/pid/share/pid/environment/library_path.sh
+[0.435s] -- Up-to-date symlink: /home/ricardo22/capture/src/install/pid/share/pid/environment/library_path.dsv
+[0.436s] -- Up-to-date symlink: /home/ricardo22/capture/src/install/pid/share/ament_index/resource_index/package_run_dependencies/pid
+[0.437s] -- Up-to-date symlink: /home/ricardo22/capture/src/install/pid/share/ament_index/resource_index/parent_prefix_path/pid
+[0.438s] -- Up-to-date symlink: /home/ricardo22/capture/src/install/pid/share/pid/environment/ament_prefix_path.sh
+[0.438s] -- Up-to-date symlink: /home/ricardo22/capture/src/install/pid/share/pid/environment/ament_prefix_path.dsv
+[0.438s] -- Up-to-date symlink: /home/ricardo22/capture/src/install/pid/share/pid/environment/path.sh
+[0.438s] -- Up-to-date symlink: /home/ricardo22/capture/src/install/pid/share/pid/environment/path.dsv
+[0.438s] -- Up-to-date symlink: /home/ricardo22/capture/src/install/pid/share/pid/local_setup.bash
+[0.439s] -- Up-to-date symlink: /home/ricardo22/capture/src/install/pid/share/pid/local_setup.sh
+[0.443s] -- Up-to-date symlink: /home/ricardo22/capture/src/install/pid/share/pid/local_setup.zsh
+[0.443s] -- Up-to-date symlink: /home/ricardo22/capture/src/install/pid/share/pid/local_setup.dsv
+[0.444s] -- Symlinking: /home/ricardo22/capture/src/install/pid/share/pid/package.dsv
+[0.456s] -- Up-to-date symlink: /home/ricardo22/capture/src/install/pid/share/ament_index/resource_index/packages/pid
+[0.456s] -- Up-to-date symlink: /home/ricardo22/capture/src/install/pid/share/pid/cmake/ament_cmake_export_targets-extras.cmake
+[0.456s] -- Up-to-date symlink: /home/ricardo22/capture/src/install/pid/share/pid/cmake/pidConfig.cmake
+[0.457s] -- Up-to-date symlink: /home/ricardo22/capture/src/install/pid/share/pid/cmake/pidConfig-version.cmake
+[0.457s] -- Up-to-date symlink: /home/ricardo22/capture/src/install/pid/share/pid/package.xml
+[0.457s] -- Up-to-date: /home/ricardo22/capture/src/install/pid/lib/libpid.a
+[0.457s] -- Up-to-date: /home/ricardo22/capture/src/install/pid/share/pid/cmake/pidTargetsExport.cmake
+[0.457s] -- Up-to-date: /home/ricardo22/capture/src/install/pid/share/pid/cmake/pidTargetsExport-noconfig.cmake
+[0.473s] Invoked command in '/home/ricardo22/capture/src/build/pid' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ricardo22/capture/install/pegasus_demos:/home/ricardo22/capture/install/capture_missions:/opt/ros/humble /usr/bin/cmake --install /home/ricardo22/capture/src/build/pid

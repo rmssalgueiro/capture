@@ -7,12 +7,18 @@ namespace autopilot {
 CaptureTargetMode::~CaptureTargetMode() {}
 
 void CaptureTargetMode::initialize() {
-
+    /*
     // Initialize the target state subscribers
     node_->declare_parameter<std::string>("autopilot.CaptureTargetMode.target_state_topic", "target_state"); 
     
     target_sub_ = node_->create_subscription<nav_msgs::msg::Odometry>(
         node_->get_parameter("autopilot.CaptureTargetMode.target_state_topic").as_string(), 
+        rclcpp::SensorDataQoS(), 
+        std::bind(&CaptureTargetMode::target_state_callback, this, std::placeholders::_1)
+    );
+    */
+    target_sub_ = node_->create_subscription<nav_msgs::msg::Odometry>(
+        "/drone2/fmu/filter/state", 
         rclcpp::SensorDataQoS(), 
         std::bind(&CaptureTargetMode::target_state_callback, this, std::placeholders::_1)
     );
@@ -76,10 +82,9 @@ void CaptureTargetMode::update(double dt) {
     update_vehicle_state();
 
     // Check if we need to change MPC on
-    if((Pd[0] + 0.7 > 28 && Pd[0] - 0.7 < 28) && (Pd[1] + 0.7 > 5 && Pd[1] - 0.7 < 5)) {
+    if((Pd[0] + 1 > 28 && Pd[0] - 1 < 28) && (Pd[1] + 1 > 5 && Pd[1] - 1 < 5)) {
 	   operation_mode_ = OperationMode::MPC_ON;
     }
-
     // Apply the correct control mode
     if (operation_mode_ == OperationMode::MPC_ON) {
         mode_mpc_on();
@@ -91,8 +96,24 @@ void CaptureTargetMode::update(double dt) {
     this->controller_->set_inertial_velocity(velocity_, Pegasus::Rotations::rad_to_deg(yawd), dt);
 }
 
+bool CaptureTargetMode::check_finished() {
+    
+    update_vehicle_state();
+
+    if((P[0] + 1 > 0 && P[0] - 1 < 0) && (P[1] + 1 > 5 && P[1] - 1 < 5)) {
+        
+        signal_mode_finished();
+        RCLCPP_INFO_STREAM(node_->get_logger(), "Capture finished.");
+        return true;
+        }
+    
+    
+    return false;
+}
+
 void CaptureTargetMode::mode_mpc_on() {
 
+    
     // Create the state vector for the MPC
     x0 = casadi::DM::vertcat({P(0), P(1), P(2), V(0), V(1), V(2), yaw, Pd(0), Pd(1), Pd(2), Vd(0), Vd(1), Vd(2), yawd});
     
@@ -116,6 +137,8 @@ void CaptureTargetMode::mode_mpc_on() {
     velocity_[0] = static_cast<double>(result_matrix(3,1));
     velocity_[1] = static_cast<double>(result_matrix(4,1));
     velocity_[2] = static_cast<double>(result_matrix(5,1));
+
+    check_finished();
 }
 
 void CaptureTargetMode::mode_mpc_off() {

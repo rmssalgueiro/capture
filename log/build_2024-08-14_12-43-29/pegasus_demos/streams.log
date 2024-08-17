@@ -1,0 +1,19 @@
+[1.469s] Invoking command in '/home/ricardo22/capture/src/build/pegasus_demos': AMENT_PREFIX_PATH=/home/ricardo22/capture/src/install/pegasus_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ricardo22/capture/src/install/pegasus_msgs:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/ricardo22/capture/src/install/pegasus_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ricardo22/capture/src/build/pegasus_demos/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ricardo22/capture/src/install/pegasus_demos/lib/python3.10/site-packages:/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/ricardo22/capture/src/build/pegasus_demos/build --no-deps symlink_data
+[2.013s] running develop
+[2.014s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[2.014s]   warnings.warn(
+[2.331s] running egg_info
+[2.331s] writing pegasus_demos.egg-info/PKG-INFO
+[2.331s] writing dependency_links to pegasus_demos.egg-info/dependency_links.txt
+[2.332s] writing entry points to pegasus_demos.egg-info/entry_points.txt
+[2.332s] writing requirements to pegasus_demos.egg-info/requires.txt
+[2.332s] writing top-level names to pegasus_demos.egg-info/top_level.txt
+[2.335s] reading manifest file 'pegasus_demos.egg-info/SOURCES.txt'
+[2.336s] writing manifest file 'pegasus_demos.egg-info/SOURCES.txt'
+[2.339s] running build_ext
+[2.339s] Creating /home/ricardo22/capture/src/install/pegasus_demos/lib/python3.10/site-packages/pegasus-demos.egg-link (link to .)
+[2.341s] Installing pegasus_demos script to /home/ricardo22/capture/src/install/pegasus_demos/lib/pegasus_demos
+[2.342s] 
+[2.342s] Installed /home/ricardo22/capture/src/build/pegasus_demos
+[2.342s] running symlink_data
+[2.428s] Invoked command in '/home/ricardo22/capture/src/build/pegasus_demos' returned '0': AMENT_PREFIX_PATH=/home/ricardo22/capture/src/install/pegasus_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ricardo22/capture/src/install/pegasus_msgs:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/ricardo22/capture/src/install/pegasus_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ricardo22/capture/src/build/pegasus_demos/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ricardo22/capture/src/install/pegasus_demos/lib/python3.10/site-packages:/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/ricardo22/capture/src/build/pegasus_demos/build --no-deps symlink_data

@@ -1,0 +1,35 @@
+[35m[1mConsolidate compiler generated dependencies of target autopilot_controllers[0m
+[100%] Built target autopilot_controllers
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/ricardo22/capture/src/install/autopilot_controllers/share/autopilot_controllers//autopilot_controller_plugins.xml
+-- Symlinking: /home/ricardo22/capture/src/install/autopilot_controllers/include/autopilot_controllers/mellinger_controller.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/autopilot_controllers/include/autopilot_controllers/onboard_controller.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/autopilot_controllers/include/autopilot_controllers/pid.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/autopilot_controllers/include/autopilot_controllers/pid_controller.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/autopilot_controllers/share/autopilot_controllers/environment/library_path.sh
+-- Symlinking: /home/ricardo22/capture/src/install/autopilot_controllers/share/autopilot_controllers/environment/library_path.dsv
+-- Symlinking: /home/ricardo22/capture/src/install/autopilot_controllers/share/ament_index/resource_index/package_run_dependencies/autopilot_controllers
+-- Symlinking: /home/ricardo22/capture/src/install/autopilot_controllers/share/ament_index/resource_index/parent_prefix_path/autopilot_controllers
+-- Symlinking: /home/ricardo22/capture/src/install/autopilot_controllers/share/autopilot_controllers/environment/ament_prefix_path.sh
+-- Symlinking: /home/ricardo22/capture/src/install/autopilot_controllers/share/autopilot_controllers/environment/ament_prefix_path.dsv
+-- Symlinking: /home/ricardo22/capture/src/install/autopilot_controllers/share/autopilot_controllers/environment/path.sh
+-- Symlinking: /home/ricardo22/capture/src/install/autopilot_controllers/share/autopilot_controllers/environment/path.dsv
+-- Symlinking: /home/ricardo22/capture/src/install/autopilot_controllers/share/autopilot_controllers/local_setup.bash
+-- Symlinking: /home/ricardo22/capture/src/install/autopilot_controllers/share/autopilot_controllers/local_setup.sh
+-- Symlinking: /home/ricardo22/capture/src/install/autopilot_controllers/share/autopilot_controllers/local_setup.zsh
+-- Symlinking: /home/ricardo22/capture/src/install/autopilot_controllers/share/autopilot_controllers/local_setup.dsv
+-- Symlinking: /home/ricardo22/capture/src/install/autopilot_controllers/share/autopilot_controllers/package.dsv
+-- Symlinking: /home/ricardo22/capture/src/install/autopilot_controllers/share/ament_index/resource_index/packages/autopilot_controllers
+-- Symlinking: /home/ricardo22/capture/src/install/autopilot_controllers/share/ament_index/resource_index/autopilot__pluginlib__plugin/autopilot_controllers
+-- Symlinking: /home/ricardo22/capture/src/install/autopilot_controllers/share/autopilot_controllers/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Symlinking: /home/ricardo22/capture/src/install/autopilot_controllers/share/autopilot_controllers/cmake/ament_cmake_export_libraries-extras.cmake
+-- Symlinking: /home/ricardo22/capture/src/install/autopilot_controllers/share/autopilot_controllers/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Symlinking: /home/ricardo22/capture/src/install/autopilot_controllers/share/autopilot_controllers/cmake/ament_cmake_export_targets-extras.cmake
+-- Symlinking: /home/ricardo22/capture/src/install/autopilot_controllers/share/autopilot_controllers/cmake/autopilot_controllersConfig.cmake
+-- Symlinking: /home/ricardo22/capture/src/install/autopilot_controllers/share/autopilot_controllers/cmake/autopilot_controllersConfig-version.cmake
+-- Symlinking: /home/ricardo22/capture/src/install/autopilot_controllers/share/autopilot_controllers/package.xml
+-- Installing: /home/ricardo22/capture/src/install/autopilot_controllers/lib/libautopilot_controllers.so
+-- Set runtime path of "/home/ricardo22/capture/src/install/autopilot_controllers/lib/libautopilot_controllers.so" to ""
+-- Installing: /home/ricardo22/capture/src/install/autopilot_controllers/share/autopilot_controllers/cmake/export_autopilot_controllersExport.cmake
+-- Installing: /home/ricardo22/capture/src/install/autopilot_controllers/share/autopilot_controllers/cmake/export_autopilot_controllersExport-noconfig.cmake

@@ -1,0 +1,68 @@
+[0.057s] Invoking command in '/home/ricardo22/capture/src/build/mavlink_interface': AMENT_PREFIX_PATH=/home/ricardo22/capture/src/install/thrust_curves:/home/ricardo22/capture/src/install/pegasus_utils:/home/ricardo22/capture/src/install/pegasus_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ricardo22/capture/src/install/thrust_curves:/home/ricardo22/capture/src/install/pegasus_utils:/home/ricardo22/capture/src/install/pegasus_msgs:/home/ricardo22/capture/install/capture:/home/ricardo22/capture/install/pegasus:/home/ricardo22/capture/install/mavlink_interface:/home/ricardo22/capture/install/autopilot_controllers:/home/ricardo22/capture/install/thrust_curves:/home/ricardo22/capture/install/static_trajectories:/home/ricardo22/capture/install/static_trajectory_manager:/home/ricardo22/capture/install/pid:/home/ricardo22/capture/install/pegasus_console:/home/ricardo22/capture/install/capture_modes:/home/ricardo22/capture/install/autopilot_modes:/home/ricardo22/capture/install/pegasus_utils:/home/ricardo22/capture/install/box_geofencing:/home/ricardo22/capture/install/autopilot:/home/ricardo22/capture/install/pegasus_msgs:/home/ricardo22/capture/install/pegasus_gazebo:/home/ricardo22/capture/install/mocap_interface:/home/ricardo22/pegasus_external/install/vrpn_vendor:/home/ricardo22/pegasus_external/install/micro_xrce_vendor:/home/ricardo22/pegasus_external/install/mavsdk_vendor:/home/ricardo22/pegasus_external/install/casadi_vendor:/home/ricardo22/capture/install/pegasus_demos:/home/ricardo22/capture/install/capture_missions:/opt/ros/humble LD_LIBRARY_PATH=/home/ricardo22/capture/src/install/thrust_curves/lib:/home/ricardo22/capture/src/install/pegasus_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/ricardo22/capture/src/pegasus/pegasus_interfaces/mavlink_interface -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ricardo22/capture/src/install/mavlink_interface
+[0.472s] -- The C compiler identification is GNU 11.4.0
+[0.472s] -- The CXX compiler identification is GNU 11.4.0
+[0.472s] -- Detecting C compiler ABI info
+[0.472s] -- Detecting C compiler ABI info - done
+[0.472s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.472s] -- Detecting C compile features
+[0.472s] -- Detecting C compile features - done
+[0.472s] -- Detecting CXX compiler ABI info
+[0.538s] -- Detecting CXX compiler ABI info - done
+[0.552s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.552s] -- Detecting CXX compile features
+[0.553s] -- Detecting CXX compile features - done
+[0.563s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.803s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.901s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.019s] -- Found rclcpp: 16.0.9 (/opt/ros/humble/share/rclcpp/cmake)
+[1.152s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.172s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.197s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.235s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.288s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.472s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.480s] -- Found rmw_fastrtps_cpp: 6.2.6 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.676s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.728s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.821s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.846s] -- Looking for pthread.h
+[1.971s] -- Looking for pthread.h - found
+[1.971s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.087s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[2.089s] -- Found Threads: TRUE  
+[2.302s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[2.484s] -- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)
+[2.596s] -- Found pegasus_msgs: 1.0.0 (/home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/cmake)
+[2.709s] -- Found pegasus_utils: 1.0.0 (/home/ricardo22/capture/src/install/pegasus_utils/share/pegasus_utils/cmake)
+[2.725s] -- Found thrust_curves: 1.0.0 (/home/ricardo22/capture/src/install/thrust_curves/share/thrust_curves/cmake)
+[2.730s] -- Found mavsdk_vendor: 2.0.1 (/home/ricardo22/pegasus_external/install/mavsdk_vendor/share/mavsdk_vendor/cmake)
+[2.753s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.935s] -- Added test 'copyright' to check source files copyright and LICENSE
+[2.938s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.938s] -- Configured cppcheck include dirs: /home/ricardo22/capture/src/pegasus/pegasus_interfaces/mavlink_interface/include/mavlink_interface
+[2.938s] -- Configured cppcheck exclude dirs and/or files: 
+[2.941s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[2.941s] -- Configured cpplint exclude dirs and/or files: 
+[2.942s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.944s] -- Added test 'lint_cmake' to check CMake code style
+[2.945s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[2.948s] -- Added test 'uncrustify' to check C / C++ code style
+[2.948s] -- Configured uncrustify additional arguments: 
+[2.949s] -- Added test 'xmllint' to check XML markup files
+[2.953s] -- Configuring done
+[2.971s] -- Generating done
+[2.974s] -- Build files have been written to: /home/ricardo22/capture/src/build/mavlink_interface
+[2.990s] Invoked command in '/home/ricardo22/capture/src/build/mavlink_interface' returned '0': AMENT_PREFIX_PATH=/home/ricardo22/capture/src/install/thrust_curves:/home/ricardo22/capture/src/install/pegasus_utils:/home/ricardo22/capture/src/install/pegasus_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ricardo22/capture/src/install/thrust_curves:/home/ricardo22/capture/src/install/pegasus_utils:/home/ricardo22/capture/src/install/pegasus_msgs:/home/ricardo22/capture/install/capture:/home/ricardo22/capture/install/pegasus:/home/ricardo22/capture/install/mavlink_interface:/home/ricardo22/capture/install/autopilot_controllers:/home/ricardo22/capture/install/thrust_curves:/home/ricardo22/capture/install/static_trajectories:/home/ricardo22/capture/install/static_trajectory_manager:/home/ricardo22/capture/install/pid:/home/ricardo22/capture/install/pegasus_console:/home/ricardo22/capture/install/capture_modes:/home/ricardo22/capture/install/autopilot_modes:/home/ricardo22/capture/install/pegasus_utils:/home/ricardo22/capture/install/box_geofencing:/home/ricardo22/capture/install/autopilot:/home/ricardo22/capture/install/pegasus_msgs:/home/ricardo22/capture/install/pegasus_gazebo:/home/ricardo22/capture/install/mocap_interface:/home/ricardo22/pegasus_external/install/vrpn_vendor:/home/ricardo22/pegasus_external/install/micro_xrce_vendor:/home/ricardo22/pegasus_external/install/mavsdk_vendor:/home/ricardo22/pegasus_external/install/casadi_vendor:/home/ricardo22/capture/install/pegasus_demos:/home/ricardo22/capture/install/capture_missions:/opt/ros/humble LD_LIBRARY_PATH=/home/ricardo22/capture/src/install/thrust_curves/lib:/home/ricardo22/capture/src/install/pegasus_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/ricardo22/capture/src/pegasus/pegasus_interfaces/mavlink_interface -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ricardo22/capture/src/install/mavlink_interface
+[2.992s] Invoking command in '/home/ricardo22/capture/src/build/mavlink_interface': AMENT_PREFIX_PATH=/home/ricardo22/capture/src/install/thrust_curves:/home/ricardo22/capture/src/install/pegasus_utils:/home/ricardo22/capture/src/install/pegasus_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ricardo22/capture/src/install/thrust_curves:/home/ricardo22/capture/src/install/pegasus_utils:/home/ricardo22/capture/src/install/pegasus_msgs:/home/ricardo22/capture/install/capture:/home/ricardo22/capture/install/pegasus:/home/ricardo22/capture/install/mavlink_interface:/home/ricardo22/capture/install/autopilot_controllers:/home/ricardo22/capture/install/thrust_curves:/home/ricardo22/capture/install/static_trajectories:/home/ricardo22/capture/install/static_trajectory_manager:/home/ricardo22/capture/install/pid:/home/ricardo22/capture/install/pegasus_console:/home/ricardo22/capture/install/capture_modes:/home/ricardo22/capture/install/autopilot_modes:/home/ricardo22/capture/install/pegasus_utils:/home/ricardo22/capture/install/box_geofencing:/home/ricardo22/capture/install/autopilot:/home/ricardo22/capture/install/pegasus_msgs:/home/ricardo22/capture/install/pegasus_gazebo:/home/ricardo22/capture/install/mocap_interface:/home/ricardo22/pegasus_external/install/vrpn_vendor:/home/ricardo22/pegasus_external/install/micro_xrce_vendor:/home/ricardo22/pegasus_external/install/mavsdk_vendor:/home/ricardo22/pegasus_external/install/casadi_vendor:/home/ricardo22/capture/install/pegasus_demos:/home/ricardo22/capture/install/capture_missions:/opt/ros/humble LD_LIBRARY_PATH=/home/ricardo22/capture/src/install/thrust_curves/lib:/home/ricardo22/capture/src/install/pegasus_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ricardo22/capture/src/build/mavlink_interface -- -j8 -l8
+[3.082s] [ 50%] [32mBuilding CXX object CMakeFiles/mavlink_interface.dir/src/ros_node.cpp.o[0m
+[3.082s] [ 50%] [32mBuilding CXX object CMakeFiles/mavlink_interface.dir/src/mavlink_node.cpp.o[0m
+[3.084s] [ 75%] [32mBuilding CXX object CMakeFiles/mavlink_interface.dir/src/main.cpp.o[0m
+[12.786s] [01m[K/home/ricardo22/capture/src/pegasus/pegasus_interfaces/mavlink_interface/src/ros_node.cpp:[m[K In member function ‘[01m[Kvoid ROSNode::set_home_position_callback(pegasus_msgs::srv::SetHomePosition_Request_<std::allocator<void> >::SharedPtr, pegasus_msgs::srv::SetHomePosition_Response_<std::allocator<void> >::SharedPtr)[m[K’:
+[12.786s] [01m[K/home/ricardo22/capture/src/pegasus/pegasus_interfaces/mavlink_interface/src/ros_node.cpp:914:103:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krequest[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[12.786s]   914 | void ROSNode::set_home_position_callback([01;35m[Kconst pegasus_msgs::srv::SetHomePosition::Request::SharedPtr request[m[K, const pegasus_msgs::srv::SetHomePosition::Response::SharedPtr response) {
+[12.787s]       |                                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[12.787s] [01m[K/home/ricardo22/capture/src/pegasus/pegasus_interfaces/mavlink_interface/src/ros_node.cpp:914:174:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kresponse[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[12.799s]   914 | void ROSNode::set_home_position_callback(const pegasus_msgs::srv::SetHomePosition::Request::SharedPtr request, [01;35m[Kconst pegasus_msgs::srv::SetHomePosition::Response::SharedPtr response[m[K) {
+[12.799s]       |                                                                                                                [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[86.345s] [100%] [32m[1mLinking CXX executable mavlink_interface[0m
+[88.113s] [100%] Built target mavlink_interface

@@ -1,0 +1,39 @@
+[35m[1mConsolidate compiler generated dependencies of target static_trajectories[0m
+[100%] Built target static_trajectories
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/static_trajectories/share/static_trajectories//static_trajectory_manager_plugins.xml
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/static_trajectories/include/static_trajectories/arc.hpp
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/static_trajectories/include/static_trajectories/circle.hpp
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/static_trajectories/include/static_trajectories/csv.hpp
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/static_trajectories/include/static_trajectories/lemniscate.hpp
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/static_trajectories/include/static_trajectories/line.hpp
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/static_trajectories/share/static_trajectories/csv_trajectories/baf_slow_x.csv
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/static_trajectories/share/static_trajectories/csv_trajectories/baf_very_fast_x.csv
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/static_trajectories/share/static_trajectories/csv_trajectories/fast_xyz_ellipse.csv
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/static_trajectories/share/static_trajectories/csv_trajectories/slow_xy_ellipse.csv
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/static_trajectories/share/static_trajectories/environment/library_path.sh
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/static_trajectories/share/static_trajectories/environment/library_path.dsv
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/static_trajectories/share/ament_index/resource_index/package_run_dependencies/static_trajectories
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/static_trajectories/share/ament_index/resource_index/parent_prefix_path/static_trajectories
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/static_trajectories/share/static_trajectories/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/static_trajectories/share/static_trajectories/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/static_trajectories/share/static_trajectories/environment/path.sh
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/static_trajectories/share/static_trajectories/environment/path.dsv
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/static_trajectories/share/static_trajectories/local_setup.bash
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/static_trajectories/share/static_trajectories/local_setup.sh
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/static_trajectories/share/static_trajectories/local_setup.zsh
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/static_trajectories/share/static_trajectories/local_setup.dsv
+-- Symlinking: /home/ricardo22/capture/src/install/static_trajectories/share/static_trajectories/package.dsv
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/static_trajectories/share/ament_index/resource_index/packages/static_trajectories
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/static_trajectories/share/ament_index/resource_index/autopilot__pluginlib__plugin/static_trajectories
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/static_trajectories/share/static_trajectories/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/static_trajectories/share/static_trajectories/cmake/ament_cmake_export_libraries-extras.cmake
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/static_trajectories/share/static_trajectories/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/static_trajectories/share/static_trajectories/cmake/ament_cmake_export_targets-extras.cmake
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/static_trajectories/share/static_trajectories/cmake/static_trajectoriesConfig.cmake
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/static_trajectories/share/static_trajectories/cmake/static_trajectoriesConfig-version.cmake
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/static_trajectories/share/static_trajectories/package.xml
+-- Up-to-date: /home/ricardo22/capture/src/install/static_trajectories/lib/libstatic_trajectories.so
+-- Up-to-date: /home/ricardo22/capture/src/install/static_trajectories/share/static_trajectories/cmake/export_static_trajectoriesExport.cmake
+-- Up-to-date: /home/ricardo22/capture/src/install/static_trajectories/share/static_trajectories/cmake/export_static_trajectoriesExport-noconfig.cmake

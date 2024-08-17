@@ -30,6 +30,9 @@ public:
 
 protected:
 
+    bool check_finished();
+
+
     // Susbcriber for the target position
     rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr target_sub_;
 
@@ -39,7 +42,10 @@ protected:
     double yaw{0.0};                                // Yaw angle
     Eigen::Vector3d Pd{Eigen::Vector3d::Zero()};    // Desired position (of the target)
     Eigen::Vector3d Vd{Eigen::Vector3d::Zero()};    // Desired velocity (of the target)
-    double yawd{0.0};                               // Desired yaw angle (of the target)
+    double yawd{0.0};
+
+ 
+                                 // Desired yaw angle (of the target)
 
     // MPC gains
     double Kp{1.0};

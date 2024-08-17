@@ -1,0 +1,9 @@
+source;share/pegasus_demos/hook/pythonpath.ps1
+source;share/pegasus_demos/hook/pythonpath.dsv
+source;share/pegasus_demos/hook/pythonpath.sh
+source;share/pegasus_demos/hook/ament_prefix_path.ps1
+source;share/pegasus_demos/hook/ament_prefix_path.dsv
+source;share/pegasus_demos/hook/ament_prefix_path.sh
+source;../../build/pegasus_demos/share/pegasus_demos/hook/pythonpath_develop.ps1
+source;../../build/pegasus_demos/share/pegasus_demos/hook/pythonpath_develop.dsv
+source;../../build/pegasus_demos/share/pegasus_demos/hook/pythonpath_develop.sh

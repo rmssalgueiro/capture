@@ -1,0 +1,24 @@
+[35m[1mConsolidate compiler generated dependencies of target vrpn_client_node[0m
+[100%] Built target vrpn_client_node
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/mocap_interface/share/mocap_interface//launch/alameda.launch.py
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/mocap_interface/share/mocap_interface//launch/vrpn.launch.py
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/mocap_interface/share/mocap_interface//config/alameda.yaml
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/mocap_interface/share/mocap_interface//config/tagus.yaml
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/mocap_interface/lib/mocap_interface/vrpn_client_node
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/mocap_interface/share/ament_index/resource_index/package_run_dependencies/mocap_interface
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/mocap_interface/share/ament_index/resource_index/parent_prefix_path/mocap_interface
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/mocap_interface/share/mocap_interface/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/mocap_interface/share/mocap_interface/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/mocap_interface/share/mocap_interface/environment/path.sh
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/mocap_interface/share/mocap_interface/environment/path.dsv
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/mocap_interface/share/mocap_interface/local_setup.bash
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/mocap_interface/share/mocap_interface/local_setup.sh
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/mocap_interface/share/mocap_interface/local_setup.zsh
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/mocap_interface/share/mocap_interface/local_setup.dsv
+-- Symlinking: /home/ricardo22/capture/src/install/mocap_interface/share/mocap_interface/package.dsv
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/mocap_interface/share/ament_index/resource_index/packages/mocap_interface
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/mocap_interface/share/mocap_interface/cmake/mocap_interfaceConfig.cmake
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/mocap_interface/share/mocap_interface/cmake/mocap_interfaceConfig-version.cmake
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/mocap_interface/share/mocap_interface/package.xml

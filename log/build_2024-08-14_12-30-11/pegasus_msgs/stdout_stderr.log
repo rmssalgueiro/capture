@@ -1,0 +1,1157 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found std_msgs: 4.2.4 (/opt/ros/humble/share/std_msgs/cmake)
+-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+-- Found PythonExtra: .so  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/ricardo22/capture/src/build/pegasus_msgs
+[  0%] [34m[1mGenerating C code for ROS interfaces[0m
+[  0%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[  0%] Built target ament_cmake_python_symlink_pegasus_msgs
+running egg_info
+creating pegasus_msgs.egg-info
+writing pegasus_msgs.egg-info/PKG-INFO
+writing dependency_links to pegasus_msgs.egg-info/dependency_links.txt
+writing top-level names to pegasus_msgs.egg-info/top_level.txt
+writing manifest file 'pegasus_msgs.egg-info/SOURCES.txt'
+reading manifest file 'pegasus_msgs.egg-info/SOURCES.txt'
+writing manifest file 'pegasus_msgs.egg-info/SOURCES.txt'
+[  0%] Built target ament_cmake_python_build_pegasus_msgs_egg
+[  0%] Built target pegasus_msgs__cpp
+[  0%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[  0%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[  1%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[  1%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_c.dir/rosidl_generator_c/pegasus_msgs/srv/detail/land__functions.c.o[0m
+[  2%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_c.dir/rosidl_generator_c/pegasus_msgs/srv/detail/offboard__functions.c.o[0m
+[  3%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_c.dir/rosidl_generator_c/pegasus_msgs/srv/detail/kill_switch__functions.c.o[0m
+[  3%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_c.dir/rosidl_generator_c/pegasus_msgs/srv/detail/arm__functions.c.o[0m
+[  3%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_c.dir/rosidl_generator_c/pegasus_msgs/srv/detail/position_hold__functions.c.o[0m
+[  4%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_c.dir/rosidl_generator_c/pegasus_msgs/srv/detail/takeoff__functions.c.o[0m
+[  4%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_c.dir/rosidl_generator_c/pegasus_msgs/srv/detail/waypoint__functions.c.o[0m
+[  4%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_c.dir/rosidl_generator_c/pegasus_msgs/srv/detail/set_home_position__functions.c.o[0m
+[  4%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_c.dir/rosidl_generator_c/pegasus_msgs/srv/detail/set_mode__functions.c.o[0m
+[  4%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_c.dir/rosidl_generator_c/pegasus_msgs/msg/detail/speed__functions.c.o[0m
+[  5%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_c.dir/rosidl_generator_c/pegasus_msgs/srv/detail/add_arc__functions.c.o[0m
+[  5%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_c.dir/rosidl_generator_c/pegasus_msgs/srv/detail/add_line__functions.c.o[0m
+[  5%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_c.dir/rosidl_generator_c/pegasus_msgs/srv/detail/add_circle__functions.c.o[0m
+[  6%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_c.dir/rosidl_generator_c/pegasus_msgs/srv/detail/add_csv__functions.c.o[0m
+[  6%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_c.dir/rosidl_generator_c/pegasus_msgs/srv/detail/add_lemniscate__functions.c.o[0m
+[  7%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_c.dir/rosidl_generator_c/pegasus_msgs/srv/detail/start_mission__functions.c.o[0m
+[  7%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_c.dir/rosidl_generator_c/pegasus_msgs/srv/detail/reset_path__functions.c.o[0m
+[  7%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_c.dir/rosidl_generator_c/pegasus_msgs/srv/detail/land_mission__functions.c.o[0m
+[  7%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_c.dir/rosidl_generator_c/pegasus_msgs/msg/detail/autopilot_status__functions.c.o[0m
+[  8%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_c.dir/rosidl_generator_c/pegasus_msgs/msg/detail/battery__functions.c.o[0m
+[  8%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_c.dir/rosidl_generator_c/pegasus_msgs/msg/detail/control_attitude__functions.c.o[0m
+[  8%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_c.dir/rosidl_generator_c/pegasus_msgs/msg/detail/control_velocity__functions.c.o[0m
+[  8%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_c.dir/rosidl_generator_c/pegasus_msgs/msg/detail/control_position__functions.c.o[0m
+[  9%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_c.dir/rosidl_generator_c/pegasus_msgs/msg/detail/control_acceleration__functions.c.o[0m
+[  9%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_c.dir/rosidl_generator_c/pegasus_msgs/msg/detail/rc_status__functions.c.o[0m
+[ 10%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_c.dir/rosidl_generator_c/pegasus_msgs/msg/detail/rpy__functions.c.o[0m
+[ 10%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_c.dir/rosidl_generator_c/pegasus_msgs/msg/detail/health__functions.c.o[0m
+[ 10%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_c.dir/rosidl_generator_c/pegasus_msgs/msg/detail/sensor_barometer__functions.c.o[0m
+[ 10%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_c.dir/rosidl_generator_c/pegasus_msgs/msg/detail/sensor_gps__functions.c.o[0m
+[ 11%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_c.dir/rosidl_generator_c/pegasus_msgs/msg/detail/sensor_gps_info__functions.c.o[0m
+[ 11%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_c.dir/rosidl_generator_c/pegasus_msgs/msg/detail/status__functions.c.o[0m
+[ 11%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_c.dir/rosidl_generator_c/pegasus_msgs/msg/detail/thrust_curve__functions.c.o[0m
+[ 12%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_c.dir/rosidl_generator_c/pegasus_msgs/msg/detail/vehicle_constants__functions.c.o[0m
+[ 12%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_c.dir/rosidl_generator_c/pegasus_msgs/msg/detail/consensus__functions.c.o[0m
+[ 12%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_c.dir/rosidl_generator_c/pegasus_msgs/msg/detail/path__functions.c.o[0m
+[ 12%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_c.dir/rosidl_generator_c/pegasus_msgs/msg/detail/pid_statistic__functions.c.o[0m
+[ 13%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_c.dir/rosidl_generator_c/pegasus_msgs/msg/detail/pid_statistics__functions.c.o[0m
+[ 13%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_c.dir/rosidl_generator_c/pegasus_msgs/msg/detail/mellinger_statistics__functions.c.o[0m
+[ 13%] [32m[1mLinking C shared library libpegasus_msgs__rosidl_generator_c.so[0m
+[ 13%] Built target pegasus_msgs__rosidl_generator_c
+[ 14%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[ 15%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[ 16%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[ 17%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pegasus_msgs/srv/kill_switch__type_support.cpp.o[0m
+[ 17%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pegasus_msgs/srv/arm__type_support.cpp.o[0m
+[ 17%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pegasus_msgs/srv/land__type_support.cpp.o[0m
+[ 18%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pegasus_msgs/srv/offboard__type_support.cpp.o[0m
+[ 18%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pegasus_msgs/srv/position_hold__type_support.cpp.o[0m
+[ 18%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pegasus_msgs/srv/waypoint__type_support.cpp.o[0m
+[ 19%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pegasus_msgs/srv/takeoff__type_support.cpp.o[0m
+[ 19%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pegasus_msgs/srv/set_home_position__type_support.cpp.o[0m
+[ 19%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pegasus_msgs/srv/set_mode__type_support.cpp.o[0m
+[ 19%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pegasus_msgs/msg/speed__type_support.cpp.o[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pegasus_msgs/srv/add_arc__type_support.cpp.o[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pegasus_msgs/srv/add_line__type_support.cpp.o[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pegasus_msgs/srv/add_circle__type_support.cpp.o[0m
+[ 21%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pegasus_msgs/srv/add_csv__type_support.cpp.o[0m
+[ 21%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pegasus_msgs/srv/add_lemniscate__type_support.cpp.o[0m
+[ 21%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pegasus_msgs/srv/reset_path__type_support.cpp.o[0m
+[ 21%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pegasus_msgs/srv/detail/kill_switch__type_support.cpp.o[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pegasus_msgs/srv/start_mission__type_support.cpp.o[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pegasus_msgs/srv/land_mission__type_support.cpp.o[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/pegasus_msgs/srv/kill_switch__type_support.cpp.o[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/pegasus_msgs/srv/arm__type_support.cpp.o[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/pegasus_msgs/srv/land__type_support.cpp.o[0m
+[ 23%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/pegasus_msgs/srv/offboard__type_support.cpp.o[0m
+[ 23%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pegasus_msgs/msg/autopilot_status__type_support.cpp.o[0m
+[ 23%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/pegasus_msgs/srv/position_hold__type_support.cpp.o[0m
+[ 23%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pegasus_msgs/srv/detail/arm__type_support.cpp.o[0m
+[ 23%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/pegasus_msgs/srv/waypoint__type_support.cpp.o[0m
+[ 24%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/pegasus_msgs/srv/takeoff__type_support.cpp.o[0m
+[ 24%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pegasus_msgs/srv/detail/land__type_support.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pegasus_msgs/msg/battery__type_support.cpp.o[0m
+[ 26%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pegasus_msgs/srv/detail/dds_fastrtps/kill_switch__type_support.cpp.o[0m
+[ 26%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/pegasus_msgs/srv/set_home_position__type_support.cpp.o[0m
+[ 26%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/pegasus_msgs/srv/set_mode__type_support.cpp.o[0m
+[ 27%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/pegasus_msgs/msg/speed__type_support.cpp.o[0m
+[ 27%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/pegasus_msgs/srv/add_arc__type_support.cpp.o[0m
+[ 27%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/pegasus_msgs/srv/add_line__type_support.cpp.o[0m
+[ 27%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pegasus_msgs/srv/detail/dds_fastrtps/arm__type_support.cpp.o[0m
+[ 28%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/pegasus_msgs/srv/add_circle__type_support.cpp.o[0m
+[ 28%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/pegasus_msgs/srv/add_csv__type_support.cpp.o[0m
+[ 28%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/pegasus_msgs/srv/add_lemniscate__type_support.cpp.o[0m
+[ 28%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pegasus_msgs/msg/control_attitude__type_support.cpp.o[0m
+[ 28%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/pegasus_msgs/srv/reset_path__type_support.cpp.o[0m
+[ 29%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pegasus_msgs/srv/detail/offboard__type_support.cpp.o[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/pegasus_msgs/srv/start_mission__type_support.cpp.o[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pegasus_msgs/srv/detail/position_hold__type_support.cpp.o[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/pegasus_msgs/srv/land_mission__type_support.cpp.o[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/pegasus_msgs/msg/autopilot_status__type_support.cpp.o[0m
+[ 31%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/pegasus_msgs/msg/battery__type_support.cpp.o[0m
+[ 31%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pegasus_msgs/srv/detail/dds_fastrtps/land__type_support.cpp.o[0m
+[ 31%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/pegasus_msgs/msg/control_attitude__type_support.cpp.o[0m
+[ 31%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/pegasus_msgs/msg/control_position__type_support.cpp.o[0m
+[ 32%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/pegasus_msgs/msg/control_velocity__type_support.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pegasus_msgs/srv/detail/dds_fastrtps/offboard__type_support.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pegasus_msgs/msg/control_position__type_support.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/pegasus_msgs/msg/control_acceleration__type_support.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/pegasus_msgs/msg/health__type_support.cpp.o[0m
+[ 34%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/pegasus_msgs/msg/rc_status__type_support.cpp.o[0m
+[ 34%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/pegasus_msgs/msg/rpy__type_support.cpp.o[0m
+[ 34%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pegasus_msgs/srv/detail/waypoint__type_support.cpp.o[0m
+[ 34%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/pegasus_msgs/msg/sensor_barometer__type_support.cpp.o[0m
+[ 35%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pegasus_msgs/srv/detail/takeoff__type_support.cpp.o[0m
+[ 35%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/pegasus_msgs/msg/sensor_gps__type_support.cpp.o[0m
+[ 36%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/pegasus_msgs/msg/sensor_gps_info__type_support.cpp.o[0m
+[ 36%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pegasus_msgs/msg/control_velocity__type_support.cpp.o[0m
+[ 36%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/pegasus_msgs/msg/status__type_support.cpp.o[0m
+[ 36%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/pegasus_msgs/msg/thrust_curve__type_support.cpp.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/pegasus_msgs/msg/vehicle_constants__type_support.cpp.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pegasus_msgs/srv/detail/dds_fastrtps/position_hold__type_support.cpp.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/pegasus_msgs/msg/consensus__type_support.cpp.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/pegasus_msgs/msg/path__type_support.cpp.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pegasus_msgs/srv/detail/dds_fastrtps/waypoint__type_support.cpp.o[0m
+[ 38%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/pegasus_msgs/msg/pid_statistic__type_support.cpp.o[0m
+[ 38%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pegasus_msgs/srv/detail/kill_switch__type_support.c.o[0m
+[ 38%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/pegasus_msgs/msg/pid_statistics__type_support.cpp.o[0m
+[ 38%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pegasus_msgs/srv/detail/arm__type_support.c.o[0m
+[ 38%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/pegasus_msgs/msg/mellinger_statistics__type_support.cpp.o[0m
+[ 39%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pegasus_msgs/srv/detail/land__type_support.c.o[0m
+[ 39%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pegasus_msgs/srv/detail/offboard__type_support.c.o[0m
+[ 40%] [32m[1mLinking CXX shared library libpegasus_msgs__rosidl_typesupport_c.so[0m
+[ 41%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pegasus_msgs/msg/control_acceleration__type_support.cpp.o[0m
+[ 41%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pegasus_msgs/srv/detail/kill_switch__type_support_c.cpp.o[0m
+[ 41%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pegasus_msgs/srv/detail/arm__type_support_c.cpp.o[0m
+[ 41%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pegasus_msgs/srv/detail/set_home_position__type_support.cpp.o[0m
+[ 41%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pegasus_msgs/srv/detail/position_hold__type_support.c.o[0m
+[ 41%] Built target pegasus_msgs__rosidl_typesupport_c
+[ 42%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pegasus_msgs/srv/detail/waypoint__type_support.c.o[0m
+[ 42%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pegasus_msgs/srv/detail/takeoff__type_support.c.o[0m
+[ 42%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pegasus_msgs/srv/detail/set_home_position__type_support.c.o[0m
+[ 42%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pegasus_msgs/srv/detail/set_mode__type_support.c.o[0m
+[ 43%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pegasus_msgs/srv/detail/dds_fastrtps/takeoff__type_support.cpp.o[0m
+[ 44%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pegasus_msgs/msg/detail/speed__type_support.c.o[0m
+[ 44%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pegasus_msgs/srv/detail/add_arc__type_support.c.o[0m
+[ 44%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pegasus_msgs/srv/detail/dds_fastrtps/set_home_position__type_support.cpp.o[0m
+[ 44%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pegasus_msgs/srv/detail/add_line__type_support.c.o[0m
+[ 44%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pegasus_msgs/srv/detail/dds_fastrtps/set_mode__type_support.cpp.o[0m
+[ 44%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pegasus_msgs/msg/health__type_support.cpp.o[0m
+[ 45%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pegasus_msgs/srv/detail/add_circle__type_support.c.o[0m
+[ 45%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pegasus_msgs/srv/detail/add_csv__type_support.c.o[0m
+[ 45%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pegasus_msgs/srv/detail/add_lemniscate__type_support.c.o[0m
+[ 46%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pegasus_msgs/srv/detail/land__type_support_c.cpp.o[0m
+[ 46%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pegasus_msgs/srv/detail/offboard__type_support_c.cpp.o[0m
+[ 47%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pegasus_msgs/srv/detail/reset_path__type_support.c.o[0m
+[ 47%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pegasus_msgs/srv/detail/set_mode__type_support.cpp.o[0m
+[ 47%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pegasus_msgs/srv/detail/start_mission__type_support.c.o[0m
+[ 47%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pegasus_msgs/srv/detail/land_mission__type_support.c.o[0m
+[ 47%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pegasus_msgs/msg/rc_status__type_support.cpp.o[0m
+[ 48%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pegasus_msgs/msg/detail/autopilot_status__type_support.c.o[0m
+[ 49%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pegasus_msgs/msg/detail/dds_fastrtps/speed__type_support.cpp.o[0m
+[ 49%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pegasus_msgs/msg/detail/battery__type_support.c.o[0m
+[ 49%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pegasus_msgs/srv/detail/dds_fastrtps/add_arc__type_support.cpp.o[0m
+[ 49%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pegasus_msgs/msg/detail/control_attitude__type_support.c.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pegasus_msgs/msg/rpy__type_support.cpp.o[0m
+[ 50%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pegasus_msgs/msg/detail/control_position__type_support.c.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pegasus_msgs/srv/detail/position_hold__type_support_c.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pegasus_msgs/srv/detail/waypoint__type_support_c.cpp.o[0m
+[ 51%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pegasus_msgs/msg/detail/control_velocity__type_support.c.o[0m
+[ 51%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pegasus_msgs/msg/detail/control_acceleration__type_support.c.o[0m
+[ 51%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pegasus_msgs/msg/detail/health__type_support.c.o[0m
+[ 52%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pegasus_msgs/msg/detail/speed__type_support.cpp.o[0m
+[ 52%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pegasus_msgs/srv/detail/add_arc__type_support.cpp.o[0m
+[ 53%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pegasus_msgs/msg/detail/rc_status__type_support.c.o[0m
+[ 53%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pegasus_msgs/msg/detail/rpy__type_support.c.o[0m
+[ 53%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pegasus_msgs/msg/detail/sensor_barometer__type_support.c.o[0m
+[ 54%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pegasus_msgs/msg/detail/sensor_gps__type_support.c.o[0m
+[ 54%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pegasus_msgs/msg/sensor_barometer__type_support.cpp.o[0m
+[ 54%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pegasus_msgs/msg/detail/sensor_gps_info__type_support.c.o[0m
+[ 54%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pegasus_msgs/msg/detail/status__type_support.c.o[0m
+[ 54%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pegasus_msgs/srv/detail/dds_fastrtps/add_line__type_support.cpp.o[0m
+[ 55%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pegasus_msgs/srv/detail/takeoff__type_support_c.cpp.o[0m
+[ 56%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pegasus_msgs/msg/detail/thrust_curve__type_support.c.o[0m
+[ 56%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pegasus_msgs/srv/detail/dds_fastrtps/add_circle__type_support.cpp.o[0m
+[ 56%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pegasus_msgs/srv/detail/set_home_position__type_support_c.cpp.o[0m
+[ 56%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pegasus_msgs/msg/detail/vehicle_constants__type_support.c.o[0m
+[ 56%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pegasus_msgs/msg/detail/consensus__type_support.c.o[0m
+[ 56%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pegasus_msgs/msg/detail/path__type_support.c.o[0m
+[ 56%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pegasus_msgs/msg/sensor_gps__type_support.cpp.o[0m
+[ 56%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pegasus_msgs/srv/detail/add_line__type_support.cpp.o[0m
+[ 57%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pegasus_msgs/srv/detail/add_circle__type_support.cpp.o[0m
+[ 58%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pegasus_msgs/msg/detail/pid_statistic__type_support.c.o[0m
+[ 58%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pegasus_msgs/msg/detail/pid_statistics__type_support.c.o[0m
+[ 58%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/pegasus_msgs/msg/detail/mellinger_statistics__type_support.c.o[0m
+[ 59%] [32m[1mLinking C shared library libpegasus_msgs__rosidl_typesupport_introspection_c.so[0m
+[ 59%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pegasus_msgs/srv/detail/set_mode__type_support_c.cpp.o[0m
+[ 59%] Built target pegasus_msgs__rosidl_typesupport_introspection_c
+[ 60%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pegasus_msgs/srv/detail/dds_fastrtps/add_csv__type_support.cpp.o[0m
+[ 61%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pegasus_msgs/msg/detail/speed__type_support_c.cpp.o[0m
+[ 61%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pegasus_msgs/srv/detail/add_arc__type_support_c.cpp.o[0m
+[ 62%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pegasus_msgs/msg/sensor_gps_info__type_support.cpp.o[0m
+[ 62%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pegasus_msgs/srv/detail/dds_fastrtps/add_lemniscate__type_support.cpp.o[0m
+[ 62%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pegasus_msgs/srv/detail/dds_fastrtps/reset_path__type_support.cpp.o[0m
+[ 62%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pegasus_msgs/srv/detail/add_csv__type_support.cpp.o[0m
+[ 62%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pegasus_msgs/msg/status__type_support.cpp.o[0m
+[ 62%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pegasus_msgs/srv/detail/add_line__type_support_c.cpp.o[0m
+[ 63%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pegasus_msgs/srv/detail/add_circle__type_support_c.cpp.o[0m
+[ 63%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pegasus_msgs/srv/detail/add_csv__type_support_c.cpp.o[0m
+[ 64%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pegasus_msgs/srv/detail/dds_fastrtps/start_mission__type_support.cpp.o[0m
+[ 64%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pegasus_msgs/srv/detail/dds_fastrtps/land_mission__type_support.cpp.o[0m
+[ 64%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pegasus_msgs/msg/thrust_curve__type_support.cpp.o[0m
+[ 64%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pegasus_msgs/msg/detail/dds_fastrtps/autopilot_status__type_support.cpp.o[0m
+[ 64%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pegasus_msgs/srv/detail/add_lemniscate__type_support.cpp.o[0m
+[ 64%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pegasus_msgs/srv/detail/add_lemniscate__type_support_c.cpp.o[0m
+[ 65%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pegasus_msgs/srv/detail/reset_path__type_support_c.cpp.o[0m
+[ 65%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pegasus_msgs/srv/detail/start_mission__type_support_c.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pegasus_msgs/msg/vehicle_constants__type_support.cpp.o[0m
+[ 67%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pegasus_msgs/msg/detail/dds_fastrtps/battery__type_support.cpp.o[0m
+[ 67%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pegasus_msgs/msg/consensus__type_support.cpp.o[0m
+[ 67%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pegasus_msgs/msg/detail/dds_fastrtps/control_attitude__type_support.cpp.o[0m
+[ 67%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pegasus_msgs/srv/detail/reset_path__type_support.cpp.o[0m
+[ 67%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pegasus_msgs/srv/detail/land_mission__type_support_c.cpp.o[0m
+[ 67%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pegasus_msgs/msg/detail/autopilot_status__type_support_c.cpp.o[0m
+[ 67%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pegasus_msgs/msg/path__type_support.cpp.o[0m
+[ 68%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pegasus_msgs/msg/detail/battery__type_support_c.cpp.o[0m
+[ 68%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pegasus_msgs/msg/detail/dds_fastrtps/control_position__type_support.cpp.o[0m
+[ 68%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pegasus_msgs/msg/pid_statistic__type_support.cpp.o[0m
+[ 69%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pegasus_msgs/msg/pid_statistics__type_support.cpp.o[0m
+[ 69%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/pegasus_msgs/msg/mellinger_statistics__type_support.cpp.o[0m
+[ 70%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pegasus_msgs/srv/detail/start_mission__type_support.cpp.o[0m
+[ 70%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pegasus_msgs/msg/detail/control_attitude__type_support_c.cpp.o[0m
+[ 70%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pegasus_msgs/msg/detail/control_position__type_support_c.cpp.o[0m
+[ 71%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pegasus_msgs/msg/detail/control_velocity__type_support_c.cpp.o[0m
+[ 71%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pegasus_msgs/msg/detail/control_acceleration__type_support_c.cpp.o[0m
+[ 71%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pegasus_msgs/msg/detail/health__type_support_c.cpp.o[0m
+[ 71%] [32m[1mLinking CXX shared library libpegasus_msgs__rosidl_typesupport_cpp.so[0m
+[ 72%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pegasus_msgs/msg/detail/dds_fastrtps/control_velocity__type_support.cpp.o[0m
+[ 72%] Built target pegasus_msgs__rosidl_typesupport_cpp
+[ 73%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pegasus_msgs/msg/detail/rc_status__type_support_c.cpp.o[0m
+[ 73%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pegasus_msgs/srv/detail/land_mission__type_support.cpp.o[0m
+[ 73%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pegasus_msgs/msg/detail/rpy__type_support_c.cpp.o[0m
+[ 73%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pegasus_msgs/msg/detail/sensor_barometer__type_support_c.cpp.o[0m
+[ 74%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pegasus_msgs/msg/detail/sensor_gps__type_support_c.cpp.o[0m
+[ 74%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pegasus_msgs/msg/detail/sensor_gps_info__type_support_c.cpp.o[0m
+[ 74%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pegasus_msgs/msg/detail/status__type_support_c.cpp.o[0m
+[ 74%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pegasus_msgs/msg/detail/thrust_curve__type_support_c.cpp.o[0m
+[ 74%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pegasus_msgs/msg/detail/dds_fastrtps/control_acceleration__type_support.cpp.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pegasus_msgs/msg/detail/vehicle_constants__type_support_c.cpp.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pegasus_msgs/msg/detail/consensus__type_support_c.cpp.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pegasus_msgs/msg/detail/autopilot_status__type_support.cpp.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pegasus_msgs/msg/detail/path__type_support_c.cpp.o[0m
+[ 76%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pegasus_msgs/msg/detail/pid_statistic__type_support_c.cpp.o[0m
+[ 76%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pegasus_msgs/msg/detail/pid_statistics__type_support_c.cpp.o[0m
+[ 76%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/pegasus_msgs/msg/detail/mellinger_statistics__type_support_c.cpp.o[0m
+[ 77%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pegasus_msgs/msg/detail/battery__type_support.cpp.o[0m
+[ 77%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pegasus_msgs/msg/detail/dds_fastrtps/health__type_support.cpp.o[0m
+[ 77%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pegasus_msgs/msg/detail/dds_fastrtps/rc_status__type_support.cpp.o[0m
+[ 77%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pegasus_msgs/msg/detail/control_attitude__type_support.cpp.o[0m
+[ 77%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pegasus_msgs/msg/detail/control_position__type_support.cpp.o[0m
+[ 78%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pegasus_msgs/msg/detail/control_velocity__type_support.cpp.o[0m
+[ 78%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pegasus_msgs/msg/detail/control_acceleration__type_support.cpp.o[0m
+[ 79%] [32m[1mLinking CXX shared library libpegasus_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[ 79%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pegasus_msgs/msg/detail/health__type_support.cpp.o[0m
+[ 80%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pegasus_msgs/msg/detail/dds_fastrtps/rpy__type_support.cpp.o[0m
+[ 80%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pegasus_msgs/msg/detail/dds_fastrtps/sensor_barometer__type_support.cpp.o[0m
+[ 81%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pegasus_msgs/msg/detail/rc_status__type_support.cpp.o[0m
+[ 81%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pegasus_msgs/msg/detail/rpy__type_support.cpp.o[0m
+[ 81%] Built target pegasus_msgs__rosidl_typesupport_fastrtps_c
+[ 81%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pegasus_msgs/msg/detail/sensor_barometer__type_support.cpp.o[0m
+[ 81%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pegasus_msgs/msg/detail/sensor_gps__type_support.cpp.o[0m
+[ 82%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pegasus_msgs/msg/detail/sensor_gps_info__type_support.cpp.o[0m
+[ 82%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pegasus_msgs/msg/detail/status__type_support.cpp.o[0m
+[ 82%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pegasus_msgs/msg/detail/thrust_curve__type_support.cpp.o[0m
+[ 83%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pegasus_msgs/msg/detail/vehicle_constants__type_support.cpp.o[0m
+[ 83%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pegasus_msgs/msg/detail/dds_fastrtps/sensor_gps__type_support.cpp.o[0m
+[ 83%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pegasus_msgs/msg/detail/consensus__type_support.cpp.o[0m
+[ 83%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pegasus_msgs/msg/detail/path__type_support.cpp.o[0m
+[ 84%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pegasus_msgs/msg/detail/pid_statistic__type_support.cpp.o[0m
+[ 84%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pegasus_msgs/msg/detail/pid_statistics__type_support.cpp.o[0m
+[ 84%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/pegasus_msgs/msg/detail/mellinger_statistics__type_support.cpp.o[0m
+[ 85%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pegasus_msgs/msg/detail/dds_fastrtps/sensor_gps_info__type_support.cpp.o[0m
+[ 85%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pegasus_msgs/msg/detail/dds_fastrtps/status__type_support.cpp.o[0m
+[ 85%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pegasus_msgs/msg/detail/dds_fastrtps/thrust_curve__type_support.cpp.o[0m
+[ 86%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pegasus_msgs/msg/detail/dds_fastrtps/vehicle_constants__type_support.cpp.o[0m
+[ 86%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pegasus_msgs/msg/detail/dds_fastrtps/consensus__type_support.cpp.o[0m
+[ 86%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pegasus_msgs/msg/detail/dds_fastrtps/path__type_support.cpp.o[0m
+[ 87%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pegasus_msgs/msg/detail/dds_fastrtps/pid_statistic__type_support.cpp.o[0m
+[ 88%] [32m[1mLinking CXX shared library libpegasus_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[ 88%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pegasus_msgs/msg/detail/dds_fastrtps/pid_statistics__type_support.cpp.o[0m
+[ 88%] Built target pegasus_msgs__rosidl_typesupport_introspection_cpp
+[ 88%] [32mBuilding CXX object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/pegasus_msgs/msg/detail/dds_fastrtps/mellinger_statistics__type_support.cpp.o[0m
+[ 88%] [32m[1mLinking CXX shared library libpegasus_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[ 88%] Built target pegasus_msgs__rosidl_typesupport_fastrtps_cpp
+[ 88%] Built target pegasus_msgs
+[ 88%] [34m[1mGenerating Python code for ROS interfaces[0m
+[ 88%] Built target pegasus_msgs__py
+[ 89%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_py.dir/rosidl_generator_py/pegasus_msgs/srv/_kill_switch_s.c.o[0m
+[ 89%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_py.dir/rosidl_generator_py/pegasus_msgs/srv/_land_s.c.o[0m
+[ 90%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_py.dir/rosidl_generator_py/pegasus_msgs/srv/_arm_s.c.o[0m
+[ 90%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_py.dir/rosidl_generator_py/pegasus_msgs/srv/_offboard_s.c.o[0m
+[ 91%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_py.dir/rosidl_generator_py/pegasus_msgs/srv/_waypoint_s.c.o[0m
+[ 91%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_py.dir/rosidl_generator_py/pegasus_msgs/srv/_position_hold_s.c.o[0m
+[ 91%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_py.dir/rosidl_generator_py/pegasus_msgs/srv/_set_home_position_s.c.o[0m
+[ 91%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_py.dir/rosidl_generator_py/pegasus_msgs/srv/_takeoff_s.c.o[0m
+[ 91%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_py.dir/rosidl_generator_py/pegasus_msgs/msg/_speed_s.c.o[0m
+[ 91%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_py.dir/rosidl_generator_py/pegasus_msgs/srv/_set_mode_s.c.o[0m
+[ 92%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_py.dir/rosidl_generator_py/pegasus_msgs/srv/_add_arc_s.c.o[0m
+[ 92%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_py.dir/rosidl_generator_py/pegasus_msgs/srv/_add_line_s.c.o[0m
+[ 92%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_py.dir/rosidl_generator_py/pegasus_msgs/srv/_add_circle_s.c.o[0m
+[ 93%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_py.dir/rosidl_generator_py/pegasus_msgs/srv/_add_csv_s.c.o[0m
+[ 93%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_py.dir/rosidl_generator_py/pegasus_msgs/srv/_reset_path_s.c.o[0m
+[ 93%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_py.dir/rosidl_generator_py/pegasus_msgs/srv/_add_lemniscate_s.c.o[0m
+[ 94%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_py.dir/rosidl_generator_py/pegasus_msgs/srv/_start_mission_s.c.o[0m
+[ 94%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_py.dir/rosidl_generator_py/pegasus_msgs/srv/_land_mission_s.c.o[0m
+[ 94%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_py.dir/rosidl_generator_py/pegasus_msgs/msg/_autopilot_status_s.c.o[0m
+[ 94%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_py.dir/rosidl_generator_py/pegasus_msgs/msg/_battery_s.c.o[0m
+[ 95%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_py.dir/rosidl_generator_py/pegasus_msgs/msg/_control_attitude_s.c.o[0m
+[ 95%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_py.dir/rosidl_generator_py/pegasus_msgs/msg/_control_velocity_s.c.o[0m
+[ 95%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_py.dir/rosidl_generator_py/pegasus_msgs/msg/_control_position_s.c.o[0m
+[ 96%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_py.dir/rosidl_generator_py/pegasus_msgs/msg/_control_acceleration_s.c.o[0m
+[ 96%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_py.dir/rosidl_generator_py/pegasus_msgs/msg/_health_s.c.o[0m
+[ 96%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_py.dir/rosidl_generator_py/pegasus_msgs/msg/_rc_status_s.c.o[0m
+[ 97%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_py.dir/rosidl_generator_py/pegasus_msgs/msg/_rpy_s.c.o[0m
+[ 97%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_py.dir/rosidl_generator_py/pegasus_msgs/msg/_sensor_barometer_s.c.o[0m
+[ 97%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_py.dir/rosidl_generator_py/pegasus_msgs/msg/_sensor_gps_s.c.o[0m
+[ 97%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_py.dir/rosidl_generator_py/pegasus_msgs/msg/_status_s.c.o[0m
+[ 98%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_py.dir/rosidl_generator_py/pegasus_msgs/msg/_sensor_gps_info_s.c.o[0m
+[ 98%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_py.dir/rosidl_generator_py/pegasus_msgs/msg/_thrust_curve_s.c.o[0m
+[ 99%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_py.dir/rosidl_generator_py/pegasus_msgs/msg/_vehicle_constants_s.c.o[0m
+[ 99%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_py.dir/rosidl_generator_py/pegasus_msgs/msg/_consensus_s.c.o[0m
+[ 99%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_py.dir/rosidl_generator_py/pegasus_msgs/msg/_path_s.c.o[0m
+[ 99%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_py.dir/rosidl_generator_py/pegasus_msgs/msg/_pid_statistic_s.c.o[0m
+[100%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_py.dir/rosidl_generator_py/pegasus_msgs/msg/_pid_statistics_s.c.o[0m
+[100%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_generator_py.dir/rosidl_generator_py/pegasus_msgs/msg/_mellinger_statistics_s.c.o[0m
+[100%] [32m[1mLinking C shared library rosidl_generator_py/pegasus_msgs/libpegasus_msgs__rosidl_generator_py.so[0m
+[100%] Built target pegasus_msgs__rosidl_generator_py
+[100%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/pegasus_msgs/_pegasus_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[100%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/pegasus_msgs/_pegasus_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[100%] [32mBuilding C object CMakeFiles/pegasus_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/pegasus_msgs/_pegasus_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[100%] [32m[1mLinking C shared library rosidl_generator_py/pegasus_msgs/pegasus_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[100%] [32m[1mLinking C shared library rosidl_generator_py/pegasus_msgs/pegasus_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[100%] [32m[1mLinking C shared library rosidl_generator_py/pegasus_msgs/pegasus_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[100%] Built target pegasus_msgs__rosidl_typesupport_fastrtps_c__pyext
+[100%] Built target pegasus_msgs__rosidl_typesupport_c__pyext
+[100%] Built target pegasus_msgs__rosidl_typesupport_introspection_c__pyext
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include//pegasus_msgs/visibility_control.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/ament_index/resource_index/rosidl_interfaces/pegasus_msgs
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/autopilot_status.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/battery.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/consensus.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/control_acceleration.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/control_attitude.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/control_position.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/control_velocity.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/autopilot_status__functions.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/autopilot_status__struct.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/autopilot_status__type_support.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/battery__functions.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/battery__struct.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/battery__type_support.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/consensus__functions.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/consensus__struct.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/consensus__type_support.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/control_acceleration__functions.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/control_acceleration__struct.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/control_acceleration__type_support.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/control_attitude__functions.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/control_attitude__struct.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/control_attitude__type_support.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/control_position__functions.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/control_position__struct.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/control_position__type_support.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/control_velocity__functions.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/control_velocity__struct.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/control_velocity__type_support.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/health__functions.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/health__struct.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/health__type_support.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/mellinger_statistics__functions.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/mellinger_statistics__struct.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/mellinger_statistics__type_support.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/path__functions.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/path__struct.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/path__type_support.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/pid_statistic__functions.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/pid_statistic__struct.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/pid_statistic__type_support.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/pid_statistics__functions.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/pid_statistics__struct.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/pid_statistics__type_support.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/rc_status__functions.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/rc_status__struct.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/rc_status__type_support.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/rpy__functions.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/rpy__struct.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/rpy__type_support.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/sensor_barometer__functions.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/sensor_barometer__struct.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/sensor_barometer__type_support.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/sensor_gps__functions.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/sensor_gps__struct.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/sensor_gps__type_support.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/sensor_gps_info__functions.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/sensor_gps_info__struct.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/sensor_gps_info__type_support.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/speed__functions.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/speed__struct.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/speed__type_support.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/status__functions.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/status__struct.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/status__type_support.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/thrust_curve__functions.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/thrust_curve__struct.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/thrust_curve__type_support.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/vehicle_constants__functions.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/vehicle_constants__struct.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/vehicle_constants__type_support.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/health.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/mellinger_statistics.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/path.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/pid_statistic.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/pid_statistics.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/rc_status.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/rosidl_generator_c__visibility_control.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/rpy.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/sensor_barometer.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/sensor_gps.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/sensor_gps_info.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/speed.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/status.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/thrust_curve.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/vehicle_constants.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/add_arc.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/add_circle.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/add_csv.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/add_lemniscate.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/add_line.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/arm.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_arc__functions.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_arc__struct.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_arc__type_support.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_circle__functions.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_circle__struct.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_circle__type_support.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_csv__functions.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_csv__struct.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_csv__type_support.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_lemniscate__functions.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_lemniscate__struct.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_lemniscate__type_support.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_line__functions.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_line__struct.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_line__type_support.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/arm__functions.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/arm__struct.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/arm__type_support.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/kill_switch__functions.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/kill_switch__struct.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/kill_switch__type_support.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/land__functions.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/land__struct.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/land__type_support.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/land_mission__functions.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/land_mission__struct.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/land_mission__type_support.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/offboard__functions.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/offboard__struct.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/offboard__type_support.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/position_hold__functions.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/position_hold__struct.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/position_hold__type_support.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/reset_path__functions.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/reset_path__struct.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/reset_path__type_support.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/set_home_position__functions.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/set_home_position__struct.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/set_home_position__type_support.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/set_mode__functions.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/set_mode__struct.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/set_mode__type_support.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/start_mission__functions.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/start_mission__struct.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/start_mission__type_support.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/takeoff__functions.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/takeoff__struct.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/takeoff__type_support.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/waypoint__functions.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/waypoint__struct.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/waypoint__type_support.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/kill_switch.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/land.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/land_mission.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/offboard.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/position_hold.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/reset_path.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/set_home_position.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/set_mode.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/start_mission.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/takeoff.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/waypoint.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/environment/library_path.sh
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/environment/library_path.dsv
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/autopilot_status__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/battery__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/consensus__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/control_acceleration__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/control_attitude__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/control_position__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/control_velocity__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/health__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/mellinger_statistics__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/path__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/pid_statistic__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/pid_statistics__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/rc_status__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/rpy__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/sensor_barometer__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/sensor_gps__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/sensor_gps_info__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/speed__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/status__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/thrust_curve__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/vehicle_constants__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_arc__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_circle__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_csv__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_lemniscate__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_line__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/arm__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/kill_switch__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/land__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/land_mission__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/offboard__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/position_hold__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/reset_path__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/set_home_position__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/set_mode__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/start_mission__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/takeoff__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/waypoint__rosidl_typesupport_fastrtps_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/autopilot_status.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/battery.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/consensus.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/control_acceleration.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/control_attitude.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/control_position.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/control_velocity.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/autopilot_status__builder.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/autopilot_status__struct.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/autopilot_status__traits.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/battery__builder.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/battery__struct.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/battery__traits.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/consensus__builder.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/consensus__struct.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/consensus__traits.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/control_acceleration__builder.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/control_acceleration__struct.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/control_acceleration__traits.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/control_attitude__builder.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/control_attitude__struct.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/control_attitude__traits.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/control_position__builder.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/control_position__struct.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/control_position__traits.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/control_velocity__builder.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/control_velocity__struct.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/control_velocity__traits.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/health__builder.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/health__struct.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/health__traits.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/mellinger_statistics__builder.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/mellinger_statistics__struct.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/mellinger_statistics__traits.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/path__builder.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/path__struct.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/path__traits.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/pid_statistic__builder.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/pid_statistic__struct.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/pid_statistic__traits.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/pid_statistics__builder.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/pid_statistics__struct.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/pid_statistics__traits.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/rc_status__builder.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/rc_status__struct.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/rc_status__traits.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/rpy__builder.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/rpy__struct.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/rpy__traits.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/sensor_barometer__builder.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/sensor_barometer__struct.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/sensor_barometer__traits.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/sensor_gps__builder.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/sensor_gps__struct.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/sensor_gps__traits.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/sensor_gps_info__builder.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/sensor_gps_info__struct.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/sensor_gps_info__traits.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/speed__builder.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/speed__struct.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/speed__traits.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/status__builder.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/status__struct.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/status__traits.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/thrust_curve__builder.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/thrust_curve__struct.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/thrust_curve__traits.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/vehicle_constants__builder.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/vehicle_constants__struct.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/vehicle_constants__traits.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/health.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/mellinger_statistics.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/path.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/pid_statistic.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/pid_statistics.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/rc_status.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/rpy.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/sensor_barometer.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/sensor_gps.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/sensor_gps_info.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/speed.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/status.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/thrust_curve.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/vehicle_constants.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/add_arc.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/add_circle.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/add_csv.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/add_lemniscate.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/add_line.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/arm.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_arc__builder.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_arc__struct.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_arc__traits.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_circle__builder.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_circle__struct.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_circle__traits.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_csv__builder.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_csv__struct.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_csv__traits.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_lemniscate__builder.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_lemniscate__struct.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_lemniscate__traits.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_line__builder.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_line__struct.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_line__traits.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/arm__builder.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/arm__struct.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/arm__traits.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/kill_switch__builder.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/kill_switch__struct.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/kill_switch__traits.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/land__builder.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/land__struct.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/land__traits.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/land_mission__builder.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/land_mission__struct.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/land_mission__traits.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/offboard__builder.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/offboard__struct.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/offboard__traits.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/position_hold__builder.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/position_hold__struct.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/position_hold__traits.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/reset_path__builder.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/reset_path__struct.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/reset_path__traits.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/set_home_position__builder.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/set_home_position__struct.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/set_home_position__traits.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/set_mode__builder.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/set_mode__struct.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/set_mode__traits.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/start_mission__builder.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/start_mission__struct.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/start_mission__traits.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/takeoff__builder.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/takeoff__struct.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/takeoff__traits.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/waypoint__builder.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/waypoint__struct.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/waypoint__traits.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/kill_switch.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/land.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/land_mission.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/offboard.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/position_hold.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/reset_path.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/set_home_position.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/set_mode.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/start_mission.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/takeoff.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/waypoint.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/autopilot_status__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/battery__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/consensus__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/control_acceleration__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/control_attitude__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/control_position__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/control_velocity__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/health__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/mellinger_statistics__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/path__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/pid_statistic__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/pid_statistics__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/rc_status__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/rpy__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/sensor_barometer__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/sensor_gps__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/sensor_gps_info__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/speed__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/status__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/thrust_curve__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/vehicle_constants__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_arc__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_circle__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_csv__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_lemniscate__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_line__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/arm__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/kill_switch__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/land__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/land_mission__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/offboard__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/position_hold__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/reset_path__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/set_home_position__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/set_mode__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/start_mission__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/takeoff__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/waypoint__rosidl_typesupport_fastrtps_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/autopilot_status__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/battery__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/consensus__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/control_acceleration__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/control_attitude__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/control_position__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/control_velocity__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/health__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/mellinger_statistics__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/path__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/pid_statistic__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/pid_statistics__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/rc_status__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/rpy__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/sensor_barometer__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/sensor_gps__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/sensor_gps_info__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/speed__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/status__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/thrust_curve__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/vehicle_constants__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_arc__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_circle__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_csv__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_lemniscate__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_line__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/arm__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/kill_switch__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/land__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/land_mission__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/offboard__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/position_hold__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/reset_path__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/set_home_position__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/set_mode__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/start_mission__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/takeoff__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/waypoint__rosidl_typesupport_introspection_c.h
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/autopilot_status__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/battery__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/consensus__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/control_acceleration__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/control_attitude__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/control_position__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/control_velocity__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/health__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/mellinger_statistics__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/path__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/pid_statistic__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/pid_statistics__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/rc_status__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/rpy__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/sensor_barometer__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/sensor_gps__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/sensor_gps_info__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/speed__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/status__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/thrust_curve__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/msg/detail/vehicle_constants__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_arc__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_circle__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_csv__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_lemniscate__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/add_line__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/arm__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/kill_switch__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/land__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/land_mission__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/offboard__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/position_hold__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/reset_path__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/set_home_position__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/set_mode__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/start_mission__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/takeoff__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/include/pegasus_msgs/pegasus_msgs/srv/detail/waypoint__rosidl_typesupport_introspection_cpp.hpp
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/environment/pythonpath.sh
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/environment/pythonpath.dsv
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs-1.0.0-py3.10.egg-info/PKG-INFO
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs-1.0.0-py3.10.egg-info/SOURCES.txt
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs-1.0.0-py3.10.egg-info/dependency_links.txt
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs-1.0.0-py3.10.egg-info/top_level.txt
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/__init__.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/_pegasus_msgs_s.ep.rosidl_typesupport_c.c
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/_pegasus_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/_pegasus_msgs_s.ep.rosidl_typesupport_introspection_c.c
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/libpegasus_msgs__rosidl_generator_py.so
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/__init__.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_autopilot_status.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_autopilot_status_s.c
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_battery.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_battery_s.c
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_consensus.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_consensus_s.c
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_control_acceleration.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_control_acceleration_s.c
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_control_attitude.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_control_attitude_s.c
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_control_position.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_control_position_s.c
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_control_velocity.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_control_velocity_s.c
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_health.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_health_s.c
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_mellinger_statistics.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_mellinger_statistics_s.c
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_path.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_path_s.c
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_pid_statistic.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_pid_statistic_s.c
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_pid_statistics.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_pid_statistics_s.c
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_rc_status.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_rc_status_s.c
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_rpy.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_rpy_s.c
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_sensor_barometer.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_sensor_barometer_s.c
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_sensor_gps.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_sensor_gps_info.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_sensor_gps_info_s.c
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_sensor_gps_s.c
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_speed.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_speed_s.c
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_status.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_status_s.c
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_thrust_curve.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_thrust_curve_s.c
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_vehicle_constants.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_vehicle_constants_s.c
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/pegasus_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/pegasus_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/pegasus_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/__init__.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_add_arc.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_add_arc_s.c
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_add_circle.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_add_circle_s.c
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_add_csv.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_add_csv_s.c
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_add_lemniscate.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_add_lemniscate_s.c
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_add_line.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_add_line_s.c
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_arm.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_arm_s.c
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_kill_switch.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_kill_switch_s.c
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_land.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_land_mission.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_land_mission_s.c
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_land_s.c
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_offboard.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_offboard_s.c
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_position_hold.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_position_hold_s.c
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_reset_path.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_reset_path_s.c
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_set_home_position.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_set_home_position_s.c
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_set_mode.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_set_mode_s.c
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_start_mission.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_start_mission_s.c
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_takeoff.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_takeoff_s.c
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_waypoint.py
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_waypoint_s.c
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/pegasus_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/pegasus_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+-- Up-to-date symlink: /home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/pegasus_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/KillSwitch.idl
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/Arm.idl
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/Land.idl
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/Offboard.idl
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/PositionHold.idl
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/Waypoint.idl
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/Takeoff.idl
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/SetHomePosition.idl
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/SetMode.idl
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/Speed.idl
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/AddArc.idl
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/AddLine.idl
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/AddCircle.idl
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/AddCsv.idl
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/AddLemniscate.idl
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/ResetPath.idl
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/StartMission.idl
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/LandMission.idl
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/AutopilotStatus.idl
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/Battery.idl
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/ControlAttitude.idl
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/ControlPosition.idl
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/ControlVelocity.idl
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/ControlAcceleration.idl
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/Health.idl
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/RcStatus.idl
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/RPY.idl
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/SensorBarometer.idl
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/SensorGps.idl
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/SensorGpsInfo.idl
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/Status.idl
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/ThrustCurve.idl
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/VehicleConstants.idl
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/Consensus.idl
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/Path.idl
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/PidStatistic.idl
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/PidStatistics.idl
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/MellingerStatistics.idl
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/KillSwitch.srv
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/KillSwitch_Request.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/KillSwitch_Response.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/Arm.srv
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/Arm_Request.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/Arm_Response.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/Land.srv
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/Land_Request.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/Land_Response.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/Offboard.srv
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/Offboard_Request.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/Offboard_Response.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/PositionHold.srv
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/PositionHold_Request.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/PositionHold_Response.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/Waypoint.srv
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/Waypoint_Request.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/Waypoint_Response.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/Takeoff.srv
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/Takeoff_Request.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/Takeoff_Response.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/SetHomePosition.srv
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/SetHomePosition_Request.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/SetHomePosition_Response.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/SetMode.srv
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/SetMode_Request.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/SetMode_Response.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/Speed.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/AddArc.srv
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/AddArc_Request.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/AddArc_Response.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/AddLine.srv
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/AddLine_Request.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/AddLine_Response.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/AddCircle.srv
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/AddCircle_Request.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/AddCircle_Response.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/AddCsv.srv
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/AddCsv_Request.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/AddCsv_Response.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/AddLemniscate.srv
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/AddLemniscate_Request.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/AddLemniscate_Response.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/ResetPath.srv
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/ResetPath_Request.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/ResetPath_Response.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/StartMission.srv
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/StartMission_Request.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/StartMission_Response.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/LandMission.srv
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/LandMission_Request.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/srv/LandMission_Response.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/AutopilotStatus.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/Battery.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/ControlAttitude.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/ControlPosition.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/ControlVelocity.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/ControlAcceleration.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/Health.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/RcStatus.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/RPY.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/SensorBarometer.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/SensorGps.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/SensorGpsInfo.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/Status.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/ThrustCurve.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/VehicleConstants.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/Consensus.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/Path.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/PidStatistic.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/PidStatistics.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/msg/MellingerStatistics.msg
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/ament_index/resource_index/package_run_dependencies/pegasus_msgs
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/ament_index/resource_index/parent_prefix_path/pegasus_msgs
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/environment/ament_prefix_path.sh
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/environment/ament_prefix_path.dsv
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/environment/path.sh
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/environment/path.dsv
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/local_setup.bash
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/local_setup.sh
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/local_setup.zsh
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/local_setup.dsv
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/package.dsv
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/ament_index/resource_index/packages/pegasus_msgs
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/cmake/rosidl_cmake-extras.cmake
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/cmake/ament_cmake_export_targets-extras.cmake
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/cmake/pegasus_msgsConfig.cmake
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/cmake/pegasus_msgsConfig-version.cmake
+-- Symlinking: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/package.xml
+-- Installing: /home/ricardo22/capture/src/install/pegasus_msgs/lib/libpegasus_msgs__rosidl_generator_c.so
+-- Set runtime path of "/home/ricardo22/capture/src/install/pegasus_msgs/lib/libpegasus_msgs__rosidl_generator_c.so" to ""
+-- Installing: /home/ricardo22/capture/src/install/pegasus_msgs/lib/libpegasus_msgs__rosidl_typesupport_fastrtps_c.so
+-- Set runtime path of "/home/ricardo22/capture/src/install/pegasus_msgs/lib/libpegasus_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+-- Installing: /home/ricardo22/capture/src/install/pegasus_msgs/lib/libpegasus_msgs__rosidl_typesupport_fastrtps_cpp.so
+-- Set runtime path of "/home/ricardo22/capture/src/install/pegasus_msgs/lib/libpegasus_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+-- Installing: /home/ricardo22/capture/src/install/pegasus_msgs/lib/libpegasus_msgs__rosidl_typesupport_introspection_c.so
+-- Set runtime path of "/home/ricardo22/capture/src/install/pegasus_msgs/lib/libpegasus_msgs__rosidl_typesupport_introspection_c.so" to ""
+-- Installing: /home/ricardo22/capture/src/install/pegasus_msgs/lib/libpegasus_msgs__rosidl_typesupport_c.so
+-- Set runtime path of "/home/ricardo22/capture/src/install/pegasus_msgs/lib/libpegasus_msgs__rosidl_typesupport_c.so" to ""
+-- Installing: /home/ricardo22/capture/src/install/pegasus_msgs/lib/libpegasus_msgs__rosidl_typesupport_introspection_cpp.so
+-- Set runtime path of "/home/ricardo22/capture/src/install/pegasus_msgs/lib/libpegasus_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+-- Installing: /home/ricardo22/capture/src/install/pegasus_msgs/lib/libpegasus_msgs__rosidl_typesupport_cpp.so
+-- Set runtime path of "/home/ricardo22/capture/src/install/pegasus_msgs/lib/libpegasus_msgs__rosidl_typesupport_cpp.so" to ""
+Listing '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/__init__.py'...
+Listing '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/__init__.py'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_autopilot_status.py'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_battery.py'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_consensus.py'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_control_acceleration.py'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_control_attitude.py'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_control_position.py'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_control_velocity.py'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_health.py'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_mellinger_statistics.py'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_path.py'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_pid_statistic.py'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_pid_statistics.py'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_rc_status.py'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_rpy.py'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_sensor_barometer.py'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_sensor_gps.py'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_sensor_gps_info.py'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_speed.py'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_status.py'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_thrust_curve.py'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/msg/_vehicle_constants.py'...
+Listing '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/__init__.py'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_add_arc.py'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_add_circle.py'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_add_csv.py'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_add_lemniscate.py'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_add_line.py'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_arm.py'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_kill_switch.py'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_land.py'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_land_mission.py'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_offboard.py'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_position_hold.py'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_reset_path.py'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_set_home_position.py'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_set_mode.py'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_start_mission.py'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_takeoff.py'...
+Compiling '/home/ricardo22/capture/src/install/pegasus_msgs/local/lib/python3.10/dist-packages/pegasus_msgs/srv/_waypoint.py'...
+-- Installing: /home/ricardo22/capture/src/install/pegasus_msgs/lib/libpegasus_msgs__rosidl_generator_py.so
+-- Set runtime path of "/home/ricardo22/capture/src/install/pegasus_msgs/lib/libpegasus_msgs__rosidl_generator_py.so" to ""
+-- Installing: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/cmake/export_pegasus_msgs__rosidl_generator_cExport.cmake
+-- Installing: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/cmake/export_pegasus_msgs__rosidl_generator_cExport-noconfig.cmake
+-- Installing: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/cmake/export_pegasus_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+-- Installing: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/cmake/export_pegasus_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+-- Installing: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/cmake/export_pegasus_msgs__rosidl_generator_cppExport.cmake
+-- Installing: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/cmake/export_pegasus_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+-- Installing: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/cmake/export_pegasus_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+-- Installing: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/cmake/pegasus_msgs__rosidl_typesupport_introspection_cExport.cmake
+-- Installing: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/cmake/pegasus_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+-- Installing: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/cmake/pegasus_msgs__rosidl_typesupport_cExport.cmake
+-- Installing: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/cmake/pegasus_msgs__rosidl_typesupport_cExport-noconfig.cmake
+-- Installing: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/cmake/pegasus_msgs__rosidl_typesupport_introspection_cppExport.cmake
+-- Installing: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/cmake/pegasus_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+-- Installing: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/cmake/pegasus_msgs__rosidl_typesupport_cppExport.cmake
+-- Installing: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/cmake/pegasus_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+-- Installing: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/cmake/export_pegasus_msgs__rosidl_generator_pyExport.cmake
+-- Installing: /home/ricardo22/capture/src/install/pegasus_msgs/share/pegasus_msgs/cmake/export_pegasus_msgs__rosidl_generator_pyExport-noconfig.cmake
