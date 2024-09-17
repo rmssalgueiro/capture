@@ -1,1 +1,0 @@
-/home/ricardo22/capture/src/pegasus/pegasus_console/launch/pegasus_console.launch.py

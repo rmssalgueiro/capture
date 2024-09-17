@@ -1,1 +1,0 @@
-/home/ricardo22/capture/src/pegasus/pegasus_autopilot/autopilot_controllers/include/autopilot_controllers/onboard_controller.hpp

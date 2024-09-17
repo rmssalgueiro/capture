@@ -1,1 +1,0 @@
-/home/ricardo22/capture/src/build/pegasus_msgs/rosidl_cmake/srv/SetHomePosition_Response.msg

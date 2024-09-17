@@ -16,7 +16,7 @@
     # ----------------------------------------------------------------------------------------------------------
     autopilot:
       # Update rate
-      rate: 10.0 # Hz
+      rate: 50.0 # Hz
       # ----------------------------------------------------------------------------------------------------------
       # Definition of the controller that will perform the tracking of references of the different operation modes
       # ----------------------------------------------------------------------------------------------------------
@@ -30,6 +30,30 @@
           control_inertial_acceleration: "fmu/in/inertial_acceleration"
           control_attitude: "fmu/in/force/attitude"
           control_attitude_rate: "fmu/in/force/attitude_rate"
+      PIDController:
+        publishers:
+          control_attitude: "fmu/in/force/attitude"
+          control_attitude_rate: "fmu/in/force/attitude_rate"
+          pid_debug_topic: "autopilot/statistics/pid"
+        # Gains for position PIDs on [x, y, z]
+        gains:
+          kp: [2.0, 2.0, 2.0]   # Proportional gain
+          kd: [4.0, 4.0, 5.0]   # Derivative gain
+          ki: [0.2, 0.2, 0.1]   # Integral gain
+          min_output: [-20.0, -20.0, -20.0] # Minimum output of each PID
+          max_output: [ 20.0,  20.0,  20.0]
+      MellingerController:
+        publishers:
+          control_attitude: "fmu/in/force/attitude"
+          control_attitude_rate: "fmu/in/force/attitude_rate"
+          debug_topic: "autopilot/statistics/mellinger"
+        gains:
+          kp: [5.0, 5.0, 3.3]    # Proportional gain
+          kd: [4.0, 4.0, 5.0]    # Derivative gain
+          ki: [0.0, 0.0, 0.0]    # Integral gain
+          kr: [6.5, 6.5, 6.5]    # Attitude error gain
+          min_output: [-100.0, -100.0, -100.0]  # Minimum output of each PID
+          max_output: [ 100.0,  100.0,  100.0]  # Maximum output of each PID
       # ----------------------------------------------------------------------------------------------------------
       # Definition of the geofencing mechanism that will keep the vehicle in safe places
       # ----------------------------------------------------------------------------------------------------------
@@ -73,9 +97,9 @@
         on_finish: "HoldMode"
         target_state_topic: "target"
         gains:
-          Kp: 1.0
-          Kv: 2.0
-          Kpz: 1.0
+          Kp: 3.0
+          Kv: 5.0
+          Kpz: 2.0
           Kvz: 3.0
       DisarmMode: 
         valid_transitions: ["ArmMode"]

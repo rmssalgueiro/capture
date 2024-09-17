@@ -52,6 +52,7 @@ protected:
     double Kv{1.0};
     double Kpz{1.0};
     double Kvz{1.0};
+    int counter{0};
 
     // MPC controller function
     casadi::Function mpc_controller_;
@@ -63,6 +64,7 @@ protected:
 
     // Control inputs to apply to the vehicle
     Eigen::Vector3d velocity_;
+    Eigen::Vector3d acel_;
 
     // Operation Mode
     OperationMode operation_mode_{MPC_OFF};

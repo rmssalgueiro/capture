@@ -1,1 +1,0 @@
-/home/ricardo22/capture/src/build/pegasus/ament_cmake_environment_hooks/local_setup.zsh

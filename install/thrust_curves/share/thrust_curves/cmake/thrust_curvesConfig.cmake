@@ -1,1 +1,0 @@
-/home/ricardo22/capture/src/build/thrust_curves/ament_cmake_core/thrust_curvesConfig.cmake

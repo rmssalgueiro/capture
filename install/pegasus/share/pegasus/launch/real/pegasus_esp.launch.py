@@ -1,1 +1,0 @@
-/home/ricardo22/capture/src/pegasus/pegasus/launch/real/pegasus_esp.launch.py

@@ -1,1 +1,0 @@
-/home/ricardo22/capture/src/capture/launch/mb690b.launch.py

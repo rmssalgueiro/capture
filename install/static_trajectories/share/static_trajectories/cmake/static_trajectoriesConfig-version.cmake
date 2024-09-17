@@ -1,1 +1,0 @@
-/home/ricardo22/capture/src/build/static_trajectories/ament_cmake_core/static_trajectoriesConfig-version.cmake

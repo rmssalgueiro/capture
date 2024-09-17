@@ -1,1 +1,0 @@
-/home/ricardo22/capture/src/build/autopilot_controllers/ament_cmake_core/autopilot_controllersConfig.cmake

@@ -1,1 +1,0 @@
-/home/ricardo22/capture/src/pegasus/pegasus_autopilot/autopilot/include/autopilot/trajectory_manager.hpp

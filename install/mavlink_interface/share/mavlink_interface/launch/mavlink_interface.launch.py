@@ -1,1 +1,0 @@
-/home/ricardo22/capture/src/pegasus/pegasus_interfaces/mavlink_interface/launch/mavlink_interface.launch.py

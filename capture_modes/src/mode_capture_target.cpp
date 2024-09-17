@@ -24,10 +24,10 @@ void CaptureTargetMode::initialize() {
     );
 
     // Load the gains of the controller
-    node_->declare_parameter<double>("autopilot.CaptureTargetMode.gains.Kp", 1.0);
-    node_->declare_parameter<double>("autopilot.CaptureTargetMode.gains.Kv", 1.0);
-    node_->declare_parameter<double>("autopilot.CaptureTargetMode.gains.Kpz", 1.0);
-    node_->declare_parameter<double>("autopilot.CaptureTargetMode.gains.Kvz", .0);
+    node_->declare_parameter<double>("autopilot.CaptureTargetMode.gains.Kp", 3.0);
+    node_->declare_parameter<double>("autopilot.CaptureTargetMode.gains.Kv", 5.0);
+    node_->declare_parameter<double>("autopilot.CaptureTargetMode.gains.Kpz", 2.0);
+    node_->declare_parameter<double>("autopilot.CaptureTargetMode.gains.Kvz", 3.0);
     Kp = node_->get_parameter("autopilot.CaptureTargetMode.gains.Kp").as_double();
     Kv = node_->get_parameter("autopilot.CaptureTargetMode.gains.Kv").as_double();
     Kpz = node_->get_parameter("autopilot.CaptureTargetMode.gains.Kpz").as_double();
@@ -82,25 +82,36 @@ void CaptureTargetMode::update(double dt) {
     update_vehicle_state();
 
     // Check if we need to change MPC on
-    if((Pd[0] + 1 > 28 && Pd[0] - 1 < 28) && (Pd[1] + 1 > 5 && Pd[1] - 1 < 5)) {
+    //Pinform
+    if((Pd[0] + 5 > 80 && Pd[0] - 5 < 80) && (Pd[1] + 1 > 10 && Pd[1] - 1 < 10)) {
 	   operation_mode_ = OperationMode::MPC_ON;
     }
     // Apply the correct control mode
     if (operation_mode_ == OperationMode::MPC_ON) {
+
         mode_mpc_on();
+
+        if(counter==10){
+            //The MPC was made to work at 5 Hz(200ms), so we need to call it every 10 iterations, because the update function is called at 50 Hz(20ms).
+            // Make the controller track the reference
+            //this->controller_->set_inertial_velocity(velocity_, Pegasus::Rotations::rad_to_deg(yawd), dt);
+            this->controller_->set_inertial_acceleration(acel_, dt);
+            counter=0;
+        }
+        counter++;
+
     } else {
         mode_mpc_off();
-    }
+        this->controller_->set_inertial_velocity(velocity_, Pegasus::Rotations::rad_to_deg(yawd), dt);
 
-    // Make the controller track the reference
-    this->controller_->set_inertial_velocity(velocity_, Pegasus::Rotations::rad_to_deg(yawd), dt);
+    }
 }
 
 bool CaptureTargetMode::check_finished() {
     
     update_vehicle_state();
 
-    if((P[0] + 1 > 0 && P[0] - 1 < 0) && (P[1] + 1 > 5 && P[1] - 1 < 5)) {
+    if((P[0] + 1 > 0 && P[0] - 1 < 0) && (P[1] + 1 > 10 && P[1] - 1 < 10)) {
         
         signal_mode_finished();
         RCLCPP_INFO_STREAM(node_->get_logger(), "Capture finished.");
@@ -131,25 +142,30 @@ void CaptureTargetMode::mode_mpc_on() {
     xx = result_xx;
     uu = result_uu;
 
-    casadi::Matrix<double> result_matrix = res.at(1);
+    casadi::Matrix<double> result_matrix = res.at(0);
 
     // Set the velocity input to apply to the vehicle
+    /*
     velocity_[0] = static_cast<double>(result_matrix(3,1));
     velocity_[1] = static_cast<double>(result_matrix(4,1));
     velocity_[2] = static_cast<double>(result_matrix(5,1));
+    */
+    acel_[0] = static_cast<double>(result_matrix(0,1));
+    acel_[1] = static_cast<double>(result_matrix(1,1));
+    acel_[2] = static_cast<double>(result_matrix(2,1));
 
     check_finished();
 }
 
 void CaptureTargetMode::mode_mpc_off() {
-    
+    //Pwait
     // TODO - explain what is going on here...
     Kp=0.5;
 
     Eigen::Vector3d Cp;
-    Cp[0] = 35 - P[0];
-    Cp[1] = 5 - P[1];
-    Cp[2] = (-15) - P[2];
+    Cp[0] = 90 - P[0];
+    Cp[1] = 10 - P[1];
+    Cp[2] = (-23) - P[2];
 
     velocity_[0] = Kp * Cp[0];
     velocity_[1] = Kp * Cp[1];
