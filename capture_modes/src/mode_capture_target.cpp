@@ -89,9 +89,10 @@ void CaptureTargetMode::update(double dt) {
     // Apply the correct control mode
     if (operation_mode_ == OperationMode::MPC_ON) {
 
-        mode_mpc_on();
+        
 
         if(counter==10){
+            mode_mpc_on();
             //The MPC was made to work at 5 Hz(200ms), so we need to call it every 10 iterations, because the update function is called at 50 Hz(20ms).
             // Make the controller track the reference
             //this->controller_->set_inertial_velocity(velocity_, Pegasus::Rotations::rad_to_deg(yawd), dt);
@@ -154,6 +155,7 @@ void CaptureTargetMode::mode_mpc_on() {
     acel_[1] = static_cast<double>(result_matrix(1,1));
     acel_[2] = static_cast<double>(result_matrix(2,1));
 
+    RCLCPP_WARN(this->node_->get_logger(), "acc set to (%f, %f, %f)", acel_[0], acel_[1], acel_[2]);
     check_finished();
 }
 

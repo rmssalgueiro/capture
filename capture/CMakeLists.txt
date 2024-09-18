@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10.2)
-project(capture)
+project(capture_test)
 
 # Add -Wno-dev to CLion CMake options to suppress warning about gazebo_dev
 find_package(ament_cmake_auto REQUIRED)

@@ -83,6 +83,8 @@ def main(args=None):
     # Wait for takeoff
     time.sleep(5)
 
+    shuttle.set_autopilot_mode('CaptureTargetMode')
+    '''
     # Set waypoints relative to the initial position
     shuttle.set_waypoint(initial_x, initial_y, initial_z - 10, 0.0)
     shuttle.set_autopilot_mode('WaypointMode')
@@ -100,11 +102,11 @@ def main(args=None):
     shuttle.set_waypoint(initial_x, initial_y, initial_z - 10, 0.0)
 
     time.sleep(10)
-
+    '''
     # Land the drone
-    shuttle.set_autopilot_mode('OnboardLandMode')
 
-    time.sleep(10)
+    time.sleep(600)
+    shuttle.set_autopilot_mode('OnboardLandMode')
     rclpy.shutdown()
 
 if __name__ == "__main__":
