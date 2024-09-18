@@ -106,7 +106,7 @@ def main(args=None):
     time.sleep(10)
 
     # Land the drone
-    shuttle.set_autopilot_mode('LandMode')
+    shuttle.set_autopilot_mode('OnboardLandMode')
 
     time.sleep(10)
     rclpy.shutdown()
