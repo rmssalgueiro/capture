@@ -89,19 +89,15 @@ def main(args=None):
 
     time.sleep(10)
     shuttle.set_waypoint(initial_x + 10.0, initial_y, initial_z - 10, 0.0)
-    shuttle.set_autopilot_mode('WaypointMode')
 
     time.sleep(10)
     shuttle.set_waypoint(initial_x + 10.0, initial_y + 10.0, initial_z - 10, 0.0)
-    shuttle.set_autopilot_mode('WaypointMode')
 
     time.sleep(10)
     shuttle.set_waypoint(initial_x, initial_y + 10.0, initial_z - 10, 0.0)
-    shuttle.set_autopilot_mode('WaypointMode')
 
     time.sleep(10)
     shuttle.set_waypoint(initial_x, initial_y, initial_z - 10, 0.0)
-    shuttle.set_autopilot_mode('WaypointMode')
 
     time.sleep(10)
 
