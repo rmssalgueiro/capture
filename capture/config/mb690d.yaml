@@ -3,7 +3,7 @@
     # ----------------------------------------------------------------------------------------------------------
     # Low-level configurations
     # ----------------------------------------------------------------------------------------------------------
-     dynamics:
+    dynamics:
       mass: 3.50 #Kg
       thrust_curve:
         # Formula T(N) = a * arctan(b * input + c) + d   
@@ -16,7 +16,7 @@
     # ----------------------------------------------------------------------------------------------------------
     autopilot:
       # Update rate
-      rate: 33.0 # Hz
+      rate: 50.0 # Hz
       # ----------------------------------------------------------------------------------------------------------
       # Definition of the controller that will perform the tracking of references of the different operation modes
       # ----------------------------------------------------------------------------------------------------------
@@ -87,18 +87,18 @@
         fallback: "HoldMode"
         on_finish: "HoldMode"
         geofencing_violation_fallback: "HoldMode"
-        takeoff_altitude: -1.0 # m (NED)
+        takeoff_altitude: -3.0 # m (NED)
         set_takeoff_altitude_service: "autopilot/set_takeoff"
       OnboardLandMode: 
         valid_transitions: ["DisarmMode", "ArmMode", "TakeoffMode", "HoldMode", "WaypointMode", "FollowTrajectoryMode", "PassThroughMode"]
         fallback: "HoldMode"
         on_finish: "DisarmMode"
         land_service: "fmu/land"
-      HoldMode:
+      HoldMode: 
         valid_transitions: ["OnboardLandMode", "WaypointMode", "FollowTrajectoryMode", "PassThroughMode", "CaptureTargetMode"]
         fallback: "OnboardLandMode"
       WaypointMode: 
-        valid_transitions: ["OnboardLandMode", "HoldMode", "FollowTrajectoryMode", "PassThroughMode", "CaptureTargetMode"]
+        valid_transitions: ["LandMode", "HoldMode", "FollowTrajectoryMode", "PassThroughMode", "CaptureTargetMode"]
         fallback: "HoldMode"
         geofencing_violation_fallback: "HoldMode"
         set_waypoint_service: "autopilot/set_waypoint"
