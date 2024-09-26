@@ -68,5 +68,6 @@ protected:
 
     // Operation Mode
     OperationMode operation_mode_{MPC_OFF};
+
 };
 }

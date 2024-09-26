@@ -16,12 +16,6 @@ class Drone(Node):
         self.id = id
         self.namespace = 'drone'
 
-        # Variables to store the initial position
-        self.initial_position_received = False
-        self.initial_x = 0.0
-        self.initial_y = 0.0
-        self.initial_z = 0.0
-
         # Create the service clients for the drone
         self.add_waypoint_srv = self.create_client(Waypoint, '/drone' + str(id) + '/autopilot/set_waypoint')
         while not self.add_waypoint_srv.wait_for_service(timeout_sec=10.0):
@@ -31,20 +25,9 @@ class Drone(Node):
         while not self.set_autopilot_srv.wait_for_service(timeout_sec=10.0):
             self.get_logger().info('Set Mode service not available, waiting again...')
 
-        # Create subscriptions to listen to the drone's position (replace PositionStatus with your message type)
-        self.create_subscription(Odometry, '/drone' + str(id) + '/fmu/filter/state', self.position_status_callback, qos_profile_sensor_data)
-
         # Requests messages
         self.waypoint_req = Waypoint.Request()
         self.set_mode_req = SetMode.Request()
-
-    def position_status_callback(self, msg):
-        if not self.initial_position_received:
-            self.initial_x = msg.pose.pose.position.x
-            self.initial_y = msg.pose.pose.position.y
-            self.initial_z = msg.pose.pose.position.z
-            self.initial_position_received = True
-            self.get_logger().info(f'Initial position saved: ({self.initial_x}, {self.initial_y}, {self.initial_z})')
 
     def set_autopilot_mode(self, mode='DisarmMode'):
         self.get_logger().info(f'Setting autopilot mode to: {mode}')
@@ -67,15 +50,6 @@ def main(args=None):
     rclpy.init(args=args)
     shuttle = Drone(1)
 
-    # Wait until initial position is received
-    while not shuttle.initial_position_received:
-        rclpy.spin_once(shuttle)
-
-    # Now use the initial position to set waypoints dynamically
-    initial_x = shuttle.initial_x
-    initial_y = shuttle.initial_y
-    initial_z = shuttle.initial_z
-
     # Arm the drone
     shuttle.set_autopilot_mode('ArmMode')
     shuttle.set_autopilot_mode('TakeoffMode')
@@ -83,30 +57,12 @@ def main(args=None):
     # Wait for takeoff
     time.sleep(5)
 
-    
-    # Set waypoints relative to the initial position
-    shuttle.set_waypoint(initial_x, initial_y, initial_z - 3.0, 0.0)
-    shuttle.set_autopilot_mode('WaypointMode')
+    shuttle.set_autopilot_mode('CaptureTargetMode')
 
-    time.sleep(10)
-    shuttle.set_waypoint(initial_x + 3.0, initial_y, initial_z - 3.0, 0.0)
-
-    time.sleep(10)
-    shuttle.set_waypoint(initial_x + 3.0, initial_y + 3.0, initial_z - 3.0, 0.0)
-
-    time.sleep(10)
-    shuttle.set_waypoint(initial_x, initial_y + 3.0, initial_z - 3.0, 0.0)
-
-    time.sleep(10)
-    shuttle.set_waypoint(initial_x, initial_y, initial_z - 3.0, 0.0)
-
-    time.sleep(10)
-    
     # Land the drone
-    shuttle.set_autopilot_mode('OnboardLandMode')
-    
-    time.sleep(10)
 
+    time.sleep(600)
+    shuttle.set_autopilot_mode('OnboardLandMode')
     rclpy.shutdown()
 
 if __name__ == "__main__":

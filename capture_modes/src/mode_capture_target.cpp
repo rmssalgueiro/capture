@@ -112,8 +112,8 @@ bool CaptureTargetMode::check_finished() {
     
     update_vehicle_state();
 
-    if((P[0] + 1 > 0 && P[0] - 1 < 0) && (P[1] + 1 > 10 && P[1] - 1 < 10)) {
-        
+    //if((P[0] + 1 > 0 && P[0] - 1 < 0) && (P[1] + 1 > 10 && P[1] - 1 < 10)) {
+    if((P[2] - Pd[2] > - 0.5) && (operation_mode_ == OperationMode::MPC_ON)){// > because NED referencial
         signal_mode_finished();
         RCLCPP_INFO_STREAM(node_->get_logger(), "Capture finished.");
         return true;
@@ -172,6 +172,7 @@ void CaptureTargetMode::mode_mpc_off() {
     velocity_[0] = Kp * Cp[0];
     velocity_[1] = Kp * Cp[1];
     velocity_[2] = Kp * Cp[2];
+
 }
 
 bool CaptureTargetMode::exit() {
