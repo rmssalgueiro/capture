@@ -21,7 +21,8 @@ setup(
     entry_points={
         'console_scripts': [
             'mission=capture_missions.mission:main',
-            'capture=capture_missions.capture:main'
+            'capture=capture_missions.capture:main',
+            'mission_real_and_simul=capture_missions.mission_real_and_simul:main'
         ],
     },
 )

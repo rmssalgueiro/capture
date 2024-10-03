@@ -66,7 +66,8 @@ class Drone(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    shuttle = Drone(1)
+    real = Drone(1)
+    simul = Drone(2)
 
     # Wait until initial position is received
     while not shuttle.initial_position_received:
@@ -81,13 +82,16 @@ def main(args=None):
         sys.exit(0)
 
     # Arm the drone
-    shuttle.set_autopilot_mode('ArmMode')
-    shuttle.set_autopilot_mode('TakeoffMode')
+    real.set_autopilot_mode('ArmMode')
+    real.set_autopilot_mode('TakeoffMode')
+
+    simul.set_autopilot_mode('ArmMode')
+    simul.set_autopilot_mode('TakeoffMode')
 
     # Wait for takeoff
     time.sleep(5)
 
-    
+    '''
     # Set waypoints relative to the initial position
     shuttle.set_waypoint(initial_x, initial_y, initial_z - 3.0, 0.0)
     shuttle.set_autopilot_mode('WaypointModeAcc')
@@ -105,11 +109,13 @@ def main(args=None):
     shuttle.set_waypoint(initial_x, initial_y, initial_z - 3.0, 0.0)
 
     time.sleep(10)
-    
+    '''
     # Land the drone
-    shuttle.set_autopilot_mode('OnboardLandMode')
+    real.set_autopilot_mode('OnboardLandMode')
+    simul.set_autopilot_mode('OnboardLandMode')
+
     
-    time.sleep(10)
+    time.sleep(5)
 
     rclpy.shutdown()
 
