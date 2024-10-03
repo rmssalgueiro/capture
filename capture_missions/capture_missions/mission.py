@@ -6,6 +6,7 @@ from pegasus_msgs.srv import Waypoint, AddCircle, SetMode
 from pegasus_msgs.msg import AutopilotStatus
 from std_msgs.msg import String
 from nav_msgs.msg import Odometry
+import sys
 
 
 class Drone(Node):
@@ -54,7 +55,7 @@ class Drone(Node):
         return self.future.result()
 
     def set_waypoint(self, x, y, z, yaw):
-        self.get_logger().info(f'Setting waypoint to: {x}, {y}, {z}, {yaw}')
+        #self.get_logger().info(f'Setting waypoint to: {x}, {y}, {z}, {yaw}')
         self.waypoint_req.position[0] = x
         self.waypoint_req.position[1] = y
         self.waypoint_req.position[2] = z
@@ -65,7 +66,7 @@ class Drone(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    shuttle = Drone(1)
+    shuttle = Drone(2)
 
     # Wait until initial position is received
     while not shuttle.initial_position_received:
@@ -76,6 +77,9 @@ def main(args=None):
     initial_y = shuttle.initial_y
     initial_z = shuttle.initial_z
 
+    if initial_x == 0.0:
+        sys.exit(0)
+        
     # Arm the drone
     shuttle.set_autopilot_mode('ArmMode')
     shuttle.set_autopilot_mode('TakeoffMode')
@@ -86,7 +90,7 @@ def main(args=None):
     
     # Set waypoints relative to the initial position
     shuttle.set_waypoint(initial_x, initial_y, initial_z - 3.0, 0.0)
-    shuttle.set_autopilot_mode('WaypointMode')
+    shuttle.set_autopilot_mode('WaypointModeAcc')
 
     time.sleep(10)
     shuttle.set_waypoint(initial_x + 3.0, initial_y, initial_z - 3.0, 0.0)

@@ -5,4 +5,9 @@
       <description>Mode of operation to capture a target.</description>
   </class>
 
+  <!-- Waypoint Acceleration -->
+  <class type="autopilot::WaypointModeAcc" base_class_type="autopilot::Mode">
+      <description>Mode of operation to sent acceleration commands to get to a waypoint.</description>
+  </class>
+
 </library>

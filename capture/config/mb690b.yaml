@@ -98,7 +98,7 @@
         valid_transitions: ["OnboardLandMode", "WaypointMode", "FollowTrajectoryMode", "PassThroughMode", "CaptureTargetMode"]
         fallback: "OnboardLandMode"
       WaypointMode: 
-        valid_transitions: ["LandMode", "HoldMode", "FollowTrajectoryMode", "PassThroughMode", "CaptureTargetMode"]
+        valid_transitions: ["OnboardLandMode", "HoldMode", "FollowTrajectoryMode", "PassThroughMode", "CaptureTargetMode"]
         fallback: "HoldMode"
         geofencing_violation_fallback: "HoldMode"
         set_waypoint_service: "autopilot/set_waypoint"
