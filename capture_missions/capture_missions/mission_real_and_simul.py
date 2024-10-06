@@ -70,13 +70,13 @@ def main(args=None):
     simul = Drone(2)
 
     # Wait until initial position is received
-    while not shuttle.initial_position_received:
-        rclpy.spin_once(shuttle)
+    while not real.initial_position_received:
+        rclpy.spin_once(real)
 
     # Now use the initial position to set waypoints dynamically
-    initial_x = shuttle.initial_x
-    initial_y = shuttle.initial_y
-    initial_z = shuttle.initial_z
+    initial_x = real.initial_x
+    initial_y = real.initial_y
+    initial_z = real.initial_z
 
     if initial_x == 0.0:
         sys.exit(0)
