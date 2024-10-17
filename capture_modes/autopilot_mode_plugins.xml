@@ -10,4 +10,9 @@
       <description>Mode of operation to sent acceleration commands to get to a waypoint.</description>
   </class>
 
+  <!-- Coordinate transform test -->
+  <class type="autopilot::CoordenadasMode" base_class_type="autopilot::Mode">
+      <description>Mode of operation to check coordinate transforms.</description>
+  </class>
+
 </library>

@@ -127,8 +127,9 @@ void CaptureTargetMode::mode_mpc_on() {
 
     
     // Create the state vector for the MPC
-    x0 = casadi::DM::vertcat({P(0), P(1), P(2), V(0), V(1), V(2), yaw, Pd(0), Pd(1), Pd(2), Vd(0), Vd(1), Vd(2), yawd});
-    
+    x0 = casadi::DM::vertcat({P(0), P(1), P(2), V(0), V(1), V(2), yaw, Pd2(0), Pd2(1), Pd2(2), Vd(0), Vd(1), Vd(2), yawd});
+    RCLCPP_WARN(this->node_->get_logger(), "x0: (%f, %f, %f, %f, %f, %f)", P(0), P(1), P(2), Pd2(0), Pd2(1), Pd2(2));
+
     // Create the input vector for the MPC
     std::vector<casadi::DM> arg1 = {x0, uu, xx};
 
@@ -155,7 +156,7 @@ void CaptureTargetMode::mode_mpc_on() {
     acel_[1] = static_cast<double>(result_matrix(1,1));
     acel_[2] = static_cast<double>(result_matrix(2,1));
 
-    RCLCPP_WARN(this->node_->get_logger(), "acc set to (%f, %f, %f)", acel_[0], acel_[1], acel_[2]);
+    //RCLCPP_WARN(this->node_->get_logger(), "acc set to (%f, %f, %f)", acel_[0], acel_[1], acel_[2]);
     check_finished();
 }
 
@@ -183,6 +184,10 @@ void CaptureTargetMode::target_state_callback(const nav_msgs::msg::Odometry::Con
 
     // Update the position and velocity of the target
     Pd = Eigen::Vector3d(msg->pose.pose.position.x, msg->pose.pose.position.y, msg->pose.pose.position.z);
+    Pd2[0] = Pd[0]-3;
+    Pd2[1] = Pd[1];
+    Pd2[2] = Pd[2];
+
     Vd = Eigen::Vector3d(msg->twist.twist.linear.x, msg->twist.twist.linear.y, msg->twist.twist.linear.z);
 
     // Update the heading of the target
@@ -191,7 +196,10 @@ void CaptureTargetMode::target_state_callback(const nav_msgs::msg::Odometry::Con
     q.y() = msg->pose.pose.orientation.y;
     q.z() = msg->pose.pose.orientation.z;
     q.w() = msg->pose.pose.orientation.w;
-    yawd = Pegasus::Rotations::yaw_from_quaternion(q); 
+    yawd = Pegasus::Rotations::yaw_from_quaternion(q);
+
+    //RCLCPP_WARN(this->node_->get_logger(), "Position (%f, %f, %f)", Pd[0], Pd[1], Pd[2]);
+
 }
 
 void CaptureTargetMode::update_vehicle_state() {

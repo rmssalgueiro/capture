@@ -28,6 +28,8 @@ public:
 
     void compile_mpc_controller();
 
+    Eigen::Vector3d Pd{Eigen::Vector3d::Zero()};    // Desired position (of the target)
+    Eigen::Vector3d Pd2{Eigen::Vector3d::Zero()};    // Desired position (of the target)
 protected:
 
     bool check_finished();
@@ -40,7 +42,8 @@ protected:
     Eigen::Vector3d P{Eigen::Vector3d::Zero()};     // Position
     Eigen::Vector3d V{Eigen::Vector3d::Zero()};     // Velocity
     double yaw{0.0};                                // Yaw angle
-    Eigen::Vector3d Pd{Eigen::Vector3d::Zero()};    // Desired position (of the target)
+
+
     Eigen::Vector3d Vd{Eigen::Vector3d::Zero()};    // Desired velocity (of the target)
     double yawd{0.0};
 

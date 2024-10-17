@@ -18,8 +18,8 @@ void WaypointModeAcc::initialize() {
 
 bool WaypointModeAcc::enter() {
 
-    Kp = 1;
-	Kv = 2;
+    Kp = 4;
+	Kv = 4;
 	Kpz = 1;
 	Kvz = 3;
     // Return true to indicate that the mode has been entered successfully
@@ -54,7 +54,7 @@ void WaypointModeAcc::update(double dt) {
     // Set the controller to track the target position and attitude
     this->controller_->set_inertial_acceleration(u, dt);
     //this->controller_->set_inert (this->target_pos, this->target_yaw, dt);
-    RCLCPP_WARN(this->node_->get_logger(), "Waypoint set to (%f, %f, %f)", u[0], u[1], u[2]);
+    //RCLCPP_WARN(this->node_->get_logger(), "Waypoint set to (%f, %f, %f)", u[0], u[1], u[2]);
 }
 
 void WaypointModeAcc::waypoint_callback(const pegasus_msgs::srv::Waypoint::Request::SharedPtr request, const pegasus_msgs::srv::Waypoint::Response::SharedPtr response) {

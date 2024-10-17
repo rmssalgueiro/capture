@@ -26,6 +26,7 @@ find_package(casadi REQUIRED)
 add_library(${PROJECT_NAME} 
   src/mode_capture_target.cpp
   src/mode_waypoint_acc.cpp
+  src/mode_coordenadas.cpp
 )
 
 target_include_directories(${PROJECT_NAME} PUBLIC
