@@ -67,15 +67,26 @@ public:
     float pitch = 0.0;
     float yaw = 0.0; 
 
+    float roll2 = 0.0;
+    float pitch2 = 0.0;
+    float yaw2 = 0.0;
+
     void target_state_callback(const pegasus_msgs::msg::RPY::ConstSharedPtr msg);
+    void target_state_callback2(const pegasus_msgs::msg::RPY::ConstSharedPtr msg);
+
 
     void target_gps_callback(const pegasus_msgs::msg::SensorGps::ConstSharedPtr msg);
+    void target_gps_callback2(const pegasus_msgs::msg::SensorGps::ConstSharedPtr msg);
+    void target_pos_callback2(const nav_msgs::msg::Odometry::ConstSharedPtr msg);
+
 
     Eigen::Vector3d P{Eigen::Vector3d::Zero()};     // Position
+    Eigen::Vector3d P2{Eigen::Vector3d::Zero()};     // Position
+
     
     double ref_lla[3] = {47.397742, 8.545594, 488.05}; 
     //double ref_lla[3] = {37.7749, -122.4194, 10};  // Example reference point (San Francisco)    LLA drone_lla = {0.0,0.0,0.0};
-
+    //px4 default 454671160 -737578370
 protected:
 
     // The waypoint service callback
@@ -91,8 +102,14 @@ protected:
     rclcpp::Service<pegasus_msgs::srv::Waypoint>::SharedPtr waypoint_service_{nullptr};
 
     rclcpp::Subscription<pegasus_msgs::msg::RPY>::SharedPtr target_state_sub_;
+    rclcpp::Subscription<pegasus_msgs::msg::RPY>::SharedPtr target_state_sub2_;
+
 
     rclcpp::Subscription<pegasus_msgs::msg::SensorGps>::SharedPtr target_gps_sub_;
+    rclcpp::Subscription<pegasus_msgs::msg::SensorGps>::SharedPtr target_gps_sub2_;
+
+    rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr target_pos_sub2_;
+
 
 };
 

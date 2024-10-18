@@ -30,17 +30,17 @@ def generate_launch_description():
             'launch_pegasus': 'false',
             'vehicle_id': '1',
         }.items())
-    '''
+    
     target_launch_file = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(os.path.join(get_package_share_directory('pegasus_gazebo'), 'launch/vehicles/iris.launch.py')),
         launch_arguments={  # ENU coordinates
             'x':  '0.0',
-            'y':  '0.0',
+            'y':  '3.0',
             'z':  '0.0',
             'launch_pegasus': 'false',
             'vehicle_id': '2',
         }.items())
-    '''
+    
     # -----------------------------------------------
     # ---------- CONTROL SYSTEM LANCH  --------------
     # -----------------------------------------------
@@ -64,7 +64,7 @@ def generate_launch_description():
             'mavlink_forward': "['']"
         }.items(),
     )
-    '''
+    
     # Call MAVLINK interface package launch file 
     mavlink2_interface_launch_file = IncludeLaunchDescription(
         # Grab the launch file for the mavlink interface
@@ -78,7 +78,7 @@ def generate_launch_description():
             'mavlink_forward': "['']"
         }.items(),
     )
-    '''
+    
     # Call autopilot package launch file
     autopilot_launch_file = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(os.path.join(get_package_share_directory('autopilot'), 'launch/autopilot.launch.py')),
@@ -89,7 +89,7 @@ def generate_launch_description():
             'autopilot_yaml': LaunchConfiguration('drone_params'),
         }.items(),
     )
-    '''
+    
     # Call autopilot package launch file
     autopilot2_launch_file = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(os.path.join(get_package_share_directory('autopilot'), 'launch/autopilot.launch.py')),
@@ -100,7 +100,7 @@ def generate_launch_description():
             'autopilot_yaml': LaunchConfiguration('drone_params'),
         }.items(),
     )
-    '''
+    
     # ----------------------------------------
     # ---- RETURN THE LAUNCH DESCRIPTION -----
     # ----------------------------------------
@@ -108,11 +108,11 @@ def generate_launch_description():
         # Launch files for simulation
         gazebo_launch_file,
         iris_launch_file,
-        #target_launch_file,
+        target_launch_file,
         #files for the control system
         drone_params_file_arg,
         mavlink_interface_launch_file,
-        #mavlink2_interface_launch_file,
+        mavlink2_interface_launch_file,
         autopilot_launch_file,
-        #autopilot2_launch_file
+        autopilot2_launch_file
     ])

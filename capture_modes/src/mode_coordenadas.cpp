@@ -19,8 +19,17 @@ void CoordenadasMode::initialize() {
     target_gps_sub_ = node_->create_subscription<pegasus_msgs::msg::SensorGps>("/drone1/fmu/sensors/gps", rclcpp::SensorDataQoS(), 
     std::bind(&CoordenadasMode::target_gps_callback, this, std::placeholders::_1));
 
+    target_gps_sub2_ = node_->create_subscription<pegasus_msgs::msg::SensorGps>("/drone2/fmu/sensors/gps", rclcpp::SensorDataQoS(), 
+    std::bind(&CoordenadasMode::target_gps_callback2, this, std::placeholders::_1));
+
     target_state_sub_ = node_->create_subscription<pegasus_msgs::msg::RPY>("/drone1/fmu/filter/rpy", rclcpp::SensorDataQoS(), 
     std::bind(&CoordenadasMode::target_state_callback, this, std::placeholders::_1));
+
+    target_state_sub2_ = node_->create_subscription<pegasus_msgs::msg::RPY>("/drone2/fmu/filter/rpy", rclcpp::SensorDataQoS(), 
+    std::bind(&CoordenadasMode::target_state_callback2, this, std::placeholders::_1));
+
+    target_pos_sub2_ = node_->create_subscription<nav_msgs::msg::Odometry>("/drone2/fmu/filter/state", rclcpp::SensorDataQoS(),
+    std::bind(&CoordenadasMode::target_pos_callback2, this, std::placeholders::_1));
 
     RCLCPP_INFO(this->node_->get_logger(), "CoordenadasMode initialized");
 
@@ -190,6 +199,18 @@ void global_to_local(const double global_pos[3], const double global_translation
     multiply_matrix_vector(R_local_inv, ned_pos, local_pos);  // Apply inverse local rotation to get back to local frame
 }
 */
+
+void CoordenadasMode::target_gps_callback2(const pegasus_msgs::msg::SensorGps::ConstSharedPtr msg) {
+    
+    if (drone2_lla[0] == 0.0 && drone2_lla[1] == 0.0 && drone2_lla[2] == 0.0) {
+        drone2_lla[0] = msg->latitude_deg;
+        drone2_lla[1] = msg->longitude_deg;
+        drone2_lla[2] = msg->altitude_msl;
+        //double drone1_lla[3] = {47.397769, 8.545594, 488.05};
+        //double drone2_lla[3] = {47.397742, 8.545634, 488.05};
+
+    }
+}
 void CoordenadasMode::target_gps_callback(const pegasus_msgs::msg::SensorGps::ConstSharedPtr msg) {
     
     // Drone 1's position in LLA
@@ -214,13 +235,13 @@ void CoordenadasMode::target_gps_callback(const pegasus_msgs::msg::SensorGps::Co
     //RCLCPP_WARN(this->node_->get_logger(), "LLA (%f, %f, %f)", drone1_lla[0], drone1_lla[1], drone1_lla[2]);
 
     double drone1_local_position[3] = {P[0], P[1], P[2]};  // Drone has moved in local frame
-    //double drone2_local_position[3] = {P[0], P[1], P[2]};  // Drone has moved in local frame
+    double drone2_local_position[3] = {P2[0], P2[1], P2[2]};  // Drone has moved in local frame
 
     // Step 1: Convert reference point and both drones' LLA positions to ECEF
     double ref_ecef[3], drone1_ecef[3], drone2_ecef[3];
     lla_to_ecef(ref_lla, ref_ecef);
     lla_to_ecef(drone1_lla, drone1_ecef);
-    //lla_to_ecef(drone2_lla, drone2_ecef);
+    lla_to_ecef(drone2_lla, drone2_ecef);
 
 
     // Step 2: Convert both drones' positions from ECEF to NED
@@ -228,27 +249,27 @@ void CoordenadasMode::target_gps_callback(const pegasus_msgs::msg::SensorGps::Co
     double drone1_ned[3];
     ecef_to_ned(drone1_ecef, ref_ecef, ref_lla, drone1_ned);
 
-    //double drone2_ned[3];
-    //ecef_to_ned(drone2_ecef, ref_ecef, ref_lla, drone2_ned);
+    double drone2_ned[3];
+    ecef_to_ned(drone2_ecef, ref_ecef, ref_lla, drone2_ned);
 
     // Step 3: Add the local position to the NED coordinates
     drone1_ned[0] += drone1_local_position[0];  // Add local x to NED north
     drone1_ned[1] += drone1_local_position[1];  // Add local y to NED east
     drone1_ned[2] += drone1_local_position[2];  // Add local z to NED down
-    /*
+    
     drone2_ned[0] += drone2_local_position[0];  // Add local x to NED north
     drone2_ned[1] += drone2_local_position[1];  // Add local y to NED east
     drone2_ned[2] += drone2_local_position[2];  // Add local z to NED down
-    */
+    
      // Step 4: Apply drone's local RPY rotation to the NED coordinates
     double R1_local[3][3];
-    //double R2_local[3][3];
+    double R2_local[3][3];
     rpy_to_rotation_matrix(roll, pitch, yaw, R1_local);
-    //rpy_to_rotation_matrix(roll, pitch, yaw, R2_local);
+    rpy_to_rotation_matrix(roll2, pitch2, yaw2, R2_local);
     double rotated_drone1_ned[3];
-    //double rotated_drone2_ned[3];
+    double rotated_drone2_ned[3];
     apply_rotation(drone1_ned, R1_local, rotated_drone1_ned);
-    //apply_rotation(drone2_ned, R2_local, rotated_drone2_ned);
+    apply_rotation(drone2_ned, R2_local, rotated_drone2_ned);
 
     // Step 5: Define a global rotation matrix (for example, rotating global frame by some RPY angles)
     double global_roll = 0.0, global_pitch = 0.0, global_yaw = -90.0;
@@ -259,17 +280,17 @@ void CoordenadasMode::target_gps_callback(const pegasus_msgs::msg::SensorGps::Co
     double global_rotated_drone1_ned[3];
     apply_rotation(rotated_drone1_ned, R_global, global_rotated_drone1_ned);
 
-    //double global_rotated_drone2_ned[3];
-    //apply_rotation(rotated_drone2_ned, R_global, global_rotated_drone2_ned);
+    double global_rotated_drone2_ned[3];
+    apply_rotation(rotated_drone2_ned, R_global, global_rotated_drone2_ned);
 
     // Step 6: Define a translation vector to the global reference frame
     double global_translation[3] = {0, 0, 0};  // Translation in meters
 
     // Step 7: Translate the drone to the global frame
     double final_global_drone1_ned[3];
-    //double final_global_drone2_ned[3];
+    double final_global_drone2_ned[3];
     translate_to_global(global_rotated_drone1_ned, global_translation, final_global_drone1_ned);
-    //translate_to_global(global_rotated_drone2_ned, global_translation, final_global_drone2_ned);
+    translate_to_global(global_rotated_drone2_ned, global_translation, final_global_drone2_ned);
 
     if(pos_ned[0] == 0.0 && pos_ned[1] == 0.0 && pos_ned[2] == 0.0) {
         pos_ned[0] = final_global_drone1_ned[0];
@@ -278,31 +299,39 @@ void CoordenadasMode::target_gps_callback(const pegasus_msgs::msg::SensorGps::Co
     }
     // Output the final global NED coordinates for the drone
     print_vector("Drone Global NED Coordinates", final_global_drone1_ned);
-    //print_vector("Drone Global NED Coordinates", final_global_drone2_ned);
+    print_vector("Drone Global NED Coordinates", final_global_drone2_ned);
     //RCLCPP_WARN(this->node_->get_logger(), "Waypoint set to (%f, %f, %f)", final_global_drone1_ned[0], final_global_drone1_ned[1], final_global_drone1_ned[2]);
 
 
     // Step 8: Combine the local and global rotation matrices to get the final orientation in the global frame
     double R1_combined[3][3];
-    //double R2_combined[3][3];
+    double R2_combined[3][3];
     multiply_matrices(R_global, R1_local, R1_combined);
-    //multiply_matrices(R_global, R2_local, R2_combined);
+    multiply_matrices(R_global, R2_local, R2_combined);
 
 
     // Step 9: Extract the final global RPY angles
     double global_roll1_final, global_pitch1_final, global_yaw1_final;
-    //double global_roll2_final, global_pitch2_final, global_yaw2_final;
+    double global_roll2_final, global_pitch2_final, global_yaw2_final;
 
     rotation_matrix_to_rpy(R1_combined, global_roll1_final, global_pitch1_final, global_yaw1_final);
-    //rotation_matrix_to_rpy(R2_combined, global_roll2_final, global_pitch2_final, global_yaw2_final);
+    rotation_matrix_to_rpy(R2_combined, global_roll2_final, global_pitch2_final, global_yaw2_final);
 
     
     // Output the final global RPY orientation
     std::cout << "Drone Global RPY:" << std::endl;
-    std::cout << "Roll: " << global_roll1_final << " degrees" << std::endl;
-    std::cout << "Pitch: " << global_pitch1_final << " degrees" << std::endl;
-    std::cout << "Yaw: " << global_yaw1_final << " degrees" << std::endl;
+    std::cout << "Roll: " << global_roll1_final <<","<< global_roll2_final<< " degrees" << std::endl;
+    std::cout << "Pitch: " << global_pitch1_final << "," << global_pitch2_final <<" degrees" << std::endl;
+    std::cout << "Yaw: " << global_yaw1_final << "," << global_pitch2_final << " degrees" << std::endl;
     
+}
+
+void CoordenadasMode::target_state_callback2(const pegasus_msgs::msg::RPY::ConstSharedPtr msg) {
+
+    roll2 = msg->roll;
+    pitch2 = msg->pitch;
+    yaw2 = msg->yaw;
+    //RCLCPP_WARN(this->node_->get_logger(), "RPY (%f, %f, %f)", roll, pitch, yaw);
 }
 
 void CoordenadasMode::target_state_callback(const pegasus_msgs::msg::RPY::ConstSharedPtr msg) {
@@ -380,6 +409,12 @@ void CoordenadasMode::waypoint_callback(const pegasus_msgs::srv::Waypoint::Reque
     //RCLCPP_WARN(this->node_->get_logger(), "Waypoint set to (%f, %f, %f) with yaw %f", this->target_pos[0], this->target_pos[1], this->target_pos[2], this->target_yaw);
 }
 
+void CoordenadasMode::target_pos_callback2(const nav_msgs::msg::Odometry::ConstSharedPtr msg) {
+
+    // Update the position and velocity of the target
+    P2 = Eigen::Vector3d(msg->pose.pose.position.x, msg->pose.pose.position.y, msg->pose.pose.position.z);
+
+}
 void CoordenadasMode::update_vehicle_state() {
 
     // Get the current state of the vehicle
