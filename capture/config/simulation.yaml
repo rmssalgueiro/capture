@@ -105,7 +105,7 @@
         valid_transitions: ["ArmMode"]
         fallback: "DisarmMode"
         disarm_service: "fmu/kill_switch"
-      ArmMode: 
+      ArmMode:
         valid_transitions: ["DisarmMode", "TakeoffMode", "HoldMode", "CoordenadasMode", "WaypointMode", "WaypointModeAcc", "FollowTrajectoryMode", "PassThroughMode"]
         fallback: "DisarmMode"
         geofencing_violation_fallback: "DisarmMode"

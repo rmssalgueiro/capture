@@ -18,6 +18,7 @@ find_package(Eigen3 REQUIRED)
 find_package(pegasus_utils REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(ament_index_cpp REQUIRED)
+find_package(capture_msgs REQUIRED)
 
 # Import the casadi dependency in the pegasus_external
 find_package(casadi_vendor REQUIRED)
@@ -48,6 +49,7 @@ set(dependencies
   casadi_vendor
   ament_index_cpp
   casadi
+  capture_msgs
 )
 
 ament_target_dependencies(${PROJECT_NAME} ${dependencies})

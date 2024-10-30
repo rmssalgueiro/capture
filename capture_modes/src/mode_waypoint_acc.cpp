@@ -65,10 +65,6 @@ void WaypointModeAcc::waypoint_callback(const pegasus_msgs::srv::Waypoint::Reque
     this->target_pos[2] = request->position[2];
     this->target_yaw = request->yaw;
 
-    
-
-
-
     // Set the waypoint flag
     this->waypoint_set_ = true;
 

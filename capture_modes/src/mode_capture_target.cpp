@@ -91,15 +91,15 @@ void CaptureTargetMode::update(double dt) {
 
         
 
-        if(counter==10){
+        //if(counter==10){
             mode_mpc_on();
             //The MPC was made to work at 5 Hz(200ms), so we need to call it every 10 iterations, because the update function is called at 50 Hz(20ms).
             // Make the controller track the reference
             //this->controller_->set_inertial_velocity(velocity_, Pegasus::Rotations::rad_to_deg(yawd), dt);
             this->controller_->set_inertial_acceleration(acel_, dt);
-            counter=0;
-        }
-        counter++;
+            //counter=0;
+        //}
+        //counter++;
 
     } else {
         mode_mpc_off();
@@ -184,7 +184,7 @@ void CaptureTargetMode::target_state_callback(const nav_msgs::msg::Odometry::Con
 
     // Update the position and velocity of the target
     Pd = Eigen::Vector3d(msg->pose.pose.position.x, msg->pose.pose.position.y, msg->pose.pose.position.z);
-    Pd2[0] = Pd[0]-3;
+    Pd2[0] = Pd[0];
     Pd2[1] = Pd[1];
     Pd2[2] = Pd[2];
 
