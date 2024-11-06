@@ -35,7 +35,7 @@ def generate_launch_description():
         PythonLaunchDescriptionSource(os.path.join(get_package_share_directory('pegasus_gazebo'), 'launch/vehicles/iris.launch.py')),
         launch_arguments={  # ENU coordinates
             'x':  '0.0',
-            'y':  '3.0',
+            'y':  '0.0',
             'z':  '0.0',
             'launch_pegasus': 'false',
             'vehicle_id': '2',

@@ -24,37 +24,19 @@ public:
     bool exit() override;
     void update(double dt) override;
 
-    //void print_vector(const std::string& label, const double vec[3]);
     void print_vector(const std::string& label, const Eigen::Vector3d& vec);
-
-
-    //void lla_to_ecef(const double lla[3], double ecef[3]);
     void lla_to_ecef(const Eigen::Vector3d &lla, Eigen::Vector3d &ecef);
-
-    //void ecef_to_ned(const double ecef[3], const double ecef_ref[3], const double lla_ref[3], double ned[3]);
     void ecef_to_ned(const Eigen::Vector3d &ecef, const Eigen::Vector3d &ecef_ref, const Eigen::Vector3d &lla_ref, Eigen::Vector3d &ned);
-
-    //void rpy_to_rotation_matrix(double roll, double pitch, double yaw, double R[3][3]);
     void rpy_to_rotation_matrix(double roll, double pitch, double yaw, Eigen::Matrix3d &R);
-
-    //void apply_rotation(const double ned[3], const double R[3][3], double rotated_ned[3]);
     void apply_rotation(const Eigen::Vector3d &ned, const Eigen::Matrix3d &R, Eigen::Vector3d &rotated_ned);
-
-    //void translate_to_global(const double ned[3], const double global_translation[3], double global_ned[3]);
     void translate_to_global(const Eigen::Vector3d &ned, const Eigen::Vector3d &global_translation, Eigen::Vector3d &global_ned);
-
-    //void multiply_matrices(const double A[3][3], const double B[3][3], double C[3][3]);
     void multiply_matrices(const Eigen::Matrix3d& A, const Eigen::Matrix3d& B, Eigen::Matrix3d& C);
-
-    //void rotation_matrix_to_rpy(const double R[3][3], double& roll, double& pitch, double& yaw);
     void rotation_matrix_to_rpy(const Eigen::Matrix3d& R, double& roll, double& pitch, double& yaw);
     void quaternion_to_rotation_matrix(double q_w, double q_x, double q_y, double q_z, Eigen::Matrix3d &R);
 
     void update_vehicle_state();
     void inverse_rotation_matrix(const double, double R[3][3], double R_inv[3][3]);
     void multiply_matrix_vector(const double R[3][3], const double vec[3], double result[3]);
-    //void inverse_apply_rotation(const double R[3][3], const double vec[3], double result[3]);
-    //void global_to_local(const double global_pos[3], const double global_translation[3], const double R_global[3][3], const double R_local[3][3], double local_pos[3]);
 
 
     int Kp = 0;
@@ -73,8 +55,6 @@ public:
     Eigen::Vector3d final1_ned{Eigen::Vector3d::Zero()};
     Eigen::Vector3d final2_ned{Eigen::Vector3d::Zero()};
 
-
-
     Eigen::Vector3d u{Eigen::Vector3d::Zero()};
     Eigen::Vector3d target_pos{Eigen::Vector3d::Zero()};
     
@@ -86,79 +66,49 @@ public:
     const double DEG2RAD = M_PI / 180.0;
     const double RAD2DEG = 180.0 / M_PI;
     const int SIZE = 3;
-    //double final_global_drone1_ned[3]={0.0,0.0,0.0};
     Eigen::Vector3d final_global_drone1_ned{Eigen::Vector3d::Zero()};
 
-    //double final_global_drone2_ned[3]={0.0,0.0,0.0};
     Eigen::Vector3d final_global_drone2_ned{Eigen::Vector3d::Zero()};
 
-
-    //double drone1_local_position[3] = {0.0, 0.0, 0.0};
-    //double drone2_local_position[3] = {0.0, 0.0, 0.0};
-
-    //double drone1_lla[3] = {0.0, 0.0, 0.0};
     Eigen::Vector3d drone1_lla{Eigen::Vector3d::Zero()};
 
-    //double drone2_lla[3] = {0.0, 0.0, 0.0};
     Eigen::Vector3d drone2_lla{Eigen::Vector3d::Zero()};
 
-    //double drone1_ned[3] = {0.0, 0.0, 0.0};
     Eigen::Vector3d drone1_ned{Eigen::Vector3d::Zero()};
 
-    //double drone2_ned[3] = {0.0, 0.0, 0.0};
     Eigen::Vector3d drone2_ned{Eigen::Vector3d::Zero()};
 
-
-    //double ref_ecef[3] = {0.0, 0.0, 0.0};
     Eigen::Vector3d ref_ecef{Eigen::Vector3d::Zero()};
 
-    //double drone1_ecef[3] = {0.0, 0.0, 0.0};
     Eigen::Vector3d drone1_ecef{Eigen::Vector3d::Zero()};
 
-    //double drone2_ecef[3] = {0.0, 0.0, 0.0};
     Eigen::Vector3d drone2_ecef{Eigen::Vector3d::Zero()};
 
-    //double R1_local[3][3];
     Eigen::Matrix3d R1_local{Eigen::Matrix3d::Zero()};
 
-    //double R2_local[3][3];
     Eigen::Matrix3d R2_local{Eigen::Matrix3d::Zero()};
 
-    //double rotated_drone1_ned[3] = {0.0, 0.0, 0.0};
     Eigen::Vector3d rotated_drone1_ned{Eigen::Vector3d::Zero()};
 
-    //double rotated_drone2_ned[3] = {0.0, 0.0, 0.0};
     Eigen::Vector3d rotated_drone2_ned{Eigen::Vector3d::Zero()};
 
-
     double global_roll = 0.0, global_pitch = 0.0, global_yaw = -90.0;
-    //double R_global[3][3];
     Eigen::Matrix3d R_global{Eigen::Matrix3d::Zero()};
 
-
-    //double global_rotated_drone1_ned[3] = {0.0, 0.0, 0.0};
     Eigen::Vector3d global_rotated_drone1_ned{Eigen::Vector3d::Zero()};
 
-    //double global_rotated_drone2_ned[3] = {0.0, 0.0, 0.0};
     Eigen::Vector3d global_rotated_drone2_ned{Eigen::Vector3d::Zero()};
 
-
-    //double global_translation[3] = {0, 0, 0};  // Translation in meters
     Eigen::Vector3d global_translation{Eigen::Vector3d::Zero()};
 
-
-    //double R1_combined[3][3];
     Eigen::Matrix3d R1_combined{Eigen::Matrix3d::Zero()};
 
-    //double R2_combined[3][3];
     Eigen::Matrix3d R2_combined{Eigen::Matrix3d::Zero()};
 
     Eigen::Quaterniond q;
     Eigen::Quaterniond q_global;
 
-
     double yawd{0.0};
-
 
     double global_roll1_final = 0, global_pitch1_final = 0, global_yaw1_final = 0;
     double global_roll2_final = 0, global_pitch2_final = 0, global_yaw2_final = 0;
@@ -175,8 +125,6 @@ public:
 
     void target_state_callback(const pegasus_msgs::msg::RPY::ConstSharedPtr msg);
     void target_state_callback2(const pegasus_msgs::msg::RPY::ConstSharedPtr msg);
-
-
     void target_gps_callback(const pegasus_msgs::msg::SensorGps::ConstSharedPtr msg);
     void target_gps_callback2(const pegasus_msgs::msg::SensorGps::ConstSharedPtr msg);
     void target_pos_callback2(const nav_msgs::msg::Odometry::ConstSharedPtr msg);
@@ -187,13 +135,12 @@ public:
     Eigen::Vector3d P2{Eigen::Vector3d::Zero()};     // Target Position 
 
     
-    //double ref_lla[3] = {47.397742, 8.545594, 488.05};
     Eigen::Vector3d ref_lla{47.397742, 8.545594, 488.05};
     
-    //double ref_lla[3] = {37.7749, -122.4194, 10};  // Example reference point (San Francisco)    LLA drone_lla = {0.0,0.0,0.0};
     //px4 default 454671160 -737578370
 
     capture_msgs::msg::Capture capture_msg;
+
 protected:
 
     // The waypoint service callback

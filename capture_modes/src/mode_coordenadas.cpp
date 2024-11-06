@@ -39,6 +39,7 @@ void CoordenadasMode::initialize() {
     node_->declare_parameter<std::string>("capture.publishers.status", "capture/status");
     publisher_ = this->node_->create_publisher<capture_msgs::msg::Capture>(
         this->node_->get_parameter("capture.publishers.status").as_string(), rclcpp::SensorDataQoS());
+        
 
     RCLCPP_INFO(this->node_->get_logger(), "CoordenadasMode initialized");
 
@@ -337,17 +338,10 @@ void CoordenadasMode::update(double dt) {
     rotation_matrix_to_rpy(R2_local, global_roll1_final, global_pitch1_final, global_yaw1_final);
 
     //rotation_matrix_to_rpy(R2_combined, global_roll2_final, global_pitch2_final, global_yaw2_final);
-    capture_msg.ned_pos[0] = drone1_ned[0];
-    capture_msg.ned_pos[1] = drone1_ned[1];
-    capture_msg.ned_pos[2] = drone1_ned[2];
-    
-    capture_msg.global_pos[0] = final_global_drone1_ned[0];
-    capture_msg.global_pos[1] = final_global_drone1_ned[1];
-    capture_msg.global_pos[2] = final_global_drone1_ned[2];
 
-    capture_msg.rpy[0] = global_roll1_final;
-    capture_msg.rpy[1] = global_pitch1_final;
-    capture_msg.rpy[2] = global_yaw1_final;
+    capture_msg.global_pos_shuttle[0] = final_global_drone1_ned[0];
+    capture_msg.global_pos_shuttle[1] = final_global_drone1_ned[1];
+    capture_msg.global_pos_shuttle[2] = final_global_drone1_ned[2];
 
     capture_msg.quaternion[0] = state.attitude.w();
     capture_msg.quaternion[1] = state.attitude.x();
