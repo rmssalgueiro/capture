@@ -297,6 +297,38 @@ void CaptureTargetMode::update(double dt) {
             mode_mpc_on();
             //The MPC was made to work at 5 Hz(200ms), so we need to call it every 10 iterations, because the update function is called at 50 Hz(20ms).
             this->controller_->set_inertial_acceleration(acel_, dt);
+
+            capture_msg.acel[0] = acel_[0];
+            capture_msg.acel[1] = acel_[1];
+            capture_msg.acel[2] = acel_[2];
+            capture_msg.xx_pred[0] = uu_mpc_[0];
+            capture_msg.xx_pred[1] = uu_mpc_[1];
+            capture_msg.xx_pred[2] = uu_mpc_[2];
+            capture_msg.xx_pred[3] = uu_mpc_[3];
+            capture_msg.xx_pred[4] = uu_mpc_[4];
+            capture_msg.xx_pred[5] = uu_mpc_[5];
+            capture_msg.xx_pred[6] = uu_mpc_[6];
+            capture_msg.xx_pred[7] = uu_mpc_[7];
+            capture_msg.xx_pred[8] = uu_mpc_[8];
+            capture_msg.xx_pred[9] = uu_mpc_[9];
+            capture_msg.xx_pred[10] = uu_mpc_[10];
+            capture_msg.xx_pred[11] = uu_mpc_[11];
+            capture_msg.xx_pred[12] = uu_mpc_[12];
+            capture_msg.xx_pred[13] = uu_mpc_[13];
+            capture_msg.xx_pred[14] = uu_mpc_[14];
+            capture_msg.xx_pred[15] = uu_mpc_[15];
+            capture_msg.xx_pred[16] = uu_mpc_[16];
+            capture_msg.xx_pred[17] = uu_mpc_[17];
+            capture_msg.xx_pred[18] = uu_mpc_[18];
+            capture_msg.xx_pred[19] = uu_mpc_[19];
+            capture_msg.xx_pred[20] = uu_mpc_[20];
+            capture_msg.xx_pred[21] = uu_mpc_[21];
+            capture_msg.xx_pred[22] = uu_mpc_[22];
+            capture_msg.xx_pred[23] = uu_mpc_[23];
+            capture_msg.xx_pred[24] = uu_mpc_[24];
+
+            publisher_->publish(capture_msg);
+            
             counter=0;
         }
         counter++;
@@ -311,10 +343,14 @@ void CaptureTargetMode::update(double dt) {
 bool CaptureTargetMode::check_finished() {
     
     update_vehicle_state();
+    Eigen::Vector3d A;
+    A[2] = -20;
 
     //if((P[0] + 1 > 0 && P[0] - 1 < 0) && (P[1] + 1 > 10 && P[1] - 1 < 10)) {
     if((final_global_drone1_ned[2] - final_global_drone2_ned[2] > - 0.5) && (operation_mode_ == OperationMode::MPC_ON)){// > because NED referencial
-        signal_mode_finished();
+        //signal_mode_finished();
+        operation_mode_ = OperationMode::MPC_OFF;
+        catched = true;
         RCLCPP_INFO_STREAM(node_->get_logger(), "Capture finished.");
         return true;
         }
@@ -325,10 +361,20 @@ bool CaptureTargetMode::check_finished() {
 
 void CaptureTargetMode::mode_mpc_on() {
 
-    
+    Eigen::Vector3d A;
+    Eigen::Vector3d B;
+
+    A[0] = 30;
+    A[1] = 10;
+    A[2] = -20;
+    B[0] = 0;
+    B[1] = 0;
+    B[2] = 0;
+
     // Create the state vector for the MPC
     x0 = casadi::DM::vertcat({final_global_drone1_ned[0], final_global_drone1_ned[1], final_global_drone1_ned[2], V(0), V(1), V(2), yaw, final_global_drone2_ned[0], final_global_drone2_ned[1], final_global_drone2_ned[2], Vd(0), Vd(1), Vd(2), yawd});
-    RCLCPP_WARN(this->node_->get_logger(), "x0: (%f, %f, %f, %f, %f, %f)", final_global_drone1_ned[0], final_global_drone1_ned[1], final_global_drone1_ned[2], final_global_drone2_ned[0], final_global_drone2_ned[1], final_global_drone2_ned[2]);
+    //x0 = casadi::DM::vertcat({final_global_drone1_ned[0], final_global_drone1_ned[1], final_global_drone1_ned[2], V(0), V(1), V(2), yaw, A[0], A[1], A[2], B[0], B[1], B[2], yawd});
+    RCLCPP_WARN(this->node_->get_logger(), "x0: (%f, %f, %f, %f, %f, %f, %f, %f, %f, %f, %f, %f)", final_global_drone1_ned[0], final_global_drone1_ned[1], final_global_drone1_ned[2], V(0), V(1), V(2), final_global_drone2_ned[0], final_global_drone2_ned[1], final_global_drone2_ned[2], Vd(0), Vd(1), Vd(2));
 
     // Create the input vector for the MPC
     std::vector<casadi::DM> arg1 = {x0, uu, xx};
@@ -339,10 +385,13 @@ void CaptureTargetMode::mode_mpc_on() {
     // Get the first input of the MPC
     casadi::Matrix<double> result_xx = res.at(1);
     casadi::Matrix<double> result_uu = res.at(0);
+    //casadi::Matrix<double> result_uu_mpc = res.at(2);
+
 
     // Update the state and input vectors
     xx = result_xx;
     uu = result_uu;
+    //uu_mpc = result_uu_mpc;
 
     casadi::Matrix<double> result_matrix = res.at(0);
 
@@ -356,6 +405,34 @@ void CaptureTargetMode::mode_mpc_on() {
     acel_[1] = static_cast<double>(result_matrix(1,1));
     acel_[2] = static_cast<double>(result_matrix(2,1));
 
+    uu_mpc_[0] = static_cast<double>(result_xx(0,1));
+    uu_mpc_[1] = static_cast<double>(result_xx(0,2));
+    uu_mpc_[2] = static_cast<double>(result_xx(0,3));
+    uu_mpc_[3] = static_cast<double>(result_xx(0,4));
+    uu_mpc_[4] = static_cast<double>(result_xx(0,5));
+    uu_mpc_[5] = static_cast<double>(result_xx(0,6));
+    uu_mpc_[6] = static_cast<double>(result_xx(0,7));
+    uu_mpc_[7] = static_cast<double>(result_xx(0,8));
+    uu_mpc_[8] = static_cast<double>(result_xx(0,9));
+    uu_mpc_[9] = static_cast<double>(result_xx(0,10));
+    uu_mpc_[10] = static_cast<double>(result_xx(0,11));
+    uu_mpc_[11] = static_cast<double>(result_xx(0,12));
+    uu_mpc_[12] = static_cast<double>(result_xx(0,13));
+    uu_mpc_[13] = static_cast<double>(result_xx(0,14));
+    uu_mpc_[14] = static_cast<double>(result_xx(0,15));
+    uu_mpc_[15] = static_cast<double>(result_xx(0,16));
+    uu_mpc_[16] = static_cast<double>(result_xx(0,17));
+    uu_mpc_[17] = static_cast<double>(result_xx(0,18));
+    uu_mpc_[18] = static_cast<double>(result_xx(0,19));
+    uu_mpc_[19] = static_cast<double>(result_xx(0,20));
+    uu_mpc_[20] = static_cast<double>(result_xx(0,21));
+    uu_mpc_[21] = static_cast<double>(result_xx(0,22));
+    uu_mpc_[22] = static_cast<double>(result_xx(0,23));
+    uu_mpc_[23] = static_cast<double>(result_xx(0,24));
+    uu_mpc_[24] = static_cast<double>(result_xx(0,25));
+
+    
+
     //RCLCPP_WARN(this->node_->get_logger(), "acc set to (%f, %f, %f)", acel_[0], acel_[1], acel_[2]);
     check_finished();
 }
@@ -366,10 +443,17 @@ void CaptureTargetMode::mode_mpc_off() {
     Kp=0.5;
 
     Eigen::Vector3d Cp;
+
+    if(catched){
+        Cp[0] = 0 - final_global_drone1_ned[0];
+        Cp[1] = 10 - final_global_drone1_ned[1];
+        Cp[2] = (-23) - final_global_drone1_ned[2];
+    }
+    else{
     Cp[0] = 90 - final_global_drone1_ned[0];
     Cp[1] = 10 - final_global_drone1_ned[1];
     Cp[2] = (-23) - final_global_drone1_ned[2];
-
+    }
     velocity_[0] = Kp * Cp[0];
     velocity_[1] = Kp * Cp[1];
     velocity_[2] = Kp * Cp[2];

@@ -117,6 +117,9 @@ public:
 
     capture_msgs::msg::Capture capture_msg;
     Eigen::Vector3d acel_;
+    float uu_mpc_[26];
+
+    bool catched = false;
 
 
 protected:
@@ -151,6 +154,8 @@ protected:
     casadi::DM x0;
     casadi::DM xx = casadi::DM::zeros(14,26);
     casadi::DM uu = casadi::DM::zeros(4,25);
+    casadi::DM uu_mpc = casadi::DM::zeros(4,25);
+
 
     // Control inputs to apply to the vehicle
     Eigen::Vector3d velocity_;
