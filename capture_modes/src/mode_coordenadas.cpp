@@ -254,11 +254,13 @@ void CoordenadasMode::update(double dt) {
     // Get the current state of the vehicle
     State state = get_vehicle_state();
 
-    
+    /*
     if(target_yaw == 2.0){
-        drone1_lla[0] = 47.397769;
-        drone1_lla[1] = 8.545594;
-        drone1_lla[2] = 488.05;
+        //drone1_lla[0] = 47.397769;
+        //drone1_lla[1] = 8.545594;
+        drone1_lla[0] = 38.621955;
+        drone1_lla[1] = -9.153695;
+        drone1_lla[2] = 47.0;
     }
     
     else if(target_yaw == 1.0){
@@ -266,7 +268,11 @@ void CoordenadasMode::update(double dt) {
         drone1_lla[1] = 8.545634;
         drone1_lla[2] = 488.05;
     }
-    
+    */
+    drone1_lla[0] = 38.621955;
+    drone1_lla[1] = -9.153695;
+    drone1_lla[2] = 47.0;
+
     q_global.x() = 0.0;
     q_global.y() = 0.0;
     q_global.z() = 0.0;//- sqrt(2.0) / 2.0;
@@ -302,6 +308,7 @@ void CoordenadasMode::update(double dt) {
     quaternion_to_rotation_matrix(1.0, 0.0, 0.0, 0.0, R1_local);
 
     // Step 3: Add the local position to the NED coordinates
+
     drone1_ned[0] += state.position[0];  // Add local x to NED north
     drone1_ned[1] += state.position[1];  // Add local y to NED east
     drone1_ned[2] += state.position[2];  // Add local z to NED down
@@ -363,9 +370,9 @@ void CoordenadasMode::update(double dt) {
     //u[1] = - Kp * pos_vector[1] - Kv * state.velocity[1];
     //u[2] = - Kpz * pos_vector[2] - Kvz * state.velocity[2];
 
-    u[0] = -Kp * pos_vector[0] - Kv * state.velocity[0]; //- Ki * integral_error[0];
-    u[1] = -Kp * pos_vector[1] - Kv * state.velocity[1]; //- Ki * integral_error[1];
-    u[2] = -Kpz * pos_vector[2] - Kvz * state.velocity[2]; //- Ki * integral_error[2];
+    //u[0] = -Kp * pos_vector[0] - Kv * state.velocity[0]; //- Ki * integral_error[0];
+    //u[1] = -Kp * pos_vector[1] - Kv * state.velocity[1]; //- Ki * integral_error[1];
+    //u[2] = -Kpz * pos_vector[2] - Kvz * state.velocity[2]; //- Ki * integral_error[2];
 
     //u[1] = pos_error[1] * Kp + vel_error[1] * Kv;
     //u[2] = pos_error[2] * Kpz + vel_error[2] * Kvz;
@@ -374,8 +381,31 @@ void CoordenadasMode::update(double dt) {
     //u[2] = u[2] - 9.81;
     
     // Set the controller to track the target position and attitude
-    this->controller_->set_inertial_acceleration(u, dt);
+    //this->controller_->set_inertial_acceleration(u, dt);
     //this->controller_->set_position(pos_vector, this->target_yaw, dt);
+
+    //Cp[0] = 90 - final_global_drone1_ned[0];
+    //Cp[1] = 10 - final_global_drone1_ned[1];
+    //Cp[2] = (-23) - final_global_drone1_ned[2];
+
+    Eigen::Vector3d Cp = target_pos - final_global_drone1_ned;
+
+    // Calculate the magnitude of the direction vector
+    double magnitude = std::sqrt(Cp[0] * Cp[0] + Cp[1] * Cp[1] + Cp[2] * Cp[2]);
+
+    // Normalize the direction vector and scale it to a constant speed of 5 m/s
+    if (magnitude > 0) { // Avoid division by zero
+        velocity_[0] = (Cp[0] / magnitude) * 5.0;
+        velocity_[1] = (Cp[1] / magnitude) * 5.0;
+        velocity_[2] = (Cp[2] / magnitude) * 5.0;
+    } else {
+        velocity_[0] = 0;
+        velocity_[1] = 0;
+        velocity_[2] = 0;
+    }
+
+    // Send the velocity command
+    this->controller_->set_inertial_velocity(velocity_, Pegasus::Rotations::rad_to_deg(yawd), dt);
 }
 
 void CoordenadasMode::waypoint_callback(const pegasus_msgs::srv::Waypoint::Request::SharedPtr request, const pegasus_msgs::srv::Waypoint::Response::SharedPtr response) {

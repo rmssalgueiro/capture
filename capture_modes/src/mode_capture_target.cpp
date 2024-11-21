@@ -4,6 +4,7 @@
 #include <iostream>
 #include <cmath>
 #include <Eigen/Dense>
+#include <chrono> 
 
 
 namespace autopilot {
@@ -17,6 +18,9 @@ void CaptureTargetMode::initialize() {
         rclcpp::SensorDataQoS(), 
         std::bind(&CaptureTargetMode::target_state_callback, this, std::placeholders::_1));
     
+    target_gps_sub_ = node_->create_subscription<pegasus_msgs::msg::SensorGps>("/drone1/fmu/sensors/gps", rclcpp::SensorDataQoS(), 
+        std::bind(&CaptureTargetMode::target_gps_callback, this, std::placeholders::_1));
+
     //node_->declare_parameter<std::string>("capture.publishers.status", "capture/status");
     publisher_ = this->node_->create_publisher<capture_msgs::msg::Capture>(
         this->node_->get_parameter("capture.publishers.status").as_string(), rclcpp::SensorDataQoS());
@@ -287,7 +291,7 @@ void CaptureTargetMode::update(double dt) {
 
     // Check if we need to change MPC on
     //Pinform
-    if((final_global_drone2_ned[0] + 5 > 80 && final_global_drone2_ned[0] - 5 < 80) && (final_global_drone2_ned[1] + 1 > 10 && final_global_drone2_ned[1] - 1 < 10)) {
+    if((final_global_drone2_ned[0] + 2 > 80 && final_global_drone2_ned[0] - 2 < 80) && (final_global_drone2_ned[1] + 2 > 10 && final_global_drone2_ned[1] - 2 < 10)) {
 	   operation_mode_ = OperationMode::MPC_ON;
     }
     // Apply the correct control mode
@@ -301,6 +305,9 @@ void CaptureTargetMode::update(double dt) {
             capture_msg.acel[0] = acel_[0];
             capture_msg.acel[1] = acel_[1];
             capture_msg.acel[2] = acel_[2];
+
+            
+            /*
             capture_msg.xx_pred[0] = uu_mpc_[0];
             capture_msg.xx_pred[1] = uu_mpc_[1];
             capture_msg.xx_pred[2] = uu_mpc_[2];
@@ -326,7 +333,7 @@ void CaptureTargetMode::update(double dt) {
             capture_msg.xx_pred[22] = uu_mpc_[22];
             capture_msg.xx_pred[23] = uu_mpc_[23];
             capture_msg.xx_pred[24] = uu_mpc_[24];
-
+            */
             publisher_->publish(capture_msg);
             
             counter=0;
@@ -343,11 +350,9 @@ void CaptureTargetMode::update(double dt) {
 bool CaptureTargetMode::check_finished() {
     
     update_vehicle_state();
-    Eigen::Vector3d A;
-    A[2] = -20;
 
     //if((P[0] + 1 > 0 && P[0] - 1 < 0) && (P[1] + 1 > 10 && P[1] - 1 < 10)) {
-    if((final_global_drone1_ned[2] - final_global_drone2_ned[2] > - 0.5) && (operation_mode_ == OperationMode::MPC_ON)){// > because NED referencial
+    if((final_global_drone1_ned[2] - final_global_drone2_ned[2] > - 0.8) && (operation_mode_ == OperationMode::MPC_ON)){// > because NED referencial
         //signal_mode_finished();
         operation_mode_ = OperationMode::MPC_OFF;
         catched = true;
@@ -361,15 +366,6 @@ bool CaptureTargetMode::check_finished() {
 
 void CaptureTargetMode::mode_mpc_on() {
 
-    Eigen::Vector3d A;
-    Eigen::Vector3d B;
-
-    A[0] = 30;
-    A[1] = 10;
-    A[2] = -20;
-    B[0] = 0;
-    B[1] = 0;
-    B[2] = 0;
 
     // Create the state vector for the MPC
     x0 = casadi::DM::vertcat({final_global_drone1_ned[0], final_global_drone1_ned[1], final_global_drone1_ned[2], V(0), V(1), V(2), yaw, final_global_drone2_ned[0], final_global_drone2_ned[1], final_global_drone2_ned[2], Vd(0), Vd(1), Vd(2), yawd});
@@ -379,13 +375,18 @@ void CaptureTargetMode::mode_mpc_on() {
     // Create the input vector for the MPC
     std::vector<casadi::DM> arg1 = {x0, uu, xx};
 
+    auto start = std::chrono::high_resolution_clock::now();
     // Call the MPC controller
     std::vector<casadi::DM> res = mpc_controller_(arg1);
+    auto end = std::chrono::high_resolution_clock::now();
 
+    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+    
+    capture_msg.computation_time = duration.count();
     // Get the first input of the MPC
     casadi::Matrix<double> result_xx = res.at(1);
     casadi::Matrix<double> result_uu = res.at(0);
-    //casadi::Matrix<double> result_uu_mpc = res.at(2);
+
 
 
     // Update the state and input vectors
@@ -401,36 +402,37 @@ void CaptureTargetMode::mode_mpc_on() {
     velocity_[1] = static_cast<double>(result_matrix(4,1));
     velocity_[2] = static_cast<double>(result_matrix(5,1));
     */
-    acel_[0] = static_cast<double>(result_matrix(0,1));
-    acel_[1] = static_cast<double>(result_matrix(1,1));
-    acel_[2] = static_cast<double>(result_matrix(2,1));
+    acel_[0] = static_cast<double>(result_matrix(0,0));
+    acel_[1] = static_cast<double>(result_matrix(1,0));
+    acel_[2] = static_cast<double>(result_matrix(2,0));
 
-    uu_mpc_[0] = static_cast<double>(result_xx(0,1));
-    uu_mpc_[1] = static_cast<double>(result_xx(0,2));
-    uu_mpc_[2] = static_cast<double>(result_xx(0,3));
-    uu_mpc_[3] = static_cast<double>(result_xx(0,4));
-    uu_mpc_[4] = static_cast<double>(result_xx(0,5));
-    uu_mpc_[5] = static_cast<double>(result_xx(0,6));
-    uu_mpc_[6] = static_cast<double>(result_xx(0,7));
-    uu_mpc_[7] = static_cast<double>(result_xx(0,8));
-    uu_mpc_[8] = static_cast<double>(result_xx(0,9));
-    uu_mpc_[9] = static_cast<double>(result_xx(0,10));
-    uu_mpc_[10] = static_cast<double>(result_xx(0,11));
-    uu_mpc_[11] = static_cast<double>(result_xx(0,12));
-    uu_mpc_[12] = static_cast<double>(result_xx(0,13));
-    uu_mpc_[13] = static_cast<double>(result_xx(0,14));
-    uu_mpc_[14] = static_cast<double>(result_xx(0,15));
-    uu_mpc_[15] = static_cast<double>(result_xx(0,16));
-    uu_mpc_[16] = static_cast<double>(result_xx(0,17));
-    uu_mpc_[17] = static_cast<double>(result_xx(0,18));
-    uu_mpc_[18] = static_cast<double>(result_xx(0,19));
-    uu_mpc_[19] = static_cast<double>(result_xx(0,20));
-    uu_mpc_[20] = static_cast<double>(result_xx(0,21));
-    uu_mpc_[21] = static_cast<double>(result_xx(0,22));
-    uu_mpc_[22] = static_cast<double>(result_xx(0,23));
-    uu_mpc_[23] = static_cast<double>(result_xx(0,24));
-    uu_mpc_[24] = static_cast<double>(result_xx(0,25));
-
+    /*
+    uu_mpc_[0] = static_cast<double>(result_xx(1,0));
+    uu_mpc_[1] = static_cast<double>(result_xx(2,0));
+    uu_mpc_[2] = static_cast<double>(result_xx(3,0));
+    uu_mpc_[3] = static_cast<double>(result_xx(4,0));
+    uu_mpc_[4] = static_cast<double>(result_xx(5,0));
+    uu_mpc_[5] = static_cast<double>(result_xx(6,0));
+    uu_mpc_[6] = static_cast<double>(result_xx(7,0));
+    uu_mpc_[7] = static_cast<double>(result_xx(8,0));
+    uu_mpc_[8] = static_cast<double>(result_xx(9,0));
+    uu_mpc_[9] = static_cast<double>(result_xx(10,0));
+    uu_mpc_[10] = static_cast<double>(result_xx(11,0));
+    uu_mpc_[11] = static_cast<double>(result_xx(12,0));
+    uu_mpc_[12] = static_cast<double>(result_xx(13,0));
+    uu_mpc_[13] = static_cast<double>(result_xx(14,0));
+    uu_mpc_[14] = static_cast<double>(result_xx(15,0));
+    uu_mpc_[15] = static_cast<double>(result_xx(16,0));
+    uu_mpc_[16] = static_cast<double>(result_xx(17,0));
+    uu_mpc_[17] = static_cast<double>(result_xx(18,0));
+    uu_mpc_[18] = static_cast<double>(result_xx(19,0));
+    uu_mpc_[19] = static_cast<double>(result_xx(20,0));
+    uu_mpc_[20] = static_cast<double>(result_xx(21,0));
+    uu_mpc_[21] = static_cast<double>(result_xx(22,0));
+    uu_mpc_[22] = static_cast<double>(result_xx(23,0));
+    uu_mpc_[23] = static_cast<double>(result_xx(24,0));
+    uu_mpc_[24] = static_cast<double>(result_xx(25,0));
+    */
     
 
     //RCLCPP_WARN(this->node_->get_logger(), "acc set to (%f, %f, %f)", acel_[0], acel_[1], acel_[2]);
@@ -438,21 +440,23 @@ void CaptureTargetMode::mode_mpc_on() {
 }
 
 void CaptureTargetMode::mode_mpc_off() {
-    //Pwait
+    
     // TODO - explain what is going on here...
     Kp=0.5;
 
     Eigen::Vector3d Cp;
 
     if(catched){
+        //Pfinal
         Cp[0] = 0 - final_global_drone1_ned[0];
         Cp[1] = 10 - final_global_drone1_ned[1];
-        Cp[2] = (-23) - final_global_drone1_ned[2];
+        Cp[2] = (-13) - final_global_drone1_ned[2];
     }
     else{
+    //Pwait
     Cp[0] = 90 - final_global_drone1_ned[0];
     Cp[1] = 10 - final_global_drone1_ned[1];
-    Cp[2] = (-23) - final_global_drone1_ned[2];
+    Cp[2] = (-13) - final_global_drone1_ned[2];
     }
     velocity_[0] = Kp * Cp[0];
     velocity_[1] = Kp * Cp[1];
@@ -468,9 +472,6 @@ void CaptureTargetMode::target_state_callback(const nav_msgs::msg::Odometry::Con
 
     // Update the position and velocity of the target
     Pd = Eigen::Vector3d(msg->pose.pose.position.x, msg->pose.pose.position.y, msg->pose.pose.position.z);
-    Pd2[0] = Pd[0];
-    Pd2[1] = Pd[1];
-    Pd2[2] = Pd[2];
 
     Vd = Eigen::Vector3d(msg->twist.twist.linear.x, msg->twist.twist.linear.y, msg->twist.twist.linear.z);
 
@@ -551,6 +552,18 @@ void CaptureTargetMode::update_vehicle_state() {
     yaw = Pegasus::Rotations::yaw_from_quaternion(state.attitude);
 }
 
+void CaptureTargetMode::target_gps_callback(const pegasus_msgs::msg::SensorGps::ConstSharedPtr msg) {
+
+    //posição inicial LLA drone 1
+    if (drone1_lla[0] == 0.0 && drone1_lla[1] == 0.0 && drone1_lla[2] == 0.0) {
+        drone1_lla[0] = msg->latitude_deg;
+        drone1_lla[1] = msg->longitude_deg;
+        drone1_lla[2] = msg->altitude_msl;
+        //double drone1_lla[3] = {47.397769, 8.545594, 488.05};
+        //double drone2_lla[3] = {47.397742, 8.545634, 488.05};
+
+    }     
+}
 } // namespace autopilot
 
 #include <pluginlib/class_list_macros.hpp>

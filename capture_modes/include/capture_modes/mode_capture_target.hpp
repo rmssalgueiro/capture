@@ -8,6 +8,7 @@
 #include <iostream>
 #include <cmath>
 #include <capture_msgs/msg/capture.hpp>
+#include <pegasus_msgs/msg/sensor_gps.hpp>
 
 
 namespace autopilot {
@@ -59,7 +60,7 @@ public:
 
     Eigen::Vector3d final_global_drone2_ned{Eigen::Vector3d::Zero()};
 
-    //Eigen::Vector3d drone1_lla{Eigen::Vector3d::Zero()};
+    Eigen::Vector3d drone1_lla{Eigen::Vector3d::Zero()};
 
     //Eigen::Vector3d drone2_lla{Eigen::Vector3d::Zero()};
 
@@ -101,11 +102,14 @@ public:
 
     double global_roll1_final = 0, global_pitch1_final = 0, global_yaw1_final = 0;
     double global_roll2_final = 0, global_pitch2_final = 0, global_yaw2_final = 0;
+    
+    //Eigen::Vector3d drone1_lla{47.397742, 8.545634, 488.05}; //(3,0)
 
-    Eigen::Vector3d drone1_lla{47.397742, 8.545634, 488.05}; //(3,0)
-    Eigen::Vector3d drone2_lla{47.397742, 8.545594, 488.05}; //(0,0)
+    //Eigen::Vector3d drone1_lla{47.397742, 8.545634, 488.05}; //(3,0)
+    Eigen::Vector3d drone2_lla{38.621955, -9.153695, 47.0}; //(0,0)
 
-    Eigen::Vector3d ref_lla{47.397742, 8.545594, 488.05};
+    Eigen::Vector3d ref_lla{38.621955, -9.153695, 47.0};
+    //Eigen::Vector3d ref_lla{47.397742, 8.545594, 488.05};
 
     float roll = 0.0;
     float pitch = 0.0;
@@ -120,7 +124,10 @@ public:
     float uu_mpc_[26];
 
     bool catched = false;
+    
+    void target_gps_callback(const pegasus_msgs::msg::SensorGps::ConstSharedPtr msg);
 
+    rclcpp::Subscription<pegasus_msgs::msg::SensorGps>::SharedPtr target_gps_sub_;
 
 protected:
 
@@ -129,6 +136,7 @@ protected:
 
     // Susbcriber for the target position
     rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr target_sub_;
+
 
     // MPC controller variables
     Eigen::Vector3d P{Eigen::Vector3d::Zero()};     // Position
@@ -154,7 +162,7 @@ protected:
     casadi::DM x0;
     casadi::DM xx = casadi::DM::zeros(14,26);
     casadi::DM uu = casadi::DM::zeros(4,25);
-    casadi::DM uu_mpc = casadi::DM::zeros(4,25);
+    casadi::DM uu_mpc = casadi::DM::zeros(4,24);
 
 
     // Control inputs to apply to the vehicle

@@ -1,4 +1,5 @@
 import time
+import math
 import rclpy
 from rclpy.node import Node
 from rclpy.qos import qos_profile_sensor_data
@@ -6,6 +7,8 @@ from pegasus_msgs.srv import Waypoint, AddCircle, SetMode
 from pegasus_msgs.msg import AutopilotStatus
 from std_msgs.msg import String
 from nav_msgs.msg import Odometry
+from capture_msgs.msg import Capture
+
 import sys
 
 
@@ -16,6 +19,7 @@ class Drone(Node):
 
         self.id = id
         self.namespace = 'drone'
+        self.current_position = (0.0, 0.0, 0.0)  # Initialize current position
 
         # Variables to store the initial position
         self.initial_position_received = False
@@ -33,19 +37,18 @@ class Drone(Node):
             self.get_logger().info('Set Mode service not available, waiting again...')
 
         # Create subscriptions to listen to the drone's position (replace PositionStatus with your message type)
-        self.create_subscription(Odometry, '/drone' + str(id) + '/fmu/filter/state', self.position_status_callback, qos_profile_sensor_data)
+        self.create_subscription(Capture, '/drone1/capture/status', self.position_status_callback, qos_profile_sensor_data)
 
         # Requests messages
         self.waypoint_req = Waypoint.Request()
         self.set_mode_req = SetMode.Request()
 
     def position_status_callback(self, msg):
-        if not self.initial_position_received:
-            self.initial_x = msg.pose.pose.position.x
-            self.initial_y = msg.pose.pose.position.y
-            self.initial_z = msg.pose.pose.position.z
-            self.initial_position_received = True
-            #self.get_logger().info(f'Initial position saved: ({self.initial_x}, {self.initial_y}, {self.initial_z})')
+        self.current_position = (
+            msg.global_pos_target[0],
+            msg.global_pos_target[1],
+            msg.global_pos_target[2]
+        )
 
     def set_autopilot_mode(self, mode='DisarmMode'):
         self.get_logger().info(f'Setting autopilot mode to: {mode}')
@@ -69,38 +72,63 @@ def main(args=None):
     shuttle = Drone(1)
     target = Drone(2)
 
-    # Wait until initial position is received
-    while not shuttle.initial_position_received:
-        rclpy.spin_once(shuttle)
-
-    # Now use the initial position to set waypoints dynamically
-    initial_x = shuttle.initial_x
-    initial_y = shuttle.initial_y
-    initial_z = shuttle.initial_z
-
-    if initial_x == 0.0:
-        sys.exit(0)
 
     # Arm the drone
-    shuttle.set_autopilot_mode('ArmMode')
-    shuttle.set_autopilot_mode('TakeoffMode')
+    #shuttle.set_autopilot_mode('ArmMode')
+    #shuttle.set_autopilot_mode('TakeoffMode')
     target.set_autopilot_mode('ArmMode')
     target.set_autopilot_mode('TakeoffMode')
 
     # Wait for takeoff
-    time.sleep(10)
+    time.sleep(5)
 
+    waypoints = [
+            (0.0, 0.0, -10.0),
+            (100.0, 0.0, -10.0),
+            (100.0, 10.0, -10.0),
+            (0.0, 10.0, -10.0)
+            
+        ]
+
+        # Set waypoints one by one
+    for i, waypoint in enumerate(waypoints):
+        # Calculate yaw only if there is a next waypoint
+        if i < len(waypoints) - 1:
+            next_waypoint = waypoints[i + 1]
+            dx = next_waypoint[0] - waypoint[0]
+            dy = next_waypoint[1] - waypoint[1]
+            yaw = math.atan2(dy, dx)  # Yaw towards the next waypoint
+        else:
+            yaw = 0.0  # Final waypoint: keep a default yaw
+
+        # Set the waypoint with the calculated yaw
+        target.set_waypoint(*waypoint, yaw=yaw)
+        target.set_autopilot_mode('CoordenadasMode')
+
+        # Wait until the drone reaches the current waypoint within a 1-meter margin
+        while True:
+            rclpy.spin_once(target)
+            distance = math.sqrt(
+                (target.current_position[0] - waypoint[0])**2 +
+                (target.current_position[1] - waypoint[1])**2 +
+                (target.current_position[2] - waypoint[2])**2
+            )
+            if distance <= 2.0:
+                target.get_logger().info(f"Reached waypoint at: {waypoint}")
+                break  # Move to the next waypoint
+
+    target.get_logger().info("All waypoints reached.")
     
     # Set waypoints relative to the initial position
     #shuttle.set_waypoint(initial_x, initial_y, initial_z - 3.0, 0.0)
-    shuttle.set_waypoint(3.0 , 3.0 , -3.0, 1.0)
-    target.set_waypoint(0.0, 0.0, -3.0, 2.0)
+    #shuttle.set_waypoint(3.0 , 3.0 , -3.0, 1.0)
+    #target.set_waypoint(100, 10.0, -20.0, 2.0)
     
-    shuttle.set_autopilot_mode('CoordenadasMode')
-    target.set_autopilot_mode('CoordenadasMode')
-    
+    #shuttle.set_autopilot_mode('CoordenadasMode')
+    #target.set_autopilot_mode('CoordenadasMode')
+
     time.sleep(10)
-    
+    '''
     shuttle.set_waypoint(0.0, 3.0 , -3.0, 1.0)
     target.set_waypoint(3.0, 0.0 , -3.0, 2.0)
     #shuttle.set_waypoint(10, 0, -10.0, 2.0)
@@ -122,7 +150,7 @@ def main(args=None):
     target.set_waypoint(0.0, 0.0 , -3.0, 2.0)
 
     time.sleep(10)
-
+    '''
     '''
     shuttle.set_waypoint(initial_x + 3.0, initial_y + 3.0, initial_z - 3.0, 0.0)
 
@@ -135,7 +163,7 @@ def main(args=None):
     time.sleep(5)
     '''
     # Land the drone
-    shuttle.set_autopilot_mode('OnboardLandMode')
+    #shuttle.set_autopilot_mode('OnboardLandMode')
     target.set_autopilot_mode('OnboardLandMode')
     time.sleep(5)
     

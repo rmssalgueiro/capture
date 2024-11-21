@@ -84,7 +84,7 @@ def main(args=None):
     # Arm the drone
     real.set_autopilot_mode('ArmMode')
     real.set_autopilot_mode('TakeoffMode')
-
+    
     simul.set_autopilot_mode('ArmMode')
     simul.set_autopilot_mode('TakeoffMode')
 

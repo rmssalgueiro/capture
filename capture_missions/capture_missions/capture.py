@@ -26,7 +26,7 @@ class Drone(Node):
             self.get_logger().info('Set Mode service not available, waiting again...')
 
         # Requests messages
-        self.waypoint_req = Waypoint.Request()
+        self.waypoint_req = Waypoint.Request()  
         self.set_mode_req = SetMode.Request()
 
     def set_autopilot_mode(self, mode='DisarmMode'):

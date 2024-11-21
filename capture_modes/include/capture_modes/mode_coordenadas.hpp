@@ -135,11 +135,15 @@ public:
     Eigen::Vector3d P2{Eigen::Vector3d::Zero()};     // Target Position 
 
     
-    Eigen::Vector3d ref_lla{47.397742, 8.545594, 488.05};
-    
+    //Eigen::Vector3d ref_lla{47.397742, 8.545594, 488.05};
+    Eigen::Vector3d ref_lla{38.621955, -9.153695, 47.0};
+
     //px4 default 454671160 -737578370
 
     capture_msgs::msg::Capture capture_msg;
+
+    Eigen::Vector3d velocity_;
+
 
 protected:
 

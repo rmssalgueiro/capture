@@ -1,7 +1,8 @@
 float64[3] global_pos_shuttle
 float64[3] global_pos_target
 float64[3] acel
-float64[26] xx_pred
+float64 computation_time
+# float64[26] xx_pred
 float64[4] quaternion # w x y z order
 
 
