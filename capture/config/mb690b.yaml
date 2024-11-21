@@ -62,7 +62,7 @@
       # ---------------------------------------------------------------------------------------------------------
       default_mode: "DisarmMode"
       # Define all the existing operation modes
-      modes: ["DisarmMode", "ArmMode", "TakeoffMode", "OnboardLandMode", "HoldMode", "WaypointMode", "WaypointModeAcc", "CoordenadasMode",FollowTrajectoryMode", "PassThroughMode", "CaptureTargetMode"]
+      modes: ["DisarmMode", "ArmMode", "TakeoffMode", "OnboardLandMode", "HoldMode", "WaypointMode", "WaypointModeAcc", "CoordenadasMode", "FollowTrajectoryMode", "PassThroughMode", "CaptureTargetMode"]
       # Configurations of each operating mode:
       # 1) Define the valid transitions from a given operation mode to other operation modes
       # 2) Fallback mode if something goes wrong
