@@ -30,7 +30,7 @@ public:
     void mode_mpc_on();
 
     void update_vehicle_state();
-    void target_state_callback(const nav_msgs::msg::Odometry::ConstSharedPtr msg);
+    void target_state_callback(const capture_msgs::msg::Capture::ConstSharedPtr msg);
 
     void compile_mpc_controller();
 
@@ -99,17 +99,18 @@ public:
     Eigen::Quaterniond q_global;
 
     double yawd{0.0};
+    double yaw_input{0.0};
 
     double global_roll1_final = 0, global_pitch1_final = 0, global_yaw1_final = 0;
     double global_roll2_final = 0, global_pitch2_final = 0, global_yaw2_final = 0;
-    
-    //Eigen::Vector3d drone1_lla{47.397742, 8.545634, 488.05}; //(3,0)
 
     //Eigen::Vector3d drone1_lla{47.397742, 8.545634, 488.05}; //(3,0)
-    Eigen::Vector3d drone2_lla{38.621955, -9.153695, 47.0}; //(0,0)
+    Eigen::Vector3d drone2_lla{47.397742, 8.545594, 488.05}; //(0,0)
+    //Eigen::Vector3d drone2_lla{38.621955, -9.153695, 47.0}; //(0,0)
 
-    Eigen::Vector3d ref_lla{38.621955, -9.153695, 47.0};
-    //Eigen::Vector3d ref_lla{47.397742, 8.545594, 488.05};
+    //Eigen::Vector3d ref_lla{38.621955, -9.153695, 47.0};
+    //Eigen::Vector3d ref_lla{47.397742, 8.545594, 488.05}; //em simulação
+    Eigen::Vector3d ref_lla{38.621955, -9.153695, 47.0}; //no real
 
     float roll = 0.0;
     float pitch = 0.0;
@@ -128,6 +129,8 @@ public:
     void target_gps_callback(const pegasus_msgs::msg::SensorGps::ConstSharedPtr msg);
 
     rclcpp::Subscription<pegasus_msgs::msg::SensorGps>::SharedPtr target_gps_sub_;
+    rclcpp::Subscription<capture_msgs::msg::Capture>::SharedPtr target_sub_;
+
 
 protected:
 
@@ -135,7 +138,6 @@ protected:
 
 
     // Susbcriber for the target position
-    rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr target_sub_;
 
 
     // MPC controller variables

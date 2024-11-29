@@ -269,6 +269,7 @@ void CoordenadasMode::update(double dt) {
         drone1_lla[2] = 488.05;
     }
     */
+     
     drone1_lla[0] = 38.621955;
     drone1_lla[1] = -9.153695;
     drone1_lla[2] = 47.0;
@@ -312,6 +313,7 @@ void CoordenadasMode::update(double dt) {
     drone1_ned[0] += state.position[0];  // Add local x to NED north
     drone1_ned[1] += state.position[1];  // Add local y to NED east
     drone1_ned[2] += state.position[2];  // Add local z to NED down
+
     apply_rotation(drone1_ned, R1_local, rotated_drone1_ned);
     //apply_rotation(drone2_ned, R2_local, rotated_drone2_ned);
 
@@ -346,14 +348,9 @@ void CoordenadasMode::update(double dt) {
 
     //rotation_matrix_to_rpy(R2_combined, global_roll2_final, global_pitch2_final, global_yaw2_final);
 
-    capture_msg.global_pos_shuttle[0] = final_global_drone1_ned[0];
-    capture_msg.global_pos_shuttle[1] = final_global_drone1_ned[1];
-    capture_msg.global_pos_shuttle[2] = final_global_drone1_ned[2];
-
-    capture_msg.quaternion[0] = state.attitude.w();
-    capture_msg.quaternion[1] = state.attitude.x();
-    capture_msg.quaternion[2] = state.attitude.y();
-    capture_msg.quaternion[3] = state.attitude.z();
+    capture_msg.global_pos_target[0] = final_global_drone1_ned[0];
+    capture_msg.global_pos_target[1] = final_global_drone1_ned[1];
+    capture_msg.global_pos_target[2] = final_global_drone1_ned[2];
 
     publisher_->publish(capture_msg);
 
@@ -405,7 +402,7 @@ void CoordenadasMode::update(double dt) {
     }
 
     // Send the velocity command
-    this->controller_->set_inertial_velocity(velocity_, Pegasus::Rotations::rad_to_deg(yawd), dt);
+    this->controller_->set_inertial_velocity(velocity_, Pegasus::Rotations::rad_to_deg(target_yaw), dt);
 }
 
 void CoordenadasMode::waypoint_callback(const pegasus_msgs::srv::Waypoint::Request::SharedPtr request, const pegasus_msgs::srv::Waypoint::Response::SharedPtr response) {

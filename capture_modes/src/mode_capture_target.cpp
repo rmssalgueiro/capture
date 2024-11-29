@@ -4,7 +4,9 @@
 #include <iostream>
 #include <cmath>
 #include <Eigen/Dense>
-#include <chrono> 
+#include <chrono>
+#include <capture_msgs/msg/capture.hpp>
+
 
 
 namespace autopilot {
@@ -13,8 +15,8 @@ CaptureTargetMode::~CaptureTargetMode() {}
 
 void CaptureTargetMode::initialize() {
 
-    target_sub_ = node_->create_subscription<nav_msgs::msg::Odometry>(
-        "/drone2/fmu/filter/state", 
+    target_sub_ = node_->create_subscription<capture_msgs::msg::Capture>(
+        "/drone2/capture/status", 
         rclcpp::SensorDataQoS(), 
         std::bind(&CaptureTargetMode::target_state_callback, this, std::placeholders::_1));
     
@@ -291,7 +293,7 @@ void CaptureTargetMode::update(double dt) {
 
     // Check if we need to change MPC on
     //Pinform
-    if((final_global_drone2_ned[0] + 2 > 80 && final_global_drone2_ned[0] - 2 < 80) && (final_global_drone2_ned[1] + 2 > 10 && final_global_drone2_ned[1] - 2 < 10)) {
+    if((final_global_drone2_ned[0] + 2 > -47.2 && final_global_drone2_ned[0] - 2 < -47.2) && (final_global_drone2_ned[1] + 2 > 46.15 && final_global_drone2_ned[1] - 2 < 46.15)) {
 	   operation_mode_ = OperationMode::MPC_ON;
     }
     // Apply the correct control mode
@@ -300,7 +302,8 @@ void CaptureTargetMode::update(double dt) {
         if(counter==10){
             mode_mpc_on();
             //The MPC was made to work at 5 Hz(200ms), so we need to call it every 10 iterations, because the update function is called at 50 Hz(20ms).
-            this->controller_->set_inertial_acceleration(acel_, dt);
+            //this->controller_->set_inertial_acceleration(acel_, dt);
+            this->controller_->set_inertial_velocity(velocity_, Pegasus::Rotations::rad_to_deg(yaw_input), dt);
 
             capture_msg.acel[0] = acel_[0];
             capture_msg.acel[1] = acel_[1];
@@ -352,7 +355,7 @@ bool CaptureTargetMode::check_finished() {
     update_vehicle_state();
 
     //if((P[0] + 1 > 0 && P[0] - 1 < 0) && (P[1] + 1 > 10 && P[1] - 1 < 10)) {
-    if((final_global_drone1_ned[2] - final_global_drone2_ned[2] > - 0.8) && (operation_mode_ == OperationMode::MPC_ON)){// > because NED referencial
+    if((std::abs(final_global_drone1_ned[2] - final_global_drone2_ned[2]) <  0.8) && (operation_mode_ == OperationMode::MPC_ON)){// > because NED referencial
         //signal_mode_finished();
         operation_mode_ = OperationMode::MPC_OFF;
         catched = true;
@@ -394,17 +397,18 @@ void CaptureTargetMode::mode_mpc_on() {
     uu = result_uu;
     //uu_mpc = result_uu_mpc;
 
-    casadi::Matrix<double> result_matrix = res.at(0);
+    casadi::Matrix<double> result_matrix = res.at(1);
 
     // Set the velocity input to apply to the vehicle
-    /*
+    
     velocity_[0] = static_cast<double>(result_matrix(3,1));
     velocity_[1] = static_cast<double>(result_matrix(4,1));
     velocity_[2] = static_cast<double>(result_matrix(5,1));
-    */
-    acel_[0] = static_cast<double>(result_matrix(0,0));
-    acel_[1] = static_cast<double>(result_matrix(1,0));
-    acel_[2] = static_cast<double>(result_matrix(2,0));
+    yaw_input = static_cast<double>(result_matrix(6,1));
+
+    //acel_[0] = static_cast<double>(result_matrix(0,0));
+    //acel_[1] = static_cast<double>(result_matrix(1,0));
+    //acel_[2] = static_cast<double>(result_matrix(2,0));
 
     /*
     uu_mpc_[0] = static_cast<double>(result_xx(1,0));
@@ -448,14 +452,14 @@ void CaptureTargetMode::mode_mpc_off() {
 
     if(catched){
         //Pfinal
-        Cp[0] = 0 - final_global_drone1_ned[0];
+        Cp[0] = 10 - final_global_drone1_ned[0];
         Cp[1] = 10 - final_global_drone1_ned[1];
         Cp[2] = (-13) - final_global_drone1_ned[2];
     }
     else{
     //Pwait
-    Cp[0] = 90 - final_global_drone1_ned[0];
-    Cp[1] = 10 - final_global_drone1_ned[1];
+    Cp[0] = -67.35 - final_global_drone1_ned[0];
+    Cp[1] = 52.7 - final_global_drone1_ned[1];
     Cp[2] = (-13) - final_global_drone1_ned[2];
     }
     velocity_[0] = Kp * Cp[0];
@@ -468,8 +472,13 @@ bool CaptureTargetMode::exit() {
     return true;
 }
 
-void CaptureTargetMode::target_state_callback(const nav_msgs::msg::Odometry::ConstSharedPtr msg) {
+void CaptureTargetMode::target_state_callback(const capture_msgs::msg::Capture::ConstSharedPtr msg) {
 
+    final_global_drone2_ned[0] = msg->global_pos_target[0];
+    final_global_drone2_ned[1] = msg->global_pos_target[1];
+    final_global_drone2_ned[2] = msg->global_pos_target[2];
+
+    /*
     // Update the position and velocity of the target
     Pd = Eigen::Vector3d(msg->pose.pose.position.x, msg->pose.pose.position.y, msg->pose.pose.position.z);
 
@@ -539,6 +548,7 @@ void CaptureTargetMode::target_state_callback(const nav_msgs::msg::Odometry::Con
     capture_msg.global_pos_target[2] = final_global_drone2_ned[2];
 
     publisher_->publish(capture_msg);
+    */
 }
 
 void CaptureTargetMode::update_vehicle_state() {

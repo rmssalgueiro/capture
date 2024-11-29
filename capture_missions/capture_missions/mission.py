@@ -37,7 +37,7 @@ class Drone(Node):
             self.get_logger().info('Set Mode service not available, waiting again...')
 
         # Create subscriptions to listen to the drone's position (replace PositionStatus with your message type)
-        self.create_subscription(Capture, '/drone1/capture/status', self.position_status_callback, qos_profile_sensor_data)
+        self.create_subscription(Capture, '/drone2/capture/status', self.position_status_callback, qos_profile_sensor_data)
 
         # Requests messages
         self.waypoint_req = Waypoint.Request()
@@ -84,8 +84,8 @@ def main(args=None):
 
     waypoints = [
             (0.0, 0.0, -10.0),
-            (100.0, 0.0, -10.0),
-            (100.0, 10.0, -10.0),
+            (-67.35, 52.7, -10.0),
+            (107, -14.5, -10.0),
             (0.0, 10.0, -10.0)
             
         ]
@@ -127,7 +127,7 @@ def main(args=None):
     #shuttle.set_autopilot_mode('CoordenadasMode')
     #target.set_autopilot_mode('CoordenadasMode')
 
-    time.sleep(10)
+    #time.sleep(10)
     '''
     shuttle.set_waypoint(0.0, 3.0 , -3.0, 1.0)
     target.set_waypoint(3.0, 0.0 , -3.0, 2.0)

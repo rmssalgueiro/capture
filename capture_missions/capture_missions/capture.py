@@ -62,7 +62,7 @@ def main(args=None):
     # Land the drone
 
     time.sleep(600)
-    shuttle.set_autopilot_mode('OnboardLandMode')
+    #shuttle.set_autopilot_mode('OnboardLandMode')
     rclpy.shutdown()
 
 if __name__ == "__main__":
