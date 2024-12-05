@@ -20,7 +20,7 @@ def generate_launch_description():
         launch_arguments={
             'gui': 'true',
             }.items())
-    
+    '''
     iris_launch_file = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(os.path.join(get_package_share_directory('pegasus_gazebo'), 'launch/vehicles/iris.launch.py')),
         launch_arguments={  # ENU coordinates
@@ -30,7 +30,7 @@ def generate_launch_description():
             'launch_pegasus': 'false',
             'vehicle_id': '1',
         }.items())
-    
+    '''
     target_launch_file = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(os.path.join(get_package_share_directory('pegasus_gazebo'), 'launch/vehicles/iris.launch.py')),
         launch_arguments={  # ENU coordinates
@@ -50,7 +50,7 @@ def generate_launch_description():
         'drone_params', 
         default_value=os.path.join(get_package_share_directory('capture'), 'config', 'simulation.yaml'),
         description='The directory where the drone parameters such as mass, thrust curve, etc. are defined')
-    
+    '''
     # Call MAVLINK interface package launch file 
     mavlink_interface_launch_file = IncludeLaunchDescription(
         # Grab the launch file for the mavlink interface
@@ -64,7 +64,7 @@ def generate_launch_description():
             'mavlink_forward': "['']"
         }.items(),
     )
-    
+    '''
     # Call MAVLINK interface package launch file 
     mavlink2_interface_launch_file = IncludeLaunchDescription(
         # Grab the launch file for the mavlink interface
@@ -78,7 +78,7 @@ def generate_launch_description():
             'mavlink_forward': "['']"
         }.items(),
     )
-    
+    '''
     # Call autopilot package launch file
     autopilot_launch_file = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(os.path.join(get_package_share_directory('autopilot'), 'launch/autopilot.launch.py')),
@@ -89,7 +89,7 @@ def generate_launch_description():
             'autopilot_yaml': LaunchConfiguration('drone_params'),
         }.items(),
     )
-    
+    '''
     # Call autopilot package launch file
     autopilot2_launch_file = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(os.path.join(get_package_share_directory('autopilot'), 'launch/autopilot.launch.py')),
@@ -107,12 +107,12 @@ def generate_launch_description():
     return LaunchDescription([
         # Launch files for simulation
         gazebo_launch_file,
-        iris_launch_file,
+        #iris_launch_file,
         target_launch_file,
         #files for the control system
         drone_params_file_arg,
-        mavlink_interface_launch_file,
+        #mavlink_interface_launch_file,
         mavlink2_interface_launch_file,
-        autopilot_launch_file,
+        #autopilot_launch_file,
         autopilot2_launch_file
     ])

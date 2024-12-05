@@ -69,7 +69,7 @@ class Drone(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    shuttle = Drone(1)
+    #shuttle = Drone(1)
     target = Drone(2)
 
 

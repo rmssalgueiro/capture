@@ -305,9 +305,9 @@ void CaptureTargetMode::update(double dt) {
             //this->controller_->set_inertial_acceleration(acel_, dt);
             this->controller_->set_inertial_velocity(velocity_, Pegasus::Rotations::rad_to_deg(yaw_input), dt);
 
-            capture_msg.acel[0] = acel_[0];
-            capture_msg.acel[1] = acel_[1];
-            capture_msg.acel[2] = acel_[2];
+            capture_msg.acel[0] = velocity_[0];
+            capture_msg.acel[1] = velocity_[1];
+            capture_msg.acel[2] = velocity_[2];
 
             
             /*
