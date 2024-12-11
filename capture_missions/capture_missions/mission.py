@@ -89,17 +89,21 @@ def main(args=None):
             (0.0, 10.0, -10.0)
             
         ]
-
-        # Set waypoints one by one
+    
     for i, waypoint in enumerate(waypoints):
-        # Calculate yaw only if there is a next waypoint
-        if i < len(waypoints) - 1:
-            next_waypoint = waypoints[i + 1]
-            dx = next_waypoint[0] - waypoint[0]
-            dy = next_waypoint[1] - waypoint[1]
+        # Shift the logic so that 'waypoint' is one position behind
+        if i > 0:  # Start from the second waypoint
+            next_waypoint = waypoints[i]
+            previous_waypoint = waypoints[i - 1]
+
+            dx = next_waypoint[0] - previous_waypoint[0]
+            dy = next_waypoint[1] - previous_waypoint[1]
             yaw = math.atan2(dy, dx)  # Yaw towards the next waypoint
+            yaw_deg = math.degrees(yaw)
+            print(f"Yaw in radians: {yaw}, Yaw in degrees: {yaw_deg}")
         else:
-            yaw = 0.0  # Final waypoint: keep a default yaw
+            # For the very first waypoint, set yaw to 0.0
+            yaw = 0.0
 
         # Set the waypoint with the calculated yaw
         target.set_waypoint(*waypoint, yaw=yaw)

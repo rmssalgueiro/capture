@@ -20,6 +20,9 @@ void CaptureTargetMode::initialize() {
         rclcpp::SensorDataQoS(), 
         std::bind(&CaptureTargetMode::target_state_callback, this, std::placeholders::_1));
     
+    target_state_sub_ = node_->create_subscription<nav_msgs::msg::Odometry>("/drone2/fmu/filter/state", rclcpp::SensorDataQoS(), 
+        std::bind(&CaptureTargetMode::target_state_pegasus_callback, this, std::placeholders::_1));
+    
     target_gps_sub_ = node_->create_subscription<pegasus_msgs::msg::SensorGps>("/drone1/fmu/sensors/gps", rclcpp::SensorDataQoS(), 
         std::bind(&CaptureTargetMode::target_gps_callback, this, std::placeholders::_1));
 
@@ -231,6 +234,8 @@ void CaptureTargetMode::update(double dt) {
     State state = get_vehicle_state();
     yaw = Pegasus::Rotations::yaw_from_quaternion(state.attitude);
     
+    V = state.velocity;
+
     q_global.x() = 0.0;
     q_global.y() = 0.0;
     q_global.z() = 0.0;//- sqrt(2.0) / 2.0;
@@ -288,12 +293,15 @@ void CaptureTargetMode::update(double dt) {
     capture_msg.global_pos_shuttle[0] = final_global_drone1_ned[0];
     capture_msg.global_pos_shuttle[1] = final_global_drone1_ned[1];
     capture_msg.global_pos_shuttle[2] = final_global_drone1_ned[2];
+    capture_msg.global_pos_target[0] = final_global_drone2_ned[0];
+    capture_msg.global_pos_target[1] = final_global_drone2_ned[1];
+    capture_msg.global_pos_target[2] = final_global_drone2_ned[2];
 
     publisher_->publish(capture_msg);
 
     // Check if we need to change MPC on
     //Pinform
-    if((final_global_drone2_ned[0] + 2 > -47.2 && final_global_drone2_ned[0] - 2 < -47.2) && (final_global_drone2_ned[1] + 2 > 46.15 && final_global_drone2_ned[1] - 2 < 46.15)) {
+    if((final_global_drone2_ned[0] + 5 > -24.29 && final_global_drone2_ned[0] - 5 < -24.29) && (final_global_drone2_ned[1] + 5 > 37.41 && final_global_drone2_ned[1] - 5 < 37.41)) {
 	   operation_mode_ = OperationMode::MPC_ON;
     }
     // Apply the correct control mode
@@ -309,34 +317,6 @@ void CaptureTargetMode::update(double dt) {
             capture_msg.acel[1] = velocity_[1];
             capture_msg.acel[2] = velocity_[2];
 
-            
-            /*
-            capture_msg.xx_pred[0] = uu_mpc_[0];
-            capture_msg.xx_pred[1] = uu_mpc_[1];
-            capture_msg.xx_pred[2] = uu_mpc_[2];
-            capture_msg.xx_pred[3] = uu_mpc_[3];
-            capture_msg.xx_pred[4] = uu_mpc_[4];
-            capture_msg.xx_pred[5] = uu_mpc_[5];
-            capture_msg.xx_pred[6] = uu_mpc_[6];
-            capture_msg.xx_pred[7] = uu_mpc_[7];
-            capture_msg.xx_pred[8] = uu_mpc_[8];
-            capture_msg.xx_pred[9] = uu_mpc_[9];
-            capture_msg.xx_pred[10] = uu_mpc_[10];
-            capture_msg.xx_pred[11] = uu_mpc_[11];
-            capture_msg.xx_pred[12] = uu_mpc_[12];
-            capture_msg.xx_pred[13] = uu_mpc_[13];
-            capture_msg.xx_pred[14] = uu_mpc_[14];
-            capture_msg.xx_pred[15] = uu_mpc_[15];
-            capture_msg.xx_pred[16] = uu_mpc_[16];
-            capture_msg.xx_pred[17] = uu_mpc_[17];
-            capture_msg.xx_pred[18] = uu_mpc_[18];
-            capture_msg.xx_pred[19] = uu_mpc_[19];
-            capture_msg.xx_pred[20] = uu_mpc_[20];
-            capture_msg.xx_pred[21] = uu_mpc_[21];
-            capture_msg.xx_pred[22] = uu_mpc_[22];
-            capture_msg.xx_pred[23] = uu_mpc_[23];
-            capture_msg.xx_pred[24] = uu_mpc_[24];
-            */
             publisher_->publish(capture_msg);
             
             counter=0;
@@ -345,14 +325,12 @@ void CaptureTargetMode::update(double dt) {
 
     } else {
         mode_mpc_off();
-        this->controller_->set_inertial_velocity(velocity_, Pegasus::Rotations::rad_to_deg(yawd), dt);
+        this->controller_->set_inertial_velocity(velocity_, 0, dt);
 
     }
 }
 
 bool CaptureTargetMode::check_finished() {
-    
-    update_vehicle_state();
 
     //if((P[0] + 1 > 0 && P[0] - 1 < 0) && (P[1] + 1 > 10 && P[1] - 1 < 10)) {
     if((std::abs(final_global_drone1_ned[2] - final_global_drone2_ned[2]) <  0.8) && (operation_mode_ == OperationMode::MPC_ON)){// > because NED referencial
@@ -409,34 +387,6 @@ void CaptureTargetMode::mode_mpc_on() {
     //acel_[0] = static_cast<double>(result_matrix(0,0));
     //acel_[1] = static_cast<double>(result_matrix(1,0));
     //acel_[2] = static_cast<double>(result_matrix(2,0));
-
-    /*
-    uu_mpc_[0] = static_cast<double>(result_xx(1,0));
-    uu_mpc_[1] = static_cast<double>(result_xx(2,0));
-    uu_mpc_[2] = static_cast<double>(result_xx(3,0));
-    uu_mpc_[3] = static_cast<double>(result_xx(4,0));
-    uu_mpc_[4] = static_cast<double>(result_xx(5,0));
-    uu_mpc_[5] = static_cast<double>(result_xx(6,0));
-    uu_mpc_[6] = static_cast<double>(result_xx(7,0));
-    uu_mpc_[7] = static_cast<double>(result_xx(8,0));
-    uu_mpc_[8] = static_cast<double>(result_xx(9,0));
-    uu_mpc_[9] = static_cast<double>(result_xx(10,0));
-    uu_mpc_[10] = static_cast<double>(result_xx(11,0));
-    uu_mpc_[11] = static_cast<double>(result_xx(12,0));
-    uu_mpc_[12] = static_cast<double>(result_xx(13,0));
-    uu_mpc_[13] = static_cast<double>(result_xx(14,0));
-    uu_mpc_[14] = static_cast<double>(result_xx(15,0));
-    uu_mpc_[15] = static_cast<double>(result_xx(16,0));
-    uu_mpc_[16] = static_cast<double>(result_xx(17,0));
-    uu_mpc_[17] = static_cast<double>(result_xx(18,0));
-    uu_mpc_[18] = static_cast<double>(result_xx(19,0));
-    uu_mpc_[19] = static_cast<double>(result_xx(20,0));
-    uu_mpc_[20] = static_cast<double>(result_xx(21,0));
-    uu_mpc_[21] = static_cast<double>(result_xx(22,0));
-    uu_mpc_[22] = static_cast<double>(result_xx(23,0));
-    uu_mpc_[23] = static_cast<double>(result_xx(24,0));
-    uu_mpc_[24] = static_cast<double>(result_xx(25,0));
-    */
     
 
     //RCLCPP_WARN(this->node_->get_logger(), "acc set to (%f, %f, %f)", acel_[0], acel_[1], acel_[2]);
@@ -457,11 +407,12 @@ void CaptureTargetMode::mode_mpc_off() {
         Cp[2] = (-13) - final_global_drone1_ned[2];
     }
     else{
-    //Pwait
-    Cp[0] = -67.35 - final_global_drone1_ned[0];
-    Cp[1] = 52.7 - final_global_drone1_ned[1];
-    Cp[2] = (-13) - final_global_drone1_ned[2];
+        //Pwait
+        Cp[0] = -41.76 - final_global_drone1_ned[0];
+        Cp[1] = 43.78 - final_global_drone1_ned[1];
+        Cp[2] = (-13) - final_global_drone1_ned[2];
     }
+
     velocity_[0] = Kp * Cp[0];
     velocity_[1] = Kp * Cp[1];
     velocity_[2] = Kp * Cp[2];
@@ -477,101 +428,27 @@ void CaptureTargetMode::target_state_callback(const capture_msgs::msg::Capture::
     final_global_drone2_ned[0] = msg->global_pos_target[0];
     final_global_drone2_ned[1] = msg->global_pos_target[1];
     final_global_drone2_ned[2] = msg->global_pos_target[2];
+}
 
-    /*
-    // Update the position and velocity of the target
-    Pd = Eigen::Vector3d(msg->pose.pose.position.x, msg->pose.pose.position.y, msg->pose.pose.position.z);
+void CaptureTargetMode::target_state_pegasus_callback(const nav_msgs::msg::Odometry::ConstSharedPtr msg) {
 
     Vd = Eigen::Vector3d(msg->twist.twist.linear.x, msg->twist.twist.linear.y, msg->twist.twist.linear.z);
-
-    // Update the heading of the target
+    
     Eigen::Quaterniond q;
     q.x() = msg->pose.pose.orientation.x;
     q.y() = msg->pose.pose.orientation.y;
     q.z() = msg->pose.pose.orientation.z;
     q.w() = msg->pose.pose.orientation.w;
     yawd = Pegasus::Rotations::yaw_from_quaternion(q);
-    
-    q_global.x() = 0.0;
-    q_global.y() = 0.0;
-    q_global.z() = 0.0;//- sqrt(2.0) / 2.0;
-    q_global.w() = 1.0;//sqrt(2.0) / 2.0;
-    
-    // Step 1: Convert reference point and both drones' LLA positions to ECEF
-    lla_to_ecef(ref_lla, ref_ecef);
-    lla_to_ecef(drone2_lla, drone2_ecef);
-    //lla_to_ecef(drone2_lla, drone2_ecef);
-
-    // Step 2: Convert both drones' positions from ECEF to NED
-    drone2_ned[0] = 0.0;  // Assign X value
-    drone2_ned[1] = 0.0;  // Assign Y value
-    drone2_ned[2] = 0.0;  // Assign Z value
-    
-    ecef_to_ned(drone2_ecef, ref_ecef, ref_lla, drone2_ned);
-    //ecef_to_ned(drone2_ecef, ref_ecef, ref_lla, drone2_ned);
-
-    // Step 4: Apply drone's local RPY rotation to the NED coordinates
-    quaternion_to_rotation_matrix(1.0, 0.0, 0.0, 0.0, R2_local);
-
-    // Step 3: Add the local position to the NED coordinates
-    drone2_ned[0] += msg->pose.pose.position.x;  // Add local x to NED north
-    drone2_ned[1] += msg->pose.pose.position.y;  // Add local y to NED east
-    drone2_ned[2] += msg->pose.pose.position.z;  // Add local z to NED down
-    apply_rotation(drone2_ned, R2_local, rotated_drone2_ned);
-    //apply_rotation(drone2_ned, R2_local, rotated_drone2_ned);
-
-    // Step 5: Define a global rotation matrix (for example, rotating global frame by some RPY angles)
-    quaternion_to_rotation_matrix(q_global.w(), q_global.x(), q_global.y(), q_global.z(), R_global);
-    //rpy_to_rotation_matrix(global_roll, global_pitch, global_yaw, R_global);
-
-    // Apply global rotation to the NED coordinates of the drone
-    apply_rotation(rotated_drone2_ned, R_global, global_rotated_drone2_ned);
-    //apply_rotation(rotated_drone2_ned, R_global, global_rotated_drone2_ned);
-
-    // Step 6: Define a translation vector to the global reference frame
-
-    // Step 7: Translate the drone to the global frame
-
-    translate_to_global(global_rotated_drone2_ned, global_translation, final_global_drone2_ned);
-    //translate_to_global(global_rotated_drone2_ned, global_translation, final_global_drone2_ned);
-
-    // Step 8: Combine the local and global rotation matrices to get the final orientation in the global frame
-    multiply_matrices(R_global, R2_local, R2_combined);
-    //multiply_matrices(R_global, R2_local, R2_combined);
-
-    // Step 9: Extract the final global RPY angles
-
-    //rotation_matrix_to_rpy(R2_local, global_roll1_final, global_pitch1_final, global_yaw1_final);
-
-    capture_msg.global_pos_target[0] = final_global_drone2_ned[0];
-    capture_msg.global_pos_target[1] = final_global_drone2_ned[1];
-    capture_msg.global_pos_target[2] = final_global_drone2_ned[2];
-
-    publisher_->publish(capture_msg);
-    */
-}
-
-void CaptureTargetMode::update_vehicle_state() {
-
-    // Get the current state of the vehicle
-    State state = get_vehicle_state();
-
-    // Update the MPC state
-    P = state.position;
-    V = state.velocity;
-    yaw = Pegasus::Rotations::yaw_from_quaternion(state.attitude);
 }
 
 void CaptureTargetMode::target_gps_callback(const pegasus_msgs::msg::SensorGps::ConstSharedPtr msg) {
 
     //posição inicial LLA drone 1
     if (drone1_lla[0] == 0.0 && drone1_lla[1] == 0.0 && drone1_lla[2] == 0.0) {
-        drone1_lla[0] = msg->latitude_deg;
-        drone1_lla[1] = msg->longitude_deg;
-        drone1_lla[2] = msg->altitude_msl;
-        //double drone1_lla[3] = {47.397769, 8.545594, 488.05};
-        //double drone2_lla[3] = {47.397742, 8.545634, 488.05};
-
+        //drone1_lla[0] = msg->latitude_deg;
+        //drone1_lla[1] = msg->longitude_deg;
+        //drone1_lla[2] = msg->altitude_msl;
     }     
 }
 } // namespace autopilot
